@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+/* layout */
+#header {
+  position: fixed;
+  z-index: 5000;
+  width: 10vw;
+  height: 100%;
+  background-color: #1458E4;
+  border-right: 1px solid rgba(255, 255, 255, 0.5); 
+}
+.inner {
+  max-width: 75%;
+  margin: 0 auto;
+}
+#nav {position: relative;}
+#section1 {
+  font-family: 'Jost';
+  width: 100%;
+  height: 100vh;
+  background-color: #1458E4;
+}
+#section2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#section3 {
+  width: 100%;
+  height: 100vh;
+}
+#section4 {
+  width: 100%;
+  height: 100vh;
+}
+#section5{
+
+}
+/* header */
+#nav > button{
+  position: absolute;
+  width: 40%;
+  right: 0;
+  left: 30%;
+  top: 330px;
+} 
+#nav > button > span {
+  display: inline-block;
+  width: 5%;
+  height: 40px;
+  margin: 0 5%;
+  background: #fff;
+}
+
+/* section1 */
+.main {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.main .main_left {position: relative;}
+.main .main_left p {
+  position: absolute; 
+  left: 11%; 
+  z-index: 100;
+  top: 190px;
+  font-weight: 300; 
+  font-size: 5vw; 
+  line-height: 1.2; 
+  transform: rotate(-90deg); 
+  color: #fff;
+}
+
+.main .main_right {width: 33.3%; float: right; border-left: 1px solid rgba(255, 255, 255, 0.5);}
+.right_1 {
+  height: 27vh; border-bottom: 1px solid rgba(255, 255, 255, 0.5);}
+.right_1 .r_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+/* .contact {
+  position: fixed;
+  display: flex;
+} */
+.right_1 a {
+  display: block; 
+  padding: 5%; 
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: 300;
+}
+.right_2 {
+  height: calc(100vh - 55vh);
+}
+.right_2 p {
+  font-family: 'SUIT'; 
+  font-size: 0.9rem;
+  padding: 15% 15% 7%;
+  line-height: 1.5;
+  color: #fff;
+}
+.right_2 .prof_img {
+  float: right;
+  width: 27%;  
+  padding-right: 10%;
+  display: block;
+}
+.right_2 .prof_img img {
+  display: block;
+  width: 100%; 
+  border-radius: 50%;
+}
+/* section2 */
+.intro {
+  width: 100%;
+  position: absolute;
+  display: table;
+  top: -200px;
+  height: 100vh;
+  background:url('../img/intro1.jpg') no-repeat center;
+  background-size: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.intro .intro_text {
+  display : table-cell;
+  vertical-align : middle;
+  padding-left: 15%;
+}
+.intro .intro_text h2{
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 1em;
+  font-weight: 400;
+}
+/* section3 */
+
+.profile {
+  width: 100%;
+}
+.prof_cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prof_text {
+  position: relative;
+  padding-left: 10%;
+  color: #1458E4;
+}
+.prof_text strong, p.prof_intro {
+  font-size: 4vw;
+}
+.prof_text strong {
+}
+.prof_cont figure {
+  width: 30%;
+  
+}
+.prof_cont figure img{
+  width: 100%;
+  display: block;
+}
+/* section4 */
+.skill {
+  border-top: 1px solid #7E8AAB;
+}
+.skill_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10% 0 0 10%;
+}
+.skill_text p {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1.2vw;
+}
+.skill_text .txt_left {
+  border-right: 1px solid #7E8AAB;
+  padding-right: 10%;
+  font-family: 'Jost';
+}
+.skill_text .txt_right {
+  font-family: 'SUIT';
+  padding-left: 10%;
+}

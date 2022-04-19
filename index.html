@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
   <header id="header">
@@ -23,89 +25,132 @@
   <!-- //header -->
   <div id="contents">
     <section id="section1">
-      <div class="main">
-        <article class="intro">
-          <div class="itr_left">
+        <article class="main">
+          <div class="main_left">
             <p>PORTFOLIO<br>
               CREATIVE FRONT<br>
               DEVELOPER<br>
               LEE HEE JIN
             </p>
           </div>
-          <div class="itr_right">
+          <div class="main_right">
             <div class="right_1">
               <div class="r_box">
-                <span><a href="#">PORTFOLIO</a></span>
-                <span class="cont"><a href="#">CONTACT ME</a></span>
+                <a href="#"><span>PORTFOLIO</span></a>
+                <a href="#" class="contact"><span>CONTACT ME</span></a>
               </div>
             </div>
             <div class="right_2">
               <p>안녕하세요. 프론트엔드 개발자를 꿈꾸는 이희진입니다.<br>
                  제 포트폴리오 페이지에 방문해주셔서 감사합니다.</p>
-              <div class="profile"><img src="img/images.jpg" alt=""></div>
+              <div class="prof_img">
+                <img src="assets/img/profile.jpg" alt="">
+              </div>
             </div>
           </div>
         </article>
-        <!-- //intro -->
-        <div class="intro_text">
-          <h2>PORTFOLIO</h2>
-        </div>
-      </div>
-      <!--//main -->
     </section>
     <!-- //section1 -->
     <div id="section2">
-      <div class="inner">
-        <article class="profile">
-            <div class="prof_cont">
-              <div class="prof_text">
-                <p>
-                  HELLO!!<br>
-                  IM HEEJIN-LEE!<br>
-                  I AM AIMING TO BE<br>
-                  <strong>A FRONT-END DEVELOPER</strong>
-                </p>
-                <span>I will always become a developer<br>
-                who takes step by step with an attitude of learning.</span>
-              </div>
-              <figure><img src="" alt="profile"></figure>
-            </div>
-            <!--//prof_cont -->
-        </article>
-        <!--//profile -->
-        <article class="skill">
-          <div class="skill_text">
-            <p class="txt_en">In a world where diverse and new features are constantly appearing,
-              to keep learning
-              I will become a front-end developer who never stops growing.</p>
-            <p class="txt_ko">크로스브라우징과 웹표준을 준수하여 작업
-              html 마크업,form,svg등 사용
-              css keyframe을 이용한 동적인 효과를 나타내는 애니메이션 작업
-              php를 이용하여 로그인,회원가입 기능, 댓글 컨텐츠 제작
-              javascript ES6문법, Event등 사용
-              React Hooks, useEffect, 컴포넌트, state 등 사용
-              vue </p>
+        <div class="intro">
+          <div class="intro_text">
+            <h2>PORTFOLIO</h2>
           </div>
-        </article>
-        <!--//skill -->
-      </div>
+        </div>
     </div>
     <!-- //section2 -->
-    <div id="sectio3">
-      <div class="intro_text">
-        <h2>PROJECTS</h2>
+    <div id="section3">
+      <div class="sec3 inner">
+        <article class="profile">
+          <div class="prof_cont">
+            <div class="prof_text">
+              <p class="prof_intro">
+                HELLO!!<br>
+                IM HEEJIN-LEE!<br>
+                I AM AIMING TO BE<br>
+              </p>
+              <strong>A FRONT-END DEVELOPER</strong>
+              <p>I will always become a developer<br>
+                who takes step by step with an attitude of learning.</p>
+            </div>
+            <figure><img src="assets/img/profile.jpg" alt="profile"></figure>
+          </div>
+        </article>
       </div>
-      <article class="project"></article>
-      <article class="project"></article>
-      <article class="project"></article>
     </div>
     <!-- //section3 -->
     <div id="section4">
-      
+      <article class="skill">
+        <div class="inner">
+          <div class="skill_text">
+            <div class="txt_left">
+              <p>
+              This is a skill I can use.<br>
+              I will continue to learn various new<br>
+              features and become a growing front-end developer.
+              </p>
+            </div>
+            <div class="txt_right">
+              <p>
+              크로스브라우징과 웹표준을 준수하여 작업<br>
+              html 마크업,form,svg등 사용<br>
+              css keyframe을 이용한 동적인 효과를 나타내는 애니메이션 작업<br>
+              php를 이용하여 로그인,회원가입 기능, 댓글 컨텐츠 제작<br>
+              javascript ES6문법, Event등 사용<br>
+              React Hooks, useEffect, 컴포넌트, state 등 사용<br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
     </div>
     <!-- //section4 -->
     <div id="section5">
-      
+      <div class="pro1 inner">
+        <article class="project1">
+          <div class="pro_img">
+            <img src="assets/img/pro1.png" alt="">
+          </div>
+          <div class="pro_cont">
+            <div class="pro_numb">01</div>
+            <div class="pro_txt">
+              <h3>megabox site</h3>
+              <p>기존의 메가박스 사이트를
+                웹접근성을 준수하여  반응형으로 제작하였습니다.</p>
+            </div>
+            <div class="pro_view">site view</div>
+          </div>
+        </article>
+        <article class="project2">
+          <div class="pro_img">
+            <img src="assets/img/pro2.png" alt="">
+          </div>
+          <div class="pro_cont">
+            <div class="pro_numb">02</div>
+            <div class="pro_txt">
+              <h3>hanacard site</h3>
+              <p>기존의 하나카드 사이트를 
+                웹접근성과 웹표준을 준수하여 작업하였습니다.</p>
+            </div>
+            <div class="pro_view">site view</div>
+          </div>
+        </article>
+        <article class="project3">
+          <div class="pro_img">
+            <img src="assets/img/pro3.png" alt="">
+          </div>
+          <div class="pro_cont">
+            <div class="pro_numb">03</div>
+            <div class="pro_txt">
+              <h3>webstandard site</h3>
+              <p>웹접근성과 웹표준을 준수하여 만든 사이트 입니다.
+                팝업, 탭 메뉴,게시판, 슬라이더 등
+                다양한 기능을 웹표준에 맞게 제작한 사이트 입니다.</p>
+            </div>
+            <div class="pro_view">site view</div>
+          </div>
+        </article>
+      </div>
     </div>
     <!-- //section5 -->
     <div id="section6">
