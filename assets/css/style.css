@@ -147,17 +147,18 @@
   justify-content: space-between;
 }
 .prof_text {
+  width: 45vw;
   position: relative;
   padding-left: 10%;
   color: #fff;
 }
 .prof_text strong, p.prof_intro {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 .prof_text strong {
 }
 .prof_cont figure {
-  width: 30%;
+  width: 45vw;
   
 }
 .prof_cont figure img{
