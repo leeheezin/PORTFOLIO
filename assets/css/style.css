@@ -10,7 +10,7 @@
   border-right: 1px solid rgba(255, 255, 255, 0.5); 
 }
 .inner {
-  max-width: 75%;
+  max-width: 80%;
   margin: 0 auto;
 }
 #nav {position: relative;}
@@ -36,7 +36,8 @@
   height: 100vh;
 }
 #section5{
-
+  width: 100%;
+  height: 100vh;
 }
 /* header */
 #nav > button{
@@ -113,7 +114,7 @@
   border-radius: 50%;
 }
 /* section2 */
-.intro {
+#section2 .intro {
   width: 100%;
   position: absolute;
   display: table;
@@ -152,13 +153,16 @@
   padding-left: 10%;
   color: #fff;
 }
-.prof_text strong, p.prof_intro {
-  font-size: 3vw;
+.prof_text p {
+  font-size: 3.2vw;
 }
-.prof_text strong {
+.prof_text span {
+  display: block;
+  padding-top: 10%;
+  font-size: 2vw;
 }
 .prof_cont figure {
-  width: 45vw;
+  width: 24vw;
   
 }
 .prof_cont figure img{
@@ -188,4 +192,51 @@
 .skill_text .txt_right {
   font-family: 'SUIT';
   padding-left: 10%;
+}
+/* section5 */
+#section5 .projects {
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background:url('../img/intro1.jpg') no-repeat center;
+  background-size: 100%;
+
+}
+.pro {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding-top: 20%;
+}
+.pro_img {
+  width: 30vw;
+  padding-left: 10%;
+}
+.pro_img img {width: 45vw;}
+.pro_cont {width: 30vw; text-transform:uppercase;}
+span.pro_numb {
+  color: #1458E4;
+  font-family: 'JOST';
+  font-size: 7vw;
+}
+.pro_txt {}
+.pro_txt h3 {
+  font-family: 'Abel';
+  color: #1458E4; 
+  font-size: 3vw;
+  padding-top: 20%;
+}
+.pro_txt p {
+  font-size: 1.1vw;
+  padding: 5% 0 10%;
+}
+.pro_txt a {
+  color: #fff; 
+  display: block;
+  background: #1458E4;
+  width: 15vw;
+  font-size: 0.9vw;
+  text-align: center;
+  padding: 5% 8%;
+  letter-spacing: 0.2em;
 }
