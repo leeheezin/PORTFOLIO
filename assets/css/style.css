@@ -286,10 +286,10 @@ span.pro_numb {
   right: 5vw;
 }
 .js_cont {
-  border: 1px solid #fff;
   width: 35vw;
   height: 35vw;
 }
+.js_cont img {width: 100%; display: block;}
 
 /* section7 */
 #section7 .intro {
@@ -361,12 +361,12 @@ span.pro_numb {
   width: 50vw;
   padding-left: 12vw;
 }
-.about_cont3 {
-  padding-left: 5vw;
+.about_cont4 {
+  width: 20vw;
 }
 .show figure {width: 30vw;}
 .show img {width: 100%;}
-.show span {font-size: 1.5vw; padding-top: 2vw; display: block;}
+.show span {font-size: 1.5vw; padding-top: 1.2vw; display: block;}
 
 /* footer */
 .foot {
