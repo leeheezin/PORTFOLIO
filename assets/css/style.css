@@ -75,7 +75,7 @@
 .sec1__inner .left p {
     position: absolute;
     left: 1vw;
-    bottom: 9vw;
+    bottom: 11vw;
     color: #fff;
     font-family: "Jost";
     font-size: 4.5vw;
@@ -116,9 +116,9 @@
     color: #fff;
 }
 .intro figure {
-  width: 10vw;
+  width: 12vw;
   float: right;
-  padding-top: 5vw;
+  padding: 5vw 1vw 0 0;
 }
 .intro figure img {
   width: 100%;
@@ -217,16 +217,16 @@
 .pro_img::before{
   position: absolute;
   content: '';
-  width: 40vw;
+  width: 37vw;
   height: 45vw;
-  border: 0.5vw solid #1458E4;
-  left: 0;
+  border: 0.4vw solid #1458E4;
+  left: -2vw;
   bottom: 0;
   z-index: -1;
 }
-.pro_img img {width: 53vw;}
+.pro_img img {width: 50vw;}
 .pro_cont {
-  width: 40vw; 
+  width: 45vw; 
   text-transform:uppercase;
   padding-right: 8vw;
 }
@@ -238,7 +238,7 @@
   color: #1458E4; 
   font-size: 3vw;
   padding-top: 5vw;
-  letter-spacing: 0.2vw;
+  letter-spacing: 0.1vw;
 }
 .pro_txt p {
   font-family: 'ChosunNm';
@@ -286,8 +286,8 @@
 .js_wrap .right {padding-left: 5vw;}
 .js_wrap .left {padding-right: 5vw;}
 .js_txt h2, .js_txt h3 {
-  font-size: 2.5vw;
-  letter-spacing: 0.6em;
+  font-size: 3.5vw;
+  letter-spacing: 0.3em;
   font-family: 'Abel';
   font-weight: 400;
   text-transform: uppercase;
@@ -308,7 +308,7 @@
   text-transform: uppercase;
   color: #fff;
   border: 1px solid rgba(255,255,255,0.5);
-  font-size: 1.2vw;
+  font-size: 0.9vw;
   padding: 1vw 4vw;
   transition: 0.25s ease;
   letter-spacing: 0.2vw;
@@ -344,55 +344,58 @@
 }
 .ani_wrap {}
 .ani {
-  padding-top: 10vw;
+  padding: 10vw 10vw;
 }
 .ani_txt {
   color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-bottom: 10%;
 }
 .ani_txt h3 {
   position: relative;
   font-family: 'Jost';
-  font-size: 2.5vw;
+  font-size: 3vw;
   font-weight: 300;
+  letter-spacing: 0.1vw;
+  line-height: 1.5;
 }
-.ani_txt h3::after {
+/* .ani_txt h3::after {
   content: '';
-  width: 11vw;
+  width: 9vw;
   height: 0.1vw;
   position: absolute;
   background: #c4c4c4;
   top: 5vw;
-  left: 23vw;
-}
+  left: 22vw;
+} */
 .ani_txt p {
   font-family: 'ChosunNm';
   padding-top: 6vw;
-  font-size: 0.9vw;
+  font-size: 1.3vw;
 }
 .ani_cont {
-  width: 55vw;
-  height: 30vw;
+  width: 65vw;
+  height: 36vw;
   background: #c4c4c4;
-  margin: 5vw auto;
 }
 /* section8 */
 .about {
-  color: #fff;
-  font-family: 'Jost';
-  text-transform: uppercase;
+  
 }
-.about h2 {
+#section8 h2 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 3.5vw;
   margin-bottom: 30vw;
+  color: #fff;
+  font-family: 'Jost';
+  text-transform: uppercase;
 }
-.about h2::after {
+#section8 h2::after {
   position: absolute;
   content: '';
   width: 0.1vw;
@@ -401,6 +404,9 @@
   top: 10vw;
 }
 .about_wrap1, .about_wrap2{
+  color: #fff;
+  font-family: 'Jost';
+  text-transform: uppercase;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -427,15 +433,13 @@
   padding: 15vw 0 15vw 0;
 }
 .foot_left {
-  width: 40vw;
-  height: 40vw;
+  width: 35vw;
   border-right: 1px solid #c4c4c4;
 }
 .foot_left h2 {
   font-size: 5vw;
   font-weight: 300;
   transform: rotate(-90deg);
-  border-left: 1px solid #c4c4c4;
 }
 .copy span {
   display: inline-block;
@@ -469,6 +473,7 @@
   border: 1px solid #c4c4c4;
 }
 
+/* media */
 @media (max-width:900px){
   #header {
     width: 50px;
@@ -534,10 +539,10 @@
 }
 .skill_text {
   display: block;
-  padding: 18% 5% 20% 0;
+  padding: 18% 10% 20% 0;
 }
 .skill_text p {
-  font-size: 2vw;
+  font-size: 2.2vw;
 }
 .skill_text .txt_left {
   padding-bottom: 7vw;
@@ -552,14 +557,21 @@
   border-right: 0;
 }
 /* section5 */
+.pro_txt h3 {
+  font-size: 4vw;
+}
 .pro_txt p {
-  font-size: 1.8vw;
+  font-size: 1.3vw;
 }
 .pro_img {width: 40vw;}
-.pro_cont {width: 30vw;}
+.pro_cont {width: 35vw;}
+
 /* section6 */
 .js_img img {width: 34vw;}
 .js_img::before {width: 32vw; height: 29vw;}
+.js_txt p {font-size: 1.8vw;}
+
+/* section7 */
 
 
 
