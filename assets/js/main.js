@@ -51,10 +51,10 @@ const headerHeight = header.getBoundingClientRect().height;
     gsap.to(".left_txt .left_txt3", {duration: 0.6, width: "100%", delay: 0.4});
     gsap.to(".left_txt .left_txt4", {duration: 0.6, width: "100%", delay: 0.6});
 
-    gsap.to(".left_txt .left_txt1 .active .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.4})
-    gsap.to(".left_txt .left_txt2 .active .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.6})
-    gsap.to(".left_txt .left_txt3 .active .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.8})
-    gsap.to(".left_txt .left_txt4 .active .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 1.0})
+    gsap.to(".left_txt .left_txt1 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.4})
+    gsap.to(".left_txt .left_txt2 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.6})
+    gsap.to(".left_txt .left_txt3 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.8})
+    gsap.to(".left_txt .left_txt4 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 1.0})
 }, 2000)
 //   Splitting();
 

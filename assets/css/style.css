@@ -138,7 +138,7 @@
 }
 .sec1_inner .left p {
   white-space: nowrap;
-  transform: translateY(50px);
+  transform: translateY(100px);
   color: #fff;
   font-family: "Jost";
   font-size: 5vw;
