@@ -124,10 +124,6 @@
 .left div {
   overflow: hidden;
 }
-.left > div > p {
-  white-space: nowrap;
-  transform: translateY(50px);
-}
 .sec1_inner .left .left_txt1 {
   width: 0%;
 }
@@ -141,11 +137,13 @@
   width: 0%;
 }
 .sec1_inner .left p {
-    color: #fff;
-    font-family: "Jost";
-    font-size: 5vw;
-    line-height: 1.2;
-    font-weight: 300;
+  white-space: nowrap;
+  transform: translateY(50px);
+  color: #fff;
+  font-family: "Jost";
+  font-size: 5vw;
+  line-height: 1.2;
+  font-weight: 300;
 }
 /* left ani */
 /* .left p::after {
