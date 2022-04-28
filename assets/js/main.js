@@ -89,24 +89,23 @@ const headerHeight = header.getBoundingClientRect().height;
       }
     });
 //header sidebar open - close
-// $(function() {
-// $("#nav").on("click",function(){
-//   $(".side_inner").toggle('open');
-// });
-// }); 	
-// $(function(){
-//   var sideBar = $(".sidebar");
-//   var menuBtn = $(".nav_button");
-//   var menuClose = $(".nav_close");
+$(document).ready(function(){
+  var target = $(".sidebar");
 
-// 	menuBtn.click(function(){
-// 		sideBar.toggleClass("show2");
-// 	});
+  // 버튼을 클릭하면 사이드바 열림
+  $(document).on("click", ".nav_button", function (e){
+      target.show();
+      target.addClass('.sidebar');
+  });
 
-// 	menuClose.click(function(){
-//     sideBar.removeClass("show2");
-// 	});
-// });
+  // 사이드바 외부를 클릭하면 사이드바 닫힘
+  $(document).mouseup(function (e){
+      if(target.has(e.target).length==0) {
+          target.hide();
+          target.removeClass('.sidebar');
+      } 
+  });
+});
   
   
 
@@ -135,18 +134,57 @@ const headerHeight = header.getBoundingClientRect().height;
 
 
 
-  //section1 left
-  setTimeout(() => {
-    gsap.to(".left_txt .left_txt1", {duration: 0.6, width: "100%"});
-    gsap.to(".left_txt .left_txt2", {duration: 0.6, width: "100%", delay: 0.2});
-    gsap.to(".left_txt .left_txt3", {duration: 0.6, width: "100%", delay: 0.3});
-    gsap.to(".left_txt .left_txt4", {duration: 0.6, width: "100%", delay: 0.4});
+  //section1 left txt
+  const loadReveal= function(){
+    let scrollTop = (window.pageYOffset || document.documentElement.scrollTop || window.scrollY) + window.innerHeight/2;
 
-    gsap.to(".left_txt .left_txt1 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.2})
-    gsap.to(".left_txt .left_txt2 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.4})
-    gsap.to(".left_txt .left_txt3 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.6})
-    gsap.to(".left_txt .left_txt4 .active", {duration: 0.4, stagger: 0.05, opacity: 1, y: 0, delay: 0.8})
-}, 2000)
+    const reveal = document.querySelectorAll(".reveal");
+
+    reveal.forEach(el => {
+      const revealDelay = el.dataset.delay;
+
+      // if (scrollTop > el.parentElement.offsetTop){
+      //   el.classList.add("show");
+      // }
+      if (scrollTop > el.parentElement.offsetTop){
+        if(revealDelay == undefined){
+          el.classList.add("show");
+        } else {
+          setTimeout(()=>{
+            el.classList.add("show");
+          }, revealDelay);
+        }
+      }
+    })
+  }
+  window.addEventListener("load", loadReveal);
+
+
+  //.intro_text h2 글자 쪼개기
+  document.querySelectorAll(".split").forEach(el => {
+    let text = el.innerText;
+    let split = text.split('').join("</span><span aria-hidden='true'>");
+    split = "<span aria-hidden='true'>" + split + "</span>";
+    el.innerHTML = split;
+    el.setAttribute("aria-label", text);
+});
+window.addEventListener("scroll", () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
+// gsap
+document.querySelectorAll(".intro_text").forEach((item, index) => {
+  if( scrollTop >= item.offsetTop ){
+      gsap.to( item.querySelectorAll(".split span"), {
+          duration: .5,
+          delay: 0.6,
+          opacity: 1,
+          y: 0,
+          stagger: .06,
+          ease: "power4.out",
+          rotation: 0
+      });
+  }
+});
+});
 //   Splitting();
 
 // var s = document.createElement("style");
@@ -184,9 +222,10 @@ document.querySelectorAll("#section6").forEach(item =>{
   let offset2 = (scrollTop - item.offsetTop) * 0.05;
   
   item.querySelector(".js_img").style.transform = "translateX("+ offset1 +"px)";
-  item.querySelector(".js_txt h2").style.transform = "translateX("+ -offset2 +"px)";
+  item.querySelector(".js_txt h2").style.transform = "translateX("+ offset2 +"px)";
   item.querySelector(".js_txt p").style.transform = "translateX("+ offset2 +"px)";
 });
+
 }
 window.addEventListener("scroll", scrollProgress);
 

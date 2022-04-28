@@ -27,6 +27,12 @@ body {
 .intro {display: flex; justify-content: center; align-items: center; width: 100%; background-size: 100%;}
 .intro_text {padding: 30vw 0;}
 .intro_text h2 {text-transform: uppercase; font-family: "Abel"; font-size: 3vw; font-weight: 400; color: #fff; letter-spacing: 2vw;}
+.split span {
+  opacity: 0;
+  transform: translateY(50px) rotate(234deg);
+  display: inline-block;
+  min-width: 1vw;
+}
 #section1 {font-family: 'Jost'; width: 100%; background-color: #1458E4;}
 #section2 {position: relative; width: 100%; background-color: #1458E4;}
 #section3 {width: 100%;}
@@ -110,8 +116,9 @@ body {
 .sidebar {
   display: none;
   position: absolute;
+  width: 80vw;
   left: 100px;
-  background-color: #fff;
+  /* background-color: rgba(0,0,0,0.5); */
   font-family: 'Jost';
   height: 100%;
   color: #222;
@@ -133,6 +140,7 @@ transition: all 0.2s;
   transition: all 0.2s;
 }
 .side_inner {
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -141,10 +149,11 @@ transition: all 0.2s;
 .sidebar a {display: inline-block;}
 .side_left {
   width: 40%;
-  margin-top: 20vw;
+  padding-top: 17vw;
+  padding-left: 2%;
 }
 .side_left a {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .side_left span {
   padding-top: 18vw;
@@ -157,7 +166,8 @@ transition: all 0.2s;
 }
 .side_right a { 
   width: 65%; 
-  font-size: 5vw; 
+  font-size: 4vw; 
+  padding: 1%;
   display: block;
 }
 .side_right span {}
@@ -192,21 +202,8 @@ transition: all 0.2s;
   overflow: hidden;
   padding-left: 2vw;
 }
-.sec1_inner .left .left_txt1 {
-  width: 0%;
-}
-.sec1_inner .left .left_txt2 {
-  width: 0%;
-}
-.sec1_inner .left .left_txt3 {
-  width: 0%;
-}
-.sec1_inner .left .left_txt4 {
-  width: 0%;
-}
 .sec1_inner .left p {
   white-space: nowrap;
-  transform: translateY(100px);
   color: #fff;
   font-family: "Jost";
   font-size: 5vw;
@@ -214,98 +211,42 @@ transition: all 0.2s;
   font-weight: 300;
 }
 /* left ani */
-/* .left p::after {
-  -webkit-animation: 180ms slide-right 180ms cubic-bezier(0.7, 0.3, 0, 1);
-          animation: 180ms slide-right 180ms cubic-bezier(0.7, 0.3, 0, 1);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  animation-direction: normal;
-  will-change: clip-path;
+.reveal > p {opacity: 0;}
+.reveal.show > p {animation: opacity 1000ms linear forwards;}
+.reveal {position: relative;}
+.reveal::before {
+  content: '';
+  position: absolute;
+  right: 0; top: 0;
+  width: 0; height: 100%;
+  z-index: 100;
+  background-color: #fff;
 }
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-clip-path: inset(0% 99.9999% 0% 0%);
-            clip-path: inset(0% 99.9999% 0% 0%);
-  }
-  100% {
-    -webkit-clip-path: inset(0% 0% 0% 0%);
-            clip-path: inset(0% 0% 0% 0%);
-  }
+.reveal.reveal_1::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 0;
+  width: 0; height: 100%;
+  z-index: 100;
+  background-color:#628AFF;
 }
-@keyframes slide-right {
-  0% {
-    -webkit-clip-path: inset(0% 99.9999% 0% 0%);
-            clip-path: inset(0% 99.9999% 0% 0%);
-  }
-  100% {
-    -webkit-clip-path: inset(0% 0% 0% 0%);
-            clip-path: inset(0% 0% 0% 0%);
-  }
+.reveal.show::before {animation: reveal 1000ms cubic-bezier(1, 0, 0.18, 1);}
+.reveal.show::after {animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);}
+@keyframes opacity {
+  0%   {opacity: 0;}
+  60%  {opacity: 0;}
+  70%  {opacity: 1;}
+  100% {opacity: 1;}
 }
-.left .active1{
-  -webkit-clip-path: inset(0% 0% 0% 99.9999%);
-          clip-path: inset(0% 0% 0% 99.9999%);
-  -webkit-animation: 300ms slide-right 300ms cubic-bezier(0.7, 0.3, 0, 1);
-          animation: 300ms slide-right 300ms cubic-bezier(0.7, 0.3, 0, 1);
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  will-change: clip-path;
+@keyframes reveal {
+  0%   {width: 0;    left: 0;}
+  50%  {width: 100%; left: 0;}
+  80%  {width: 100%; left: 0;}
+  100% {width: 0;    left: 100%;}
 }
-.left .active2 {
-    -webkit-clip-path: inset(0% 0% 0% 99.9999%);
-          clip-path: inset(0% 0% 0% 99.9999%);
-  -webkit-animation: 500ms slide-right 500ms cubic-bezier(0.7, 0.3, 0, 1);
-  animation: 500ms slide-right 500ms cubic-bezier(0.7, 0.3, 0, 1);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
--webkit-animation-direction: normal;
-  animation-direction: normal;
-will-change: clip-path;
-}
-.left .active3 {
-  -webkit-clip-path: inset(0% 0% 0% 99.9999%);
-  clip-path: inset(0% 0% 0% 99.9999%);
-  -webkit-animation: 700ms slide-right 700ms cubic-bezier(0.7, 0.3, 0, 1);
-  animation: 700ms slide-right 700ms cubic-bezier(0.7, 0.3, 0, 1);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
--webkit-animation-direction: normal;
-  animation-direction: normal;
-will-change: clip-path;
-}
-.left .active4 {
-  -webkit-clip-path: inset(0% 0% 0% 99.9999%);
-  clip-path: inset(0% 0% 0% 99.9999%);
-  -webkit-animation: 800ms slide-right 800ms cubic-bezier(0.7, 0.3, 0, 1);
-  animation: 800ms slide-right 800ms cubic-bezier(0.7, 0.3, 0, 1);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
--webkit-animation-direction: normal;
-  animation-direction: normal;
-will-change: clip-path;
-}
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-clip-path: inset(0% 0% 0% 99.9999%);
-            clip-path: inset(0% 0% 0% 99.9999%);
-  }
-  100% {
-    -webkit-clip-path: inset(0% 0% 0% 0%);
-            clip-path: inset(0% 0% 0% 0%);
-  }
-}
-@keyframes slide-right {
-  0% {
-    -webkit-clip-path: inset(0% 0% 0% 99.9999%);
-            clip-path: inset(0% 0% 0% 99.9999%);
-  }
-  100% {
-    -webkit-clip-path: inset(0% 0% 0% 0%);
-            clip-path: inset(0% 0% 0% 0%);
-  }
-} */
+/* // left ani */
+
+
 .sec1_inner .right {
     width: 40%;
     border-left: 1px solid #628AFF;
@@ -525,7 +466,7 @@ will-change: clip-path;
 .pro_txt p {
   font-family: 'ChosunNm';
   font-size: 1.3vw;
-  padding: 5% 0 15%;
+  padding: 5% 0 3%;
 }
 .pro_txt a {
   display: inline-block;
@@ -548,6 +489,9 @@ will-change: clip-path;
   padding-top: 15%;
   position: relative;
 }
+.js_wrap:nth-child(even){
+  padding-left: auto;
+}
 .js_wrap::before {
   content: '';
   width: 1vw;
@@ -557,12 +501,19 @@ will-change: clip-path;
   position: absolute;
   top: 0;
 }
+/* .cont_item.show .js .js_txt{
+  opacity: 1; 
+  transform: translateY(0);
+}
+.js .js_txt{
+  opacity: 0; 
+  transform: translateY(60px); 
+  transition: all 0.5s 0.5s ease-in-out;
+} */
 .js_txt {
   color: #fff;
   width: 40vw;
 }
-.js_wrap .right {padding-left: 5vw;}
-.js_wrap .left {padding-right: 5vw;}
 .js_txt h2, .js_txt h3 {
   font-size: 3.5vw;
   letter-spacing: 0.3em;
@@ -579,10 +530,10 @@ will-change: clip-path;
   font-family: 'ChosunNm';
   font-weight: 300;
   letter-spacing: 0.05vw;
-  padding-bottom: 5vw;
+  padding-bottom: 5%;
 }
 .js_txt a {
-  font-family: 'Jost';
+  font-family: 'ChosunNm';
   text-transform: uppercase;
   color: #fff;
   border: 1px solid rgba(255,255,255,0.5);
@@ -618,9 +569,18 @@ will-change: clip-path;
   right: 7vw;
 }
 .js_cont {
-  width: 32vw;
+  width: 30vw;
 }
-.js_cont img {width: 100%; display: block;}
+.js:nth-child(odd){
+  padding-left: 0;
+}
+.js_cont:nth-child(odd){
+  margin-left: 10%;
+}
+.js_cont:nth-child(even){
+  margin-right: 10%;
+}
+.js_cont img {width: 30vw; display: block;}
 
 /* section7 */
 #section7 .intro {
@@ -743,6 +703,9 @@ will-change: clip-path;
 .foot .copy {
   font-size: 1.1vw;
 }
+
+
+
 /* media */
 @media (max-width:900px){
   #header {
@@ -755,6 +718,13 @@ will-change: clip-path;
   #nav > div span, #nav > div span::before, #nav > div span::after {
     height: 2px;
   }
+  .sidebar {left: 50px;}
+  .side_inner {
+    display: block;
+  }
+  .side_left {width: 100%;}
+  .side_right {width: 100%;}
+  .side_right a {font-size: 5vw;}
   .contents {
     width: calc(100% - 50px);
     margin-left:50px;
@@ -855,11 +825,18 @@ will-change: clip-path;
 }
 
 /* section6 */
+.js {display: block;}
+.js_img {
+  position: relative;
+  width: 100%;
+}
 .js_img img {width: 34vw;}
 .js_img::before {
-  width: 42vw; 
+  width: 90vw; 
   height: 43vw;
 }
+.js_txt {width: 100%;}
+.js_txt h2 {text-align: right;}
 .js_txt p {font-size: 1.8vw;}
 
 /* section7 */
