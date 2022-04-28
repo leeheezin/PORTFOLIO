@@ -135,29 +135,19 @@ $(document).ready(function(){
 
 
   //section1 left txt
-  const loadReveal= function(){
-    let scrollTop = (window.pageYOffset || document.documentElement.scrollTop || window.scrollY) + window.innerHeight/2;
-
-    const reveal = document.querySelectorAll(".reveal");
-
-    reveal.forEach(el => {
-      const revealDelay = el.dataset.delay;
-
-      // if (scrollTop > el.parentElement.offsetTop){
-      //   el.classList.add("show");
-      // }
-      if (scrollTop > el.parentElement.offsetTop){
-        if(revealDelay == undefined){
-          el.classList.add("show");
-        } else {
-          setTimeout(()=>{
-            el.classList.add("show");
-          }, revealDelay);
-        }
-      }
-    })
-  }
-  window.addEventListener("load", loadReveal);
+  var headline = $(".left_txt p");
+  var char = '[class*="char"]';
+  var tl = new TimelineLite();
+  
+  headline
+    .lettering('words').lettering();
+  
+  // Stagger letter animation
+  tl.staggerFrom(char, 1, {
+    opacity: 0,
+    ease: Back.easeOut,
+    x: '-120%'
+  }, 0.02);
 
 
   //.intro_text h2 글자 쪼개기

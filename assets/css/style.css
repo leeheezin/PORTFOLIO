@@ -27,7 +27,7 @@ body {
 .intro {display: flex; justify-content: center; align-items: center; width: 100%; background-size: 100%;}
 .intro_text {padding: 30vw 0;}
 .intro_text h2 {text-transform: uppercase; font-family: "Abel"; font-size: 3vw; font-weight: 400; color: #fff; letter-spacing: 2vw;}
-.split span {
+.split span:nth-child(even){
   opacity: 0;
   transform: translateY(50px) rotate(234deg);
   display: inline-block;
@@ -194,13 +194,11 @@ transition: all 0.2s;
     border-bottom: 1px solid #628AFF;
     position: relative;
 }
+
+/* left  */
 .sec1_inner .left {
   height: 60%;
   transform: rotate(-90deg);
-}
-.left div {
-  overflow: hidden;
-  padding-left: 2vw;
 }
 .sec1_inner .left p {
   white-space: nowrap;
@@ -210,42 +208,9 @@ transition: all 0.2s;
   line-height: 1.2;
   font-weight: 300;
 }
-/* left ani */
-.reveal > p {opacity: 0;}
-.reveal.show > p {animation: opacity 1000ms linear forwards;}
-.reveal {position: relative;}
-.reveal::before {
-  content: '';
-  position: absolute;
-  right: 0; top: 0;
-  width: 0; height: 100%;
-  z-index: 100;
-  background-color: #fff;
-}
-.reveal.reveal_1::after {
-  content: '';
-  position: absolute;
-  right: 0; top: 0;
-  width: 0; height: 100%;
-  z-index: 100;
-  background-color:#628AFF;
-}
-.reveal.show::before {animation: reveal 1000ms cubic-bezier(1, 0, 0.18, 1);}
-.reveal.show::after {animation: reveal 1000ms 300ms cubic-bezier(0.77, 0, 0.18, 1);}
-@keyframes opacity {
-  0%   {opacity: 0;}
-  60%  {opacity: 0;}
-  70%  {opacity: 1;}
-  100% {opacity: 1;}
-}
-@keyframes reveal {
-  0%   {width: 0;    left: 0;}
-  50%  {width: 100%; left: 0;}
-  80%  {width: 100%; left: 0;}
-  100% {width: 0;    left: 100%;}
-}
-/* // left ani */
+.left_txt p span {display: inline-block;}
 
+/* // left  */
 
 .sec1_inner .right {
     width: 40%;
@@ -737,6 +702,15 @@ transition: all 0.2s;
       padding: 20vw 5vw;
       transform: rotate(0);
   }
+  .sec1_inner .left p {
+    position: relative;
+    display: inline-block;
+    font-size: 9vw;
+    bottom: 0;
+    left: 0;
+    line-height: 1.2;
+}
+
   .sec1_inner .right {
       width: 100%;
       border-left: 0;
@@ -748,14 +722,7 @@ transition: all 0.2s;
   .sec1_inner .right .intro p{
     font-size: 2.5vw;
   }
-  .sec1_inner .left p {
-      position: relative;
-      transform : rotate(0);
-      font-size: 9vw;
-      bottom: 0;
-      left: 0;
-      line-height: 1.2;
-  }
+
   .intro figure {
     width: 100%;
     border-bottom: 1px solid #628AFF;
