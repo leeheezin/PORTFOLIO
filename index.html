@@ -26,21 +26,25 @@
     <div class="sidebar">
       <div class="side_inner">
         <div class="side_left">
-          <a href="#">gmlwls107@naver.com</a>
-          <a href="https://github.com/leeheezin">https://github.com/leeheezin</a>
-          <span>© 2022 PORTFOLIO</span>
+          <div class="side1"><em>WELCOME TO MY PORTFOLIO</em></div>
+          <div class="side2">
+            <a href="#">gmlwls107@naver.com</a>
+            <a href="https://github.com/leeheezin">https://github.com/leeheezin</a>
+            <span>© 2022 PORTFOLIO</span>
+          </div>
         </div>
         <div class="side_right">
-          <a href="#section3"><span>PROFILE</span></a>
-          <a href="#section4"><span>SKILLS</span></a>
-          <a href="#section5"><span>PROJECTS</span></a>
-          <a href="#section6"><span>JAVASCRIPT</span></a>
-          <a href="#section7"><span>STUDY</span></a>
-          <a href="#section8"><span>ABOUT</span></a>
-          <a href="#footer"><span>CONTACT</span></a>
+          <a href="#section2"><span>01<em>PROFILE</em></span></a>
+          <a href="#section4"><span>02<em>SKILLS</em></span></a>
+          <a href="#section5"><span>03<em>PROJECTS</em></span></a>
+          <a href="#section7"><span>04<em>ANIMATION</em></span></a>
+          <a href="#section8"><span>05<em>ABOUT</em></span></a>
+          <a href="#footer"><span>06<em>CONTACT</em></span></a>
         </div>
         <div class="nav_close">
-          <button class="close_btn"></button>
+          <button class="close_btn">
+            <span></span>
+          </button>
         </div>
       </div>
     </div>
@@ -50,7 +54,7 @@
   <div class="contents">
       <section id="section1">
           <div class="sec1_inner">
-              <div class="left">
+              <div class="sec1_left">
                 <div class="left_txt">
                   <p>PORTFOLIO</p>
                   <p>CREATIVE FRONT</p>
@@ -58,7 +62,7 @@
                   <p>LEE HEE JIN</p>
                 </div>
               </div>
-              <div class="right">
+              <div class="sec1_right">
                   <div class="title">
                       <h2>PORTFOLIO</h2>
                       <a href="#">CONTACT ME</a>
@@ -70,17 +74,16 @@
                         다양한 라이브러리를 접하며 코드를 이해하고, 동적인 기능을 구현하는것에 흥미를 느끼게 되었고, 스터디모임을 통해 적극적으로 개발에 대한 관심사를 넓혀나가고 있습니다. 프론트엔드 개발자가 되기 위해서 여러가지 웹사이트와 컨텐츠를 퍼블리싱하고, 스크립트 기능을 추가하며 만들어 왔습니다. 배움을 멈추지 않고, 실무에서도 빠른 습득을 하는 개발자가 되겠습니다.
                         프론트엔드를 꿈꾸며 직접 공부하고, 만든 작업물을 이 포트폴리오에 담았습니다.
                       </p>
-                      <figure><img src="assets/img/profile2.jpg" alt=""></figure>
+                      <figure></figure>
                   </div>
               </div>
           </div>
       </section>
       <!-- //section1 -->
-
-      <section id="section2">
+      <section id="section2" class="cont">
           <div class="sec2_inner">
             <div class="intro_text">
-              <h2 class="split">PORTFOLIO</h2>
+              <h2>PORTFOLIO</h2>
             </div>
           </div>
       </section>
@@ -105,7 +108,7 @@
         </div>
       </section>
       <!-- //section3 -->
-      <section id="section4" class="cont_item">
+      <section id="section4" class="cont cont_item">
         <article class="skill">
           <div class="skill_text">
             <div class="txt_left">
@@ -128,10 +131,10 @@
         </article>
       </section>
       <!-- //section4 -->
-      <section id="section5">
+      <section id="section5" class="cont">
           <div class="projects intro">
             <div class="intro_text">
-              <h2 class="split">PROJECTS</h2>
+              <h2>PROJECTS</h2>
             </div>
           </div>
           <article class="project cont_item">
@@ -184,7 +187,7 @@
           </article>
       </section>
       <!-- //section5 -->
-      <section id="section6">
+      <section id="section6" class="cont_item">
           <article class="js_wrap">
             <div class="js inner">
               <div class="js_txt">
@@ -271,10 +274,10 @@
           </article>
       </section>
       <!-- //section6 -->
-      <section id="section7" class="page-start cont_item">
+      <section id="section7" class="page-start cont">
         <div class="intro">
           <div class="intro_text">
-            <h2 class="split">animation</h2>
+            <h2>animation</h2>
           </div>
         </div>
         <article class="ani_wrap">
@@ -309,8 +312,8 @@
         </article>
       </section>
       <!-- //section7 -->
-      <section id="section8">
-        <!-- <div class="about_txt">
+      <section id="section8" class="cont">
+        <div class="about_txt">
           <h2>about me</h2>
         </div>
           <article class="about_wrap1">
@@ -335,11 +338,11 @@
               <figure><img src="assets/img/profile8.jpg" alt=""></figure>
               <span>stiffness</span>
             </div>
-          </article> -->
+          </article>
       </section>
     </div>
     <!--// contents -->
-    <footer id="footer">
+    <footer id="footer" class="cont">
       <div class="foot inner">
         <div class="foot_left">
           <h2>contact- me</h2>

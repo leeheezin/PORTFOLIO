@@ -88,6 +88,7 @@ const headerHeight = header.getBoundingClientRect().height;
            header.setAttribute("style", "background: #1458E4;");
       }
     });
+
 //header sidebar open - close
 $(document).ready(function(){
   var target = $(".sidebar");
@@ -97,18 +98,35 @@ $(document).ready(function(){
       target.show();
       target.addClass('.sidebar');
   });
-
+  // 닫기 버튼을 클릭하면 사이드바 닫힘
+  $(document).on("click", ".nav_close", function (e){
+    target.hide();
+    target.removeClass('.sidebar');
+});
+// 메뉴를 클릭하면 사이드바 닫힘
+$(document).on("click", ".side_right a", function (e){
+  target.hide();
+  target.removeClass('.sidebar');
+});
   // 사이드바 외부를 클릭하면 사이드바 닫힘
   $(document).mouseup(function (e){
       if(target.has(e.target).length==0) {
           target.hide();
           target.removeClass('.sidebar');
-      } 
+      }
   });
 });
-  
-  
+//사이드바 메뉴 버튼 클릭해서 이동하기
+$(".side_right a").click(function(e){
+  e.preventDefault();
+  let target = $(this); //사용자가 클릭한 버튼의 타겟이 저장
+  let index = target.index(); //인덱스 부여하여 저장
+  let section = $(".cont").eq(index); //eq() :  인덱스
+  let offset = section.offset().top; //offset(): 요소의 위치(문서)
+  $("html,body").animate({scrollTop:offset}, 600); //offset값을 scrolltop에 대입(애니메이션)
 
+});
+  
     // function scrollProgress(){
     //   let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
       
@@ -146,35 +164,16 @@ $(document).ready(function(){
   tl.staggerFrom(char, 1, {
     opacity: 0,
     ease: Back.easeOut,
-    x: '-120%'
+    x: '-300%'
   }, 0.02);
 
 
+
   //.intro_text h2 글자 쪼개기
-  document.querySelectorAll(".split").forEach(el => {
-    let text = el.innerText;
-    let split = text.split('').join("</span><span aria-hidden='true'>");
-    split = "<span aria-hidden='true'>" + split + "</span>";
-    el.innerHTML = split;
-    el.setAttribute("aria-label", text);
-});
-window.addEventListener("scroll", () => {
-  let scrollTop = window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
-// gsap
-document.querySelectorAll(".intro_text").forEach((item, index) => {
-  if( scrollTop >= item.offsetTop ){
-      gsap.to( item.querySelectorAll(".split span"), {
-          duration: .5,
-          delay: 0.6,
-          opacity: 1,
-          y: 0,
-          stagger: .06,
-          ease: "power4.out",
-          rotation: 0
-      });
-  }
-});
-});
+
+
+
+
 //   Splitting();
 
 // var s = document.createElement("style");
@@ -214,6 +213,12 @@ document.querySelectorAll("#section6").forEach(item =>{
   item.querySelector(".js_img").style.transform = "translateX("+ offset1 +"px)";
   item.querySelector(".js_txt h2").style.transform = "translateX("+ offset2 +"px)";
   item.querySelector(".js_txt p").style.transform = "translateX("+ offset2 +"px)";
+});
+document.querySelectorAll(".intro").forEach(item =>{
+  let offset1 = (scrollTop - item.offsetTop) * 0.1;
+  let offset2 = (scrollTop - item.offsetTop) * 0.05;
+  
+  item.querySelector(".intro_text h2").style.transform = "translateX("+ offset2 +"px)";
 });
 
 }
