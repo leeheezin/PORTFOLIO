@@ -110,7 +110,7 @@ body {
 .sidebar {
   display: none;
   position: absolute;
-  width: 80vw;
+  width: 70vw;
   left: 100px;
   /* background-color: rgba(0,0,0,0.5); */
   font-family: 'Jost';
@@ -153,22 +153,15 @@ transition: all 0.2s;
   line-height: 2;
 }
 .side_left span {
-  padding-top: 17vw;
+  padding-top: 20vw;
   display: inline-block;
   font-size: 1vw;
 }
 .side_left em {display: block; padding-top: 5%;}
 .side1 {height: 50%;}
 .side2 {height: 50%;}
-.side_right {
- width: 60%;
- padding-left: 5vw;
-}
-.side_right span {
-  font-size: 1vw;
-  padding-top: 1%;
-  display: block;
-}
+.side2 a {color: #222;}
+
 .nav_close {height: 40px;}
 .nav_close > .close_btn {
   cursor: pointer;
@@ -200,17 +193,20 @@ transition: all 0.2s;
   transform: rotate(-90deg);
 }
 .side_right a {
-  display: block;
   border-bottom: 1px solid #c4c4c4;
 }
 .side_right a:hover {color: #1458E4;}
-.side_right em { 
+.side_right a { 
   width: 65%; 
-  font-size: 3.3vw; 
+  font-size: 5vw; 
   padding: 1%;
   display: block;
   font-weight: 500;
 }
+.side_right {
+  width: 60%;
+  padding-left: 5vw;
+ }
 
 /* contents */
 .contents {
@@ -340,7 +336,7 @@ transition: all 0.2s;
 }
 .prof_cont figure img {
   opacity: 0; 
-  transform: translateX(150px); 
+  transform: translateX(200px); 
   transition: all 0.6s 0.6s ease-in;
 }
 .sec3 .prof_intro{
@@ -424,7 +420,7 @@ transition: all 0.2s;
   justify-content: space-between;
   padding-top: 10vw;
 }
-.project {margin-top: 15vw;}
+.project {margin-top: 20vw;}
 /* .pro_numb {
   font-size: 3vw;
   font-family: 'Abel';
@@ -624,9 +620,6 @@ transition: all 0.2s;
   font-size: 1.3vw;
 }
 .ani_cont {
-  width: 73vw;
-  height: 36vw;
-  background: #c4c4c4;
 }
 /* section8 */
 .about {
@@ -720,7 +713,8 @@ transition: all 0.2s;
   #nav > div span, #nav > div span::before, #nav > div span::after {
     height: 2px;
   }
-  .sidebar {width: 100vw; left: 50px;}
+  .nav_close {position: absolute; top: 2%; right: 2%;}
+  .sidebar {width: 80vw; left: 50px;}
   .side_inner {
     display: block;
   }
@@ -729,8 +723,7 @@ transition: all 0.2s;
   .side1 {height: 0;}
   .side2 {display: none;}
   .side_right {width: 100%; height: 100%;}
-  .side_right span {font-size: 3vw;}
-  .side_right em {font-size: 6vw;}
+  .side_right a {font-size: 12vw;}
   .contents {
     width: calc(100% - 50px);
     margin-left:50px;
@@ -740,13 +733,13 @@ transition: all 0.2s;
   }
   .sec1_inner .sec1_left {
       width: 100%;
-      padding: 20vw 5vw;
+      padding: 22vw 5vw;
       transform: rotate(0);
   }
   .sec1_inner .sec1_left p {
     position: relative;
     display: inline-block;
-    font-size: 9vw;
+    font-size: 10vw;
     bottom: 0;
     left: 0;
     line-height: 1.2;
@@ -759,17 +752,17 @@ transition: all 0.2s;
   }
   .sec1_inner .sec1_right .intro {
       height: auto;
-      margin-top: 15vw;
+      margin-top: 25vw;
   }
   .sec1_inner .sec1_right .intro p{
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   .intro figure {
     width: 27vw;
     height: 27vw;
     display: block;
-    margin-bottom: 7vw;
+    margin-bottom: 10vw;
   }
 /* section3 */
 .prof_cont {display: block;}
@@ -791,7 +784,7 @@ transition: all 0.2s;
   padding: 18% 10% 20% 10%;
 }
 .skill_text p {
-  font-size: 2.2vw;
+  font-size: 3vw;
 }
 .skill_text .txt_left {
   padding-bottom: 7vw;
@@ -803,7 +796,7 @@ transition: all 0.2s;
   padding-top: 7vw;
 }
 .skill_text .txt_right p {
-  font-size: 2vw;
+  font-size: 2.5vw;
 }
 .skill_text .txt_left {
   border-bottom: 1px solid #7E8AAB;

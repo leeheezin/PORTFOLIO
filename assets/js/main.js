@@ -164,7 +164,7 @@ $(".side_right a").click(function(e){
   tl.staggerFrom(char, 1, {
     opacity: 0,
     ease: Back.easeOut,
-    x: '-300%'
+    x: '-200%'
   }, 0.02);
 
 
@@ -210,15 +210,8 @@ document.querySelectorAll("#section6").forEach(item =>{
   let offset1 = (scrollTop - item.offsetTop) * 0.1;
   let offset2 = (scrollTop - item.offsetTop) * 0.05;
   
-  item.querySelector(".js_img").style.transform = "translateX("+ offset1 +"px)";
   item.querySelector(".js_txt h2").style.transform = "translateX("+ offset2 +"px)";
   item.querySelector(".js_txt p").style.transform = "translateX("+ offset2 +"px)";
-});
-document.querySelectorAll(".intro").forEach(item =>{
-  let offset1 = (scrollTop - item.offsetTop) * 0.1;
-  let offset2 = (scrollTop - item.offsetTop) * 0.05;
-  
-  item.querySelector(".intro_text h2").style.transform = "translateX("+ offset2 +"px)";
 });
 
 }
