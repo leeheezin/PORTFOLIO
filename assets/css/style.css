@@ -530,13 +530,13 @@ transition: all 0.2s;
 .js_cont img {width: 30vw; display: block;}
 .js_txt h2, .js_txt h3 {
   font-size: 3.5vw;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   font-family: 'Abel';
   text-transform: uppercase;
   padding-bottom: 1vw;
   border-bottom: 1px solid #7E8AAB;
 }
-.js_txt h2 {font-size: 7vw;}
+.js_txt h2 {font-size: 5vw;}
 .js_txt p {
   padding-top: 2vw;
   font-size: 1.2vw;

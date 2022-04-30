@@ -211,7 +211,7 @@ document.querySelectorAll("#section6").forEach(item =>{
   let offset2 = (scrollTop - item.offsetTop) * 0.05;
   
   item.querySelector(".js_txt h2").style.transform = "translateX("+ offset2 +"px)";
-  item.querySelector(".js_txt p").style.transform = "translateX("+ offset2 +"px)";
+  item.querySelector(".js_txt p").style.transform = "translateX("+ -offset2 +"px)";
 });
 
 }
