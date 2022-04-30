@@ -68,13 +68,13 @@ class SupahScroll {
 //Initialize
 const supahscroll = new SupahScroll({
   el: "#wrapper",
-  speed: 0.1
+  speed: 0.2
 });
 
 //scroll
  $(window).scroll(function(){
       let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
-      $(".scroll span").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
+      $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
     })
 
 //header scroll color 
@@ -104,7 +104,7 @@ $(document).ready(function(){
     target.removeClass('.sidebar');
 });
 // 메뉴를 클릭하면 사이드바 닫힘
-$(document).on("click", ".side_right a", function (e){
+$(document).on("click", ".side2 a", function (e){
   target.hide();
   target.removeClass('.sidebar');
 });
@@ -117,7 +117,7 @@ $(document).on("click", ".side_right a", function (e){
   });
 });
 //사이드바 메뉴 버튼 클릭해서 이동하기
-$(".side_right a").click(function(e){
+$(".side2 a").click(function(e){
   e.preventDefault();
   let target = $(this); //사용자가 클릭한 버튼의 타겟이 저장
   let index = target.index(); //인덱스 부여하여 저장
