@@ -33,8 +33,8 @@ body {
 #section4 {width: 100%;}
 #section5{padding-bottom: 10vw; background: #fff;}
 #section6 {background-color: #1458E4; padding-bottom: 10vw;}
-#section7 {padding-bottom: 7vw; background: #222;}
-#section8 {padding-bottom: 15vw; background: #222;}
+#section7 {background: #222;}
+#section8 {background: #222;}
 #footer {border-top: 1px solid #c4c4c4; background: #222;}
 
 /* Supahscroll */
@@ -635,29 +635,41 @@ body {
 
 /* footer */
 .foot {
-  margin-left: 10%;
+  border-top: 1px solid #c4c4c4;
+  padding-left: 10%;
+  margin-top: 7%;
   font-family: 'Jost';
   color: #fff;
   display: flex;
   justify-content: space-between;
 }
 .foot_left {
-  width: 35%;
-  transform: rotate(-90deg);
+  width: 60%;
+  font-family: 'Raleway';
+  border-right: 1px solid #c4c4c4;
 }
 .foot_left h2 {
   font-size: 5vw;
-  font-weight: 300;
+  font-weight: 100;
+  padding-top: 10%;
+  height: 80%;
+}
+.foot_left p {
+  font-size: 1vw;
+  font-weight: 100;
 }
 .foot_right {
-  width: 35vw;
+  width: 30%;
   margin: auto;
 }
 .foot_right p {
-  font-size: 2vw;
+  font-family: 'Abel';
+  font-size: 1.3vw;
   text-align: center;
-  padding-bottom: 5vw;
+  padding: 10% 0;
+  letter-spacing: 0.1vw;
 }
+.foot_right form {padding: 5%;}
 .foot_right form input, form textarea {
   width: 100%;
   font-size: 1.1vw;
@@ -670,7 +682,7 @@ body {
   margin-bottom: 1vw;
 }
 .foot_right button {
-  width: 35vw;
+  width: 100%;
   color: #fff;
   padding: 1vw 2vw;
   border: 1px solid #c4c4c4;
@@ -694,6 +706,7 @@ body {
     height: 2px;
   }
   .nav_close {position: absolute; top: 2%; right: 2%;}
+  .scroll {left: 10px; bottom: 10px;}
   .sidebar {width: 50vw; left: 50px;}
   .side1 {height: 0;}
   .side2 {display: none;}
@@ -704,11 +717,11 @@ body {
   .sec1_inner {
       flex-direction: column-reverse;
   }
-  .sec1_left {width: 100%; height: 65vh;}
+  .sec1_left {width: 100%; height: 70vh;}
   .left_txt {padding: 27% 5%;}
   .sec1_right {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     border-bottom: 1px solid #628AFF;
   }
   .sec1_inner .sec1_left p {
@@ -724,6 +737,7 @@ body {
   .sec1_inner .sec1_right .intro p {font-size: 4vw;}
   .sec1_inner .sec1_right .title {
     padding: 4%;
+    font-size: 17px;
   }
   .side2 a {
     position: relative;
@@ -839,6 +853,7 @@ body {
 .foot_left {
   width: 100%;
   transform: rotate(0);
+  text-align: center;
 }
 .foot_left h2 {
   font-size: 7vw;
