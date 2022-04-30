@@ -67,7 +67,6 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    overflow:hidden;
     line-height:100px;
     -webkit-transition: height 0.3s;
     -moz-transition: height 0.3s;
