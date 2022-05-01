@@ -547,6 +547,7 @@ body {
 }
 /* music */
 .music_wrapper {
+  position: relative;
   margin: auto;
   overflow: hidden;
   width: 46%;
@@ -639,15 +640,15 @@ body {
 }
 .song-timer span {
   font-size: 13px;
-  color: #515c6f;
+  color: #527091;
 }
 .controls {
   margin: 40px 0 5px 0;
 }
 .controls i {
-  font-size: 28px;
+  font-size: 30px;
   user-select: none;
-  background: #d2e7fc;
+  background-color: #d2e7fc;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -714,7 +715,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 17px;
-  color: #515c6f;
+  color: #527091;
 }
 .music-list .row i {
   cursor: default;
@@ -737,7 +738,7 @@ body {
   list-style: none;
   padding-bottom: 10px;
   margin-bottom: 5px;
-  color: #515c6f;
+  color: #527091;
   border-bottom: 1px solid #e5e5e5;
 }
 .music-list ul li:last-child{
@@ -754,7 +755,7 @@ ul li .audio-duration{
 }
 ul li.playing{
   pointer-events: none;
-  color: #1458E4;
+  color: #d2e7fc;
 }
 /* //music */
 /* section7 */
@@ -1001,7 +1002,7 @@ ul li.playing{
   padding-top: 7vw;
 }
 .skill_text .txt_right p {
-  font-size: 2vw;
+  font-size: 3vw;
 }
 .skill_text .txt_left {
   border-bottom: 1px solid #7E8AAB;
@@ -1031,7 +1032,7 @@ ul li.playing{
   font-size: 9.5vw;
 }
 .pro_txt p {
-  font-size: 3.5vw;
+  font-size: 3vw;
   padding: 4% 0 8%;
 }
 .pro_img {width: 100%; height: 30vh;}
