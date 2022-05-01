@@ -902,9 +902,9 @@ ul li.playing{
   }
   .nav_close {position: absolute; top: 2%; right: 2%;}
   .scroll {left: 10px; bottom: 10px;}
-  .sidebar {width: 50vw; left: 50px;}
-  .side1 {height: 0;}
-  .side2 {display: none;}
+  .sidebar {width: 80vw; left: 50px;}
+  .side1 {}
+  .side2 {width: 80%; height: 90%;}
   .contents {
     width: calc(100% - 50px);
     margin-left:50px;
@@ -937,11 +937,11 @@ ul li.playing{
   }
   .side2 a {
     position: relative;
-    display: inline-block;
-    font-size: 10vw;
+    display: block;
+    font-size: 7vw;
     bottom: 0;
     left: 0;
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
   .intro figure {
