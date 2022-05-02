@@ -10,7 +10,7 @@ body {
   position: fixed; 
   left: 0; top: 0; 
   width: 100px; height: 100%; 
-  background: #1458E4; 
+  background: #2A57DC; 
   display: flex; 
   align-items: center; 
   justify-content: center; 
@@ -27,7 +27,7 @@ body {
 .intro {display: flex; justify-content: center; align-items: center; width: 100%; background-size: 100%;}
 .intro_text {padding: 30vw 0;}
 .intro_text h2 {white-space: nowrap; text-transform: uppercase; font-family: "Abel"; font-size: 2vw; font-weight: 400; color: #fff; letter-spacing: 2vw;}
-#section1 {width: 100%; background-color: #1458E4;}
+#section1 {width: 100%; background-color: #2A57DC;}
 #section2 {position: relative; width: 100%; background-color: #1458E4;}
 #section3 {width: 100%;}
 #section4 {width: 100%;}
@@ -193,10 +193,6 @@ body {
 
 
 /* section1 */
-#section1 {
-    background: #2A57DC;
-    width: 100%;
-}
 .sec1_inner {
     display: flex;
     justify-content: space-between;
@@ -516,33 +512,52 @@ body {
 }
 .js_txt p {
   display: inline-block;
-  padding-top: 1vw;
-  font-size: 1.1vw;
-  width: 70%;
+  padding: 5% 0;
+  font-size: 1vw;
+  width: 53%;
   font-family: 'ChosunNm';
   font-weight: 300;
-  letter-spacing: 0.05vw;
 }
+.js_txt span {width: 44%; display: inline-block;}
 .js_txt a {
+  color: #2A57DC;
+  position: relative;
   display: inline-block;
-  width: 29%;
-  text-align: right;
+  border-bottom: 1px solid #2A57DC;
+  width: 54%;
+  padding: 2% 0;
   font-family: 'ChosunNm';
-  font-size: 1.1vw;
+  font-size: 1vw;
   transition: 0.25s ease;
   letter-spacing: 0.1vw;
+  margin-left: 50%;
+}
+.js_txt a::after {
+  content: '';
+  background-image: url(../img/Arrow2.png);
+  position: absolute;
+  top: 24%;
+  right: 0%;
+  width: 11%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.5s ease-in-out;
 }
 .js_txt a:hover {
-  color: #1458E4;
-  background: rgba(255,255,255,0.8);
+  color: #fff;
+  text-align: center;
+  background: #2A57DC;
+  transition: transform .3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 .js_cont {
+  position: relative;
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/js1.png);
-  height: 70vh;
+  height: 75vh;
   margin-top: 5%;
 }
 /* music */
@@ -550,7 +565,7 @@ body {
   position: relative;
   margin: auto;
   overflow: hidden;
-  width: 46%;
+  width: 47%;
   border-radius: 3%;
   background: rgba(0,0,0,0.9);
   padding: 15px 20px;
@@ -758,6 +773,70 @@ ul li.playing{
   color: #d2e7fc;
 }
 /* //music */
+
+/* tetris */
+.js_wrap2 {overflow: hidden; height: 100%;}
+.tetris {background: #11157B;}
+.tetris_wrapper {margin: auto;}
+.game-text {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  left: 0;
+  top: 0;
+  color: #fff;
+  font-size: 50px;
+}
+.game-text button{
+  padding: 0.5rem 1rem;
+  color: #fff;
+  background: #000;
+  border:none;
+  cursor: pointer;
+}
+.score{
+  text-align: center;
+  font-size: 36px;
+  padding: 3%;
+  color: #fff;
+}
+.playground > ul {
+  width: 272px;
+  margin: 0 auto;
+}
+.playground > ul > li {
+  width: 100%;
+  height: 20px;
+}
+.playground > ul > li > ul {
+  display: flex;
+}
+.playground > ul > li > ul > li {
+  width: 27px;
+  height: 20px;
+  outline: 1px solid rgba(255,255,255,0.5);
+}
+.square {
+  background-color: yellow;
+}
+.tree {
+  background-color: blue;
+}.bar {
+  background-color: #5DCEFF;
+}.zee {
+  background-color: #000;
+}.elLeft {
+  background-color: red;
+}.elRight {
+  background-color: green;
+}
+/* //tetris */
+
 /* section7 */
 #section7 .intro {
   background: url('../img/intro4.png') no-repeat center;
@@ -1054,10 +1133,10 @@ ul li.playing{
 .js_wrap {width: 100%;}
 .js_tit span {font-size: 4vw;}
 .js_tit h3 {font-size: 8vw;}
-.js_txt p {font-size: 4vw; width: 83%;}
+.js_txt p {font-size: 3vw; width: 83%;}
 .js_txt a {font-size: 4vw; width: 100%;}
 .js_cont {height: 55vh;}
-.music_wrapper {width: 80%;}
+.music_wrapper {}
 .controls i {font-size: 30px;}
 .controls i:nth-child(2), .controls i:nth-child(4){font-size: 35px;}
 .controls .play-pause {width: 35%; height: 35%;}

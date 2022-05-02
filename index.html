@@ -229,7 +229,7 @@
               <div class="js_txt">
                 <p>javascript를 이용하여 버튼을 눌러 재생 및 정지, 리스트를 볼수있고,
                 음악이 재생되는 뮤직 플레이어 컨텐츠를 작업하였습니다.</p>
-                <a href="#" class="code_view">code view</a>
+                <span><a href="#" class="code_view">code view</a></span>
               </div>
               <div class="js_cont">
                 <!--music wrapper -->
@@ -282,7 +282,7 @@
               <!-- //js_cont -->
             </div>
           </article>
-          <article class="js_wrap" class="cont_item">
+          <article class="js_wrap js_wrap2" class="cont_item">
             <div class="js inner">
               <div class="js_tit">
                 <span>Mini Contents</span>
@@ -292,9 +292,21 @@
                 <p>javascript를 이용하여 추억의 게임 테트리스 컨텐츠입니다. 화살표 버튼을 눌러
                   도형을 바꾸고 스페이스바로 빠르기 조절이 가능합니다.
                 </p>
-                <a href="#" class="code_view">code view</a>
+                <span><a href="#" class="code_view">code view</a></span>
               </div>
-              <div class="js_cont">
+              <div class="js_cont tetris">
+                <!--tetris  -->
+                <div class="tetris_wrapper">
+                  <div class="game-text">
+                    <span>게임종료!!!</span>  
+                    <button>다시시작</button>
+                  </div>
+                  <div class="score">0</div>
+                  <div class="playground">
+                    <ul></ul>
+                  </div>
+                </div>
+                <!--//tetris  -->
               </div>
             </div>
           </article>
@@ -308,7 +320,7 @@
                 <p>javascript를 이용하여 작업한 퍼즐 컨텐츠입니다. 스타트 버튼을 눌러 5초간 완성화면을 보여주고, 
                   마우스 드래그로 이동하여 맞추는 퍼즐입니다. 
                 </p>
-                <a href="#" class="code_view">code view</a>
+                <span><a href="#" class="code_view">code view</a></span>
               </div>
               <div class="js_cont">
               </div>
@@ -324,7 +336,7 @@
                 <p>javascript를 이용하여 단어를 타이핑해서 점수를 획득하는 타자게임 컨텐츠 입니다.
                   한 단어마다 시간제한 및 점수획득이 가능하게 구현했습니다.
                 </p>
-                <a href="#" class="code_view">code view</a>
+                <span><a href="#" class="code_view">code view</a></span>
               </div>
               <div class="js_cont">
               </div>
@@ -340,7 +352,7 @@
                 <p>javascript를 이용한 카드게임 컨텐츠입니다.
                    무작위로 배치된 16장의 카드에서 2장의 동일한 이미지가 있는 같은 짝의 카드를 기억하여 맞추는것입니다.
                 </p>
-                <a href="#" class="code_view">code view</a>
+                <span><a href="#" class="code_view">code view</a></span>
               </div>
               <div class="js_cont">
               </div>
@@ -355,7 +367,7 @@
               <div class="js_txt">
                 <p>javascript를 이용한 타자게임 컨텐츠입니다.
                   페이지수마다 제한시간은 60초이며, 타이핑의 오타와 속도,시간을 테스트 할 수 있습니다.</p>
-                <a href="#" class="code_view">code view</a>
+                <span><a href="#" class="code_view">code view</a></span>
               </div>
               <div class="js_cont">
               </div>
@@ -432,7 +444,7 @@
     </div>
     <!--// contents -->
     <footer id="footer" class="cont">
-      <div class="foot inner">
+      <!-- <div class="foot inner">
         <div class="foot_left">
           <h2>contact- me</h2>
           <p>Let's talk together.<br>please contact me</p>
@@ -455,7 +467,7 @@
             <button type="submit" class="send">SEND</button>
           </form>
         </div>
-      </div>
+      </div> -->
     </footer>
     <!--//footer -->
 </div>
@@ -470,5 +482,6 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/music-list.js"></script>
   <script src="assets/js/music-script.js"></script>
+  <script src="assets/js/tetris.js" type="module"></script>
 </body>
 </html>
