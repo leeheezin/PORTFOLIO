@@ -554,10 +554,10 @@ body {
   position: relative;
   width: 100%;
   background-color: #37474F;
-  /* background-size: cover;
+  background-image: url(../img/js1.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(../img/js1.png); */
   height: 77vh;
   margin-top: 5%;
 }
@@ -856,14 +856,14 @@ ul li.playing{
   margin-top: 1rem;
   color: var(--text);
 }
- ul {
+.puzzle ul {
   margin-top: 1rem;
   list-style: none;
   border: 2px solid var(--point);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
- li {
+.puzzle li {
   width: 100px;
   height: 100px;
   color: var(--text);
