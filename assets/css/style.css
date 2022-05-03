@@ -31,8 +31,8 @@ body {
 #section2 {position: relative; width: 100%; background-color: #1458E4;}
 #section3 {width: 100%;}
 #section4 {width: 100%;}
-#section5{}
-#section6 {padding-bottom: 10vw;}
+#section5 {}
+#section6 {}
 #section7 {}
 #section8 {background: #222;}
 #footer {border-top: 1px solid #c4c4c4; background: #222;}
@@ -1008,10 +1008,89 @@ ul li.playing{
   cursor: not-allowed;
 }
 /* //typingmaster */
-
+/* card_game */
+.card_game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card_wrapper {
+  width: 400px;
+  height: 400px;
+  padding: 15px;
+  background: #F8FAFF;
+  border-radius: 3px;
+}
+.cards, .card, .view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.cards .card {
+  position: relative;
+  cursor: pointer;
+  perspective: 800px;
+  transform-style: preserve-3d;
+  width: calc(100% / 4 - 10px);
+  height: calc(100% / 4 - 10px);
+}
+.card.shake {
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%, 100%{
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-13px);
+  }
+  40%{
+    transform: translateX(13px);
+  }
+  60%{
+    transform: translateX(-8px);
+  }
+  80%{
+    transform: translateX(8px);
+  }
+}
+.cards .card .view{
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 88, 228, 0.32);
+  backface-visibility: hidden;
+  transition: ttransform 0.25s linear;
+}
+.card .front_view span {
+  font-size: 40px;
+  color: #f1f1f1;
+}
+.card .back_view {
+  transform: rotateY(-180deg);
+}
+.card .back_view img{
+  max-width: 45px;
+  border-radius: 8px;
+}
+.card.flip .front_view {
+  transform: rotateY(180deg);
+}
+.card.flip .back_view {
+  transform: rotateY(0);
+}
+/* //card_game */
 /* section7 */
 #section7 .intro {
-  background: url('../img/intro4.png') no-repeat center;
+  background-image: url('../img/intro4.png');
   background-size: 100%;
 }
 .ani_wrap {width: 100%;}
