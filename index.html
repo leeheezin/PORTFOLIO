@@ -14,8 +14,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://webfontworld.github.io/sunn/SUIT.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
   <header id="header">
@@ -223,13 +225,12 @@
           <article class="js_wrap" class="cont_item">
             <div class="js inner">
               <div class="js_tit">
-                <span>Mini Contents</span>
                 <h3>music player</h3>
               </div>
               <div class="js_txt">
                 <p>javascript를 이용하여 버튼을 눌러 재생 및 정지, 리스트를 볼수있고,
                 음악이 재생되는 뮤직 플레이어 컨텐츠를 작업하였습니다.</p>
-                <span><a href="#" class="code_view">code view</a></span>
+                <a href="#" class="code_view">code view</a>
               </div>
               <div class="js_cont music">
                 <!--music wrapper -->
@@ -285,14 +286,13 @@
           <article class="js_wrap js_wrap2" class="cont_item">
             <div class="js inner">
               <div class="js_tit">
-                <span>Mini Contents</span>
                 <h3>tetris</h3>
               </div>
               <div class="js_txt">
                 <p>javascript를 이용하여 추억의 게임 테트리스 컨텐츠입니다. 화살표 버튼을 눌러
                   도형을 바꾸고 스페이스바로 빠르기 조절이 가능합니다.
                 </p>
-                <span><a href="#" class="code_view">code view</a></span>
+                <a href="#" class="code_view">code view</a>
               </div>
               <div class="js_cont tetris">
                 <!--tetris  -->
@@ -313,14 +313,13 @@
           <article class="js_wrap" class="cont_item">
             <div class="js inner">
               <div class="js_tit">
-                <span>Mini Contents</span>
                 <h3>puzzle</h3>
               </div>
               <div class="js_txt">
                 <p>javascript를 이용하여 작업한 퍼즐 컨텐츠입니다. 스타트 버튼을 눌러 5초간 완성화면을 보여주고, 
                   마우스 드래그로 이동하여 맞추는 퍼즐입니다. 
                 </p>
-                <span><a href="#" class="code_view">code view</a></span>
+                <a href="#" class="code_view">code view</a>
               </div>
               <div class="js_cont puzzle">
                 <div class="wrap_all">
@@ -336,201 +335,223 @@
           <article class="js_wrap" class="cont_item">
             <div class="js inner">
               <div class="js_tit">
-                <span>Mini Contents</span>
                 <h3>typing master</h3>
               </div>
               <div class="js_txt">
                 <p>javascript를 이용하여 단어를 타이핑해서 점수를 획득하는 컨텐츠입니다.
                    입력하면 다음 단어로 넘어가고, 시간제한 및 점수획득이 가능합니다.
                 </p>
-                <span><a href="#" class="code_view">code view</a></span>
+                <a href="#" class="code_view">code view</a>
               </div>
-              <div class="js_cont">
-                  <div class="typing_master">
-                    <div class="typing_header">
-                      <h1>Typing Master</h1>
-                    </div>
-                      <div class="word_display">
-                        Hello
-                      </div>
-                      <div class="word_input_box">
-                        <input type="text" class="word_input">
-                      </div>
-                      <div class="game_info">
-                        <div>
-                          Time Left: <span class="timeleft">0</span>
-                        </div>
-                        <div>
-                          Score: <span class="typingscore">0</span>
-                        </div>
-                      </div>
-                    <button class="typing_button loading" onclick="run()">게임을 불러오는중...</button>
+              <div class="js_cont typing_master">
+                <div class="typing_header">
+                  <h1>Typing Master</h1>
                 </div>
+                  <div class="word_display">
+                    Hello
+                  </div>
+                  <div class="word_input_box">
+                    <input type="text" class="word_input">
+                  </div>
+                  <div class="game_info">
+                    <div>
+                      Time Left: <span class="timeleft">0</span>
+                    </div>
+                    <div>
+                      Score: <span class="typingscore">0</span>
+                    </div>
+                  </div>
+                <button class="typing_button loading" onclick="run()">게임을 불러오는중...</button>
               </div>
             </div>
           </article>
           <article class="js_wrap" class="cont_item">
             <div class="js inner">
               <div class="js_tit">
-                <span>Mini Contents</span>
                 <h3>card game</h3>
               </div>
               <div class="js_txt">
                 <p>javascript를 이용한 카드게임 컨텐츠입니다.
                    무작위로 배치된 16장의 카드에서 동일한 이미지가 있는 같은 짝의 카드를 기억하여 맞추는것입니다.
                 </p>
-                <span><a href="#" class="code_view">code view</a></span>
+                <a href="#" class="code_view">code view</a>
               </div>
-              <div class="js_cont">
-                <div class="card_game">
+              <div class="js_cont card_game">
                   <div class="card_wrapper">
-                    <ul class="cards">
-                      <li class="card">
+                    <div class="cards">
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img1.png" alt="card-img">
+                          <img src="assets/img/card1.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img2.png" alt="card-img">
+                          <img src="assets/img/card2.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img3.jpeg" alt="card-img">
+                          <img src="assets/img/card3.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img4.png" alt="card-img">
+                          <img src="assets/img/card4.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img5.png" alt="card-img">
+                          <img src="assets/img/card5.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img6.png" alt="card-img">
+                          <img src="assets/img/card6.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img7.png" alt="card-img">
+                          <img src="assets/img/card7.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img8.jpg" alt="card-img">
+                          <img src="assets/img/card8.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img1.png" alt="card-img">
+                          <img src="assets/img/card1.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img2.png" alt="card-img">
+                          <img src="assets/img/card2.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img3.jpeg" alt="card-img">
+                          <img src="assets/img/card3.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img4.png" alt="card-img">
+                          <img src="assets/img/card4.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img5.png" alt="card-img">
+                          <img src="assets/img/card5.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img6.png" alt="card-img">
+                          <img src="assets/img/card6.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img7.png" alt="card-img">
+                          <img src="assets/img/card7.png" alt="card-img">
                         </div> 
-                      </li>
-                      <li class="card">
+                      </span>
+                      <span class="card">
                         <div class="view front_view">
                           <span class="material-symbols-outlined">pan_tool</span>
                         </div> 
                         <div class="view back_view">
-                          <img src="images/img8.jpg" alt="card-img">
+                          <img src="assets/img/card8.png" alt="card-img">
                         </div> 
-                      </li>
-                    </ul>
+                      </span>
+                    </div>
                   </div>
-                </div>
               </div>
             </div>
           </article>
           <article class="js_wrap" class="cont_item">
             <div class="js inner">
               <div class="js_tit">
-                <span>Mini Contents</span>
                 <h3>typing game</h3>
               </div>
               <div class="js_txt">
                 <p>javascript를 이용한 타자게임 컨텐츠입니다.
                   페이지수마다 제한시간은 60초이며, 타이핑의 오타와 속도,시간을 테스트 할 수 있습니다.</p>
-                <span><a href="#" class="code_view">code view</a></span>
+                <a href="#" class="code_view">code view</a>
               </div>
-              <div class="js_cont">
+              <div class="js_cont typinggame">
+                <div class="typing_wrapper">
+                  <input type="text" class="input_field">
+                  <div class="content_box">
+                    <div class="typing_text">
+                      <p></p>
+                    </div>
+                    <div class="content">
+                      <ul class="result_details">
+                        <li class="time">
+                          <p>Time Left:</p>
+                          <span><b>60</b>s</span>
+                        </li>
+                        <li class="mistake">
+                          <p>Mistake:</p>
+                          <span>0</span>
+                        </li>
+                        <li class="wpm">
+                          <p>WPM:</p>
+                          <span>0</span>
+                        </li>
+                        <li class="cpm">
+                          <p>CPM:</p>
+                          <span>0</span>
+                        </li>
+                      </ul>
+                      <button>Try again</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </article>
@@ -693,6 +714,8 @@
   <script src="assets/js/typingmaster.js" type="module"></script>
   <script src="assets/js/puzzle.js" type="module"></script>
   <script src="assets/js/cardgame.js" type="module"></script>
+  <script src="assets/js/typinggame.js" type="module"></script>
+  <script src="assets/js/paragraphs.js" type="module"></script>
   <script src="assets/js/main.js"></script>
 
 </body>
