@@ -35,7 +35,7 @@ body {
 #section6 {}
 #section7 {}
 #section8 {background: #222;}
-#footer {border-top: 1px solid #c4c4c4; background: #222;}
+#footer {width: calc(100% - 100px); margin-left: 100px; border-top: 1px solid #c4c4c4; background: #222; font-family: 'Jost'; color: #fff;}
 
 /* Supahscroll */
 .supah_scroll {
@@ -297,6 +297,7 @@ body {
   transform: translateX(0);
 }
 .cont_item.show .prof_text span {
+  word-break: keep-all;
   opacity: 1; 
   transform: translateX(0);
 }
@@ -551,8 +552,8 @@ body {
   height: 77vh;
   margin-top: 5%;
 }
-  .music {background-image: url(../img/js1.png);}
 /* music */
+.music {background-color: #152637;}
 .music_wrapper {
   position: relative;
   position: absolute;
@@ -575,7 +576,7 @@ body {
 }
 .top-bar i {
   font-size: 25px;
-  color: #527091;
+  color: #D2E7FC;
 }
 .top-bar i:first-child{
   margin-left: -7px;
@@ -583,7 +584,7 @@ body {
 .top-bar span {
   font-size: 15px;
   margin-left: -3px;
-  color: #527091;
+  color: #D2E7FC;
 }
 .img-area {
   height: 67%;
@@ -602,7 +603,7 @@ body {
   margin: 5% 0;
 }
 .song-details p {
-  color: #527091;
+  color: #D2E7FC;
 }
 .song-details .name {
   font-size: 18px;
@@ -615,7 +616,7 @@ body {
 .progress-area {
   height: 6px;
   width: 100%;
-  background: #527091;
+  background: #152637;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -624,7 +625,7 @@ body {
   width: 0%;
   border-radius: inherit;
   position: relative;
-  background: #d2e7fc;
+  background: #D2E7FC;
 }
 .progress-bar::before{
   content:'';
@@ -650,7 +651,7 @@ body {
 }
 .song-timer span {
   font-size: 13px;
-  color: #527091;
+  color: #D2E7FC;
 }
 .controls {
   margin: 40px 0 5px 0;
@@ -697,7 +698,7 @@ body {
   background: inherit;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: #527091;
+  -webkit-text-fill-color: #D2E7FC;
 }
 .music-list {
   position: absolute;
@@ -724,7 +725,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 17px;
-  color: #527091;
+  color: #D2E7FC;
 }
 .music-list .row i {
   cursor: default;
@@ -747,7 +748,7 @@ body {
   list-style: none;
   padding-bottom: 10px;
   margin-bottom: 5px;
-  color: #527091;
+  color: #D2E7FC;
   border-bottom: 1px solid #e5e5e5;
 }
 .music-list ul li:last-child{
@@ -843,18 +844,19 @@ ul li.playing{
   flex-direction: column;
 }
 .play_time {
-  font-size: 3rem;
-  margin-top: 2rem;
+  font-size: 2vw;
+  padding-top: 1%;
   color: var(--text);
 }
-.puzzle ul {
+.image_container {
   margin-top: 1rem;
   list-style: none;
   border: 2px solid var(--point);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  padding-left: 16%;
+  grid-template-columns: repeat(4, 0fr);
 }
-.puzzle li {
+td {
   width: 100px;
   height: 100px;
   color: var(--text);
@@ -1339,65 +1341,47 @@ ul li.playing{
 .show span {font-size: 1.5vw; padding-top: 1.2vw; display: block;} */
 
 /* footer */
-.foot {
-  border-top: 1px solid #c4c4c4;
-  padding-left: 10%;
-  margin-top: 7%;
-  font-family: 'Jost';
-  color: #fff;
+.foot_info1 {
   display: flex;
   justify-content: space-between;
+  width: 100%; 
+  height: 35vh;
+  border-bottom: 1px solid #c4c4c4; 
+  text-transform: uppercase;
+  padding: 4%;
 }
-.foot_left {
-  width: 60%;
-  font-family: 'Raleway';
-  border-right: 1px solid #c4c4c4;
+.f_massage {width: 40%;}
+.f_massage p {font-weight: 500; font-size: 2vw;}
+.f_mail {width: 19%;}
+.f_mail p {font-weight: 300; font-size: 1.3vw; padding-bottom: 12%;}
+.f_mail button {color: #222; background: #fff; padding: 4% 10%;}
+.f_mail button:hover {color: #fff; background: #222; border: 1px solid #fff;}
+.f_sns {width: 15%;}
+.f_sns a {display: inline; padding-left: 2%;}
+.f_sns a img {width: 20%;}
+.foot_info2 {
+  text-transform: uppercase;
+  width: 100%;
+  height: 65vh; 
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3%;
 }
-.foot_left h2 {
-  font-size: 5vw;
-  font-weight: 100;
-  padding-top: 10%;
-  height: 80%;
-}
-.foot_left p {
-  font-size: 1.3vw;
-  font-weight: 100;
-}
-.foot_right {
-  width: 30%;
-  margin: auto;
-}
-.foot_right p {
+.f_txt {width: 30%; padding-left: 4%;}
+.f_txt h3 {font-size: 2vw; font-weight: 400; }
+.f_txt p {font-weight: 300; padding-top: 10%;}
+.f_txt .copy {font-size: 1vw; font-weight: 300; padding-top: 65%; display: block;}
+.f_info {width: 50%;}
+.info {width: 45%; display: inline-block; padding-bottom: 3%;}
+.f_info em {
   font-family: 'Abel';
-  font-size: 1.3vw;
-  text-align: center;
-  padding: 10% 0;
-  letter-spacing: 0.1vw;
+  display: block; 
+  font-weight: 600; 
+  font-size: 1.1vw; 
+  line-height: 2;
 }
-.foot_right form {padding: 5%;}
-.foot_right form input, form textarea {
-  width: 100%;
-  font-size: 1.2vw;
-  line-height: 1.2;
-  background: #222;
-  border: 1px solid #c4c4c4;
-  outline: none;
-  color: #fff;
-  padding: 1vw 2vw;
-  margin-bottom: 1vw;
-}
-.foot_right button {
-  width: 100%;
-  color: #fff;
-  padding: 1vw 2vw;
-  border: 1px solid #c4c4c4;
-}
-.foot .copy {
-  font-size: 1.2vw;
-}
-
-
-
+.f_info span {font-weight: 100; padding-top: 2%; font-size: 1.3vw;}
+.address, .github {padding-top: 3%;}
 /* media */
 @media (max-width:900px){
   #header {
@@ -1566,7 +1550,7 @@ ul li.playing{
 .js_txt p {font-size: 3vw; width: 83%;}
 .js_txt a {font-size: 4vw; width: 100%;}
 .js_cont {height: 55vh;}
-.music_wrapper {}
+.music_wrapper {width: 78%; left: 11%;}
 .controls i {font-size: 30px;}
 .controls i:nth-child(2), .controls i:nth-child(4){font-size: 35px;}
 .controls .play-pause {width: 35%; height: 35%;}
@@ -1575,6 +1559,7 @@ ul li.playing{
 .playground > ul > li {height: 15px;}
 .playground > ul > li > ul > li {height: 15px;}
 /* footer */
+#footer {width: calc(100% - 50px); margin-left: 50px;}
 .foot {display: block;}
 .foot_left {
   width: 100%;
