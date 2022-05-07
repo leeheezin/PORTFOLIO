@@ -234,14 +234,14 @@ body {
 }
 .sec1_inner .sec1_right .intro {
     display: block;
-    padding: 3vw;
+    padding: 1.5vw;
     margin-top: 12vw;
     border-top: 1px solid #628AFF;
     font-family: "ChosunNm";
 }
 .sec1_inner .sec1_right .intro p {
     color: #fff;
-    font-size: 1vw;
+    font-size: 1.1vw;
 }
 .intro figure {
   background: url(../img/profile2.jpg) no-repeat center;
@@ -252,7 +252,7 @@ body {
   height: 12vw;
   display: block;
   float: right;
-  margin-top: 3vw;
+  margin: 2vw 1vw;
   border-bottom: 1px solid #628AFF;
 }
 
@@ -326,9 +326,9 @@ body {
 .prof_text span {
   font-family: 'ChosunNm';
   white-space: normal;
-  line-height: 1.5;
+  line-height: 1.6;
   display: block;
-  padding-top: 5%;
+  margin-top: 2vh;
   width: 35vw;
   font-size: 1vw;
 }
