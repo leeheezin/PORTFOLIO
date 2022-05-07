@@ -553,7 +553,7 @@ body {
   margin-top: 5%;
 }
 /* music */
-.music {background-color: #152637;}
+.music {background-color: #E9EFFB;}
 .music_wrapper {
   position: relative;
   position: absolute;
@@ -563,7 +563,7 @@ body {
   overflow: hidden;
   width: 50%;
   border-radius: 3%;
-  background: rgba(0,0,0,0.9);
+  background: #fff;
   padding: 15px 20px;
 }
 .music_wrapper i {
@@ -576,7 +576,7 @@ body {
 }
 .top-bar i {
   font-size: 25px;
-  color: #D2E7FC;
+  color: #285AD5;
 }
 .top-bar i:first-child{
   margin-left: -7px;
@@ -584,7 +584,7 @@ body {
 .top-bar span {
   font-size: 15px;
   margin-left: -3px;
-  color: #D2E7FC;
+  color: #285AD5;
 }
 .img-area {
   height: 67%;
@@ -603,7 +603,7 @@ body {
   margin: 5% 0;
 }
 .song-details p {
-  color: #D2E7FC;
+  color: #285AD5;
 }
 .song-details .name {
   font-size: 18px;
@@ -616,7 +616,7 @@ body {
 .progress-area {
   height: 6px;
   width: 100%;
-  background: #152637;
+  background: #D2E7FC;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -625,7 +625,7 @@ body {
   width: 0%;
   border-radius: inherit;
   position: relative;
-  background: #D2E7FC;
+  background: #285AD5;
 }
 .progress-bar::before{
   content:'';
@@ -651,7 +651,7 @@ body {
 }
 .song-timer span {
   font-size: 13px;
-  color: #D2E7FC;
+  color: #285AD5;
 }
 .controls {
   margin: 40px 0 5px 0;
@@ -659,7 +659,7 @@ body {
 .controls i {
   font-size: 30px;
   user-select: none;
-  background-color: #d2e7fc;
+  background-color: #285AD5;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -698,7 +698,7 @@ body {
   background: inherit;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: #D2E7FC;
+  -webkit-text-fill-color: #285AD5;
 }
 .music-list {
   position: absolute;
@@ -709,7 +709,7 @@ body {
   pointer-events: none;
   z-index: 5;
   padding: 15px 0;
-  background: rgb(24, 24, 30);
+  background: #fff;
   border-radius: 15px;
   transition: all 0.15s ease-out;
 }
@@ -725,7 +725,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 17px;
-  color: #D2E7FC;
+  color: #285AD5;
 }
 .music-list .row i {
   cursor: default;
@@ -748,7 +748,7 @@ body {
   list-style: none;
   padding-bottom: 10px;
   margin-bottom: 5px;
-  color: #D2E7FC;
+  color: #285AD5;
   border-bottom: 1px solid #e5e5e5;
 }
 .music-list ul li:last-child{
@@ -765,13 +765,13 @@ ul li .audio-duration{
 }
 ul li.playing{
   pointer-events: none;
-  color: #d2e7fc;
+  color: #051D4D;
 }
 /* //music */
 
 /* tetris */
 .js_wrap2 {overflow: hidden; height: 100%;}
-.tetris {background: #11157B;}
+.tetris {background: #2A57DC;}
 .tetris_wrapper {margin: auto;}
 .game-text {
   display: none;
@@ -806,14 +806,14 @@ ul li.playing{
 }
 .playground > ul > li {
   width: 100%;
-  height: 18px;
+  height: 20px;
 }
 .playground > ul > li > ul {
   display: flex;
 }
 .playground > ul > li > ul > li {
   width: 20%;
-  height: 18px;
+  height: 20px;
   outline: 1px solid rgba(255,255,255,0.5);
 }
 .square {
@@ -834,8 +834,8 @@ ul li.playing{
 /* puzzle */
 .puzzle {background: var(--point);}
 :root {
-  --point : #222;
-  --text : #fff;
+  --point : #ECECF4;
+  --text : #10123E;
 }
 .wrap_all {
   display: flex;
@@ -1005,7 +1005,7 @@ td {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #C9C9C9;
+  background: #F4F4F4;
 }
 .card_wrapper {
   width: 400px;
@@ -1354,7 +1354,7 @@ td {
 .f_massage p {font-weight: 500; font-size: 2vw;}
 .f_mail {width: 19%;}
 .f_mail p {font-weight: 300; font-size: 1.3vw; padding-bottom: 12%;}
-.f_mail button {color: #222; background: #fff; padding: 4% 10%;}
+.f_mail button {color: #222; background: #fff; padding: 4% 20%; letter-spacing: 0.05vw;}
 .f_mail button:hover {color: #fff; background: #222; border: 1px solid #fff;}
 .f_sns {width: 15%;}
 .f_sns a {display: inline; padding-left: 2%;}
@@ -1369,7 +1369,7 @@ td {
 }
 .f_txt {width: 30%; padding-left: 4%;}
 .f_txt h3 {font-size: 2vw; font-weight: 400; }
-.f_txt p {font-weight: 300; padding-top: 10%;}
+.f_txt p {font-weight: 300; padding-top: 5%;}
 .f_txt .copy {font-size: 1vw; font-weight: 300; padding-top: 65%; display: block;}
 .f_info {width: 50%;}
 .info {width: 45%; display: inline-block; padding-bottom: 3%;}

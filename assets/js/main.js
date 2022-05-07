@@ -68,7 +68,7 @@ class SupahScroll {
 //Initialize
 const supahscroll = new SupahScroll({
   el: "#wrapper",
-  speed: 0.2
+  speed: 0.1
 });
 
 //scroll
@@ -153,19 +153,19 @@ $(".side2 a").click(function(e){
 
 
   //section1 left txt
-  var headline = $(".left_txt p");
-  var char = '[class*="char"]';
-  var tl = new TimelineLite();
+  // var headline = $(".left_txt p");
+  // var char = '[class*="char"]';
+  // var tl = new TimelineLite();
   
-  headline
-    .lettering('words').lettering();
+  // headline
+  //   .lettering('words').lettering();
   
-  // Stagger letter animation
-  tl.staggerFrom(char, 1, {
-    opacity: 0,
-    ease: Back.easeOut,
-    x: '-200%'
-  }, 0.02);
+  // // Stagger letter animation
+  // tl.staggerFrom(char, 1, {
+  //   opacity: 0,
+  //   ease: Back.easeOut,
+  //   x: '-200%'
+  // }, 0.02);
 
 
 
