@@ -218,3 +218,7 @@ document.querySelectorAll("#section6").forEach(item =>{
 window.addEventListener("scroll", scrollProgress);
 
 // section6 h2 움직이기
+
+
+//js button
+document.querySelectorAll('.js_view').forEach(button => button.innerHTML = '<div><span>' + button.textContent.trim().split('').join('</span><span>') + '</span></div>');
