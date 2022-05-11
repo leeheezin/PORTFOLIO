@@ -568,7 +568,7 @@ body {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   font-size: 1.2vw;
   position: absolute;
-  top: 0;
+  top: -12%;
   left: 0;
   right: -11%;
   bottom: 0;
