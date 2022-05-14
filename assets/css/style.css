@@ -30,7 +30,7 @@ body {
 #nav {
 }
 .inner {
-  padding-left: 7%;
+  padding: 6vw;
   margin: 0 auto;
   text-transform: uppercase;
 }
@@ -52,6 +52,7 @@ body {
 }
 #section3 {
   width: 100%;
+  border-top: 1px solid #628aff;
 }
 #section4 {
   width: 100%;
@@ -244,6 +245,7 @@ body {
 
 /* section1 */
 .sec1_inner {
+  height: 85vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -256,6 +258,12 @@ body {
 .left_txt {
   padding: 9vw 6vw;
 }
+.split span {
+  opacity: 0;
+  transform: translateY(50px);
+  display: inline-block;
+  min-width: 1vw;
+}
 .sec1_inner .sec1_left div {
   white-space: nowrap;
   color: #fff;
@@ -265,8 +273,6 @@ body {
   font-weight: 100;
   letter-spacing: 0.1vw;
 }
-
-/* // left  */
 
 .sec1_inner .sec1_right {
   border-left: 1px solid #628aff;
@@ -375,83 +381,45 @@ body {
   display: block;
 }
 /* section3 */
-.sec3 {
-  padding: 10vw;
-  border-bottom: 1px solid rgba(42, 87, 220, 0.4);
-}
-.profile {
-  font-family: "Jost";
-  font-weight: 300;
-}
-
-/* 애니메이션 나타내기*/
-.prof_cont figure img {
-}
-.sec3 .prof_text span {
-}
-
-/* section4 */
-/* 애니메이션 */
-.cont_item.show .skill .txt_left p,
-.cont_item.show .skill .txt_right p {
-  opacity: 1;
-  transform: translateX(0);
-}
-.skill {
-}
-.skill_img {
+.skill_logo {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2% 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 2vw 0;
+  border-bottom: 1px solid #c4c4c4;
 }
-.skill_img div {
+.skill_logo_img {
   width: 9%;
   padding-right: 3%;
 }
-.skill_img div:last-child {
+.skill_logo_img:last-child {
   padding-right: 0;
   width: 7%;
 }
-.skill_img div img {
+.skill_inner {
   width: 100%;
-}
-.skill .txt_left p {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: all 0.5s 0.5s ease-in-out;
-}
-.skill .txt_right p {
-  opacity: 0;
-  transform: translateX(60px);
-  transition: all 0.5s 0.5s ease-in-out;
-}
-
-.skill_text {
+  padding: 12vw 10vw;
   display: flex;
-  justify-content: center;
-  padding: 15% 10%;
+  justify-content: space-between;
 }
-.skill_text p {
-  font-weight: 300;
-  line-height: 1.5;
-  font-size: 1.2vw;
-}
-.skill_text .txt_left {
-  width: 35vw;
-  border-right: 1px solid #7e8aab;
-  padding-right: 10%;
+.skill_txt_tit {
+  width: 50%;
   font-family: "Jost";
+  padding-right: 10%;
+  font-size: 1.2vw;
+  font-weight: 300;
+  border-right: 1px solid #c4c4c4;
 }
-.skill_text .txt_right {
-  font-family: "ChosunNm";
-  width: 35vw;
+.skill_txt_cont {
+  font-family: "Chosunnm";
+  font-size: 1vw;
+
+  width: 50%;
   padding-left: 10%;
 }
-.skill_text .txt_right p {
-  font-size: 1vw;
-}
+/* section4 */
+
 /* section5 */
 #section5 .projects {
   background: url("../img/intro2.png") no-repeat center;

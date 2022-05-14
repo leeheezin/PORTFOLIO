@@ -198,7 +198,7 @@ gsap.set(".sec1_inner .sec1_right", { width: 0, opacity: 0 });
 gsap.set(".sec1_inner .sec1_right .intro p", { opacity: 0, y: 50 });
 gsap.set(".sec1_inner .sec1_right .intro_img", { opacity: 0, y: 50 });
 gsap.set("#header", { left: "-100%" });
-// gsap.set("#section2", { opacity: 0, y: 50 });
+gsap.set("#section2", { opacity: 0, y: 50 });
 
 setTimeout(() => {
   let tl = gsap.timeline();
@@ -210,11 +210,11 @@ setTimeout(() => {
     width: "37%",
   });
   tl.to(".sec2_inner", { duration: 0.6, opacity: 1, y: 0 });
-  // tl.to("#section2", {
-  //   duration: 0.3,
-  //   opacity: 1,
-  //   y: 0,
-  // });
+  tl.to("#section2", {
+    duration: 0.3,
+    opacity: 1,
+    y: 0,
+  });
   tl.to(".sec1_inner .sec1_left .left_txt", {
     duration: 0.6,
     opacity: 1,
@@ -246,22 +246,47 @@ window.addEventListener(
     const offset1 =
       scrollTop - document.querySelector(".intro_text h2").offsetTop;
     // gsap.to(".sec2_inner h2 em", {y: offset, opacity: 0 })
-    gsap.to(".intro_text h2 span", { y: offset1 * 0.1 });
+    gsap.to(".intro_text h2 span", { y: offset1 * 0.05 });
 
     gsap.set(".prof_text p", { opacity: 0, x: -100 });
     gsap.set(".prof_text strong", { opacity: 0, x: -100 });
     gsap.set(".prof_img", { opacity: 0, x: 100 });
     gsap.set(".prof_text span", { opacity: 0, x: -100 });
+    gsap.set(".skill_logo_img", { opacity: 0, x: -70 });
     setTimeout(() => {
       let tl = gsap.timeline();
       tl.to(".prof_text p", { duration: 0.6, opacity: 1, x: 0 });
       tl.to(".prof_text strong", { duration: 0.6, opacity: 1, x: 0 });
       tl.to(".prof_img", { duration: 0.6, opacity: 1, x: 0 });
       tl.to(".prof_text span", { duration: 0.6, opacity: 1, x: 0 });
+      tl.to(".skill_logo_img", { duration: 0.6, opacity: 1, x: 0 });
     });
   },
   2000
 );
+
+// main txt split
+
+// 글씨 쪼개기
+document.querySelectorAll(".split").forEach((el) => {
+  let text = el.innerText;
+  let split = text.split("").join("</span><span aria-hidden='true'>");
+  split = "<span aria-hidden='true'>" + split + "</span>";
+  el.innerHTML = split;
+  el.setAttribute("aria-label", text);
+});
+
+$(document).ready(function () {
+  document.querySelectorAll(".left_txt").forEach((item, index) => {
+    gsap.to(item.querySelectorAll(".split span"), {
+      duration: 0.3,
+      opacity: 1,
+      y: 0,
+      stagger: 0.009,
+      ease: "power4.out",
+    });
+  });
+});
 
 //section 나타내기 / img + txt 이질감
 // function scrollProgress() {
