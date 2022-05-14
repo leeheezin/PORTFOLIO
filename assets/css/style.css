@@ -41,26 +41,14 @@ body {
   width: 100%;
   background-size: 100%;
 }
-.intro_text {
-  padding: 26vw 0;
-}
-.intro_text h2 {
-  white-space: nowrap;
-  text-transform: uppercase;
-  font-family: "Abel";
-  font-size: 2vw;
-  font-weight: 400;
-  color: #fff;
-  letter-spacing: 2vw;
-}
 #section1 {
   width: 100%;
-  background-color: #2a57dc;
+  height: 85vh;
 }
 #section2 {
   position: relative;
   width: 100%;
-  background-color: #1458e4;
+  border-top: 1px solid #628aff;
 }
 #section3 {
   width: 100%;
@@ -77,6 +65,7 @@ body {
 }
 #section8 {
   background: #222;
+  color: #fff;
 }
 #footer {
   width: calc(100% - 100px);
@@ -196,7 +185,6 @@ body {
 }
 .side2 a {
   color: #222;
-  border-bottom: 1px solid #c4c4c4;
   font-size: 4vw;
   padding: 1%;
   display: block;
@@ -259,15 +247,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #628aff;
   position: relative;
 }
-
+.sec1_left {
+  background-color: #2a57dc;
+}
 /* left  */
 .left_txt {
-  padding: 0 5vw 2vw;
+  padding: 9vw 6vw;
 }
-.sec1_inner .sec1_left p {
+.sec1_inner .sec1_left div {
   white-space: nowrap;
   color: #fff;
   font-family: "Raleway";
@@ -276,15 +265,12 @@ body {
   font-weight: 100;
   letter-spacing: 0.1vw;
 }
-.left_txt p span {
-  display: inline-block;
-}
 
 /* // left  */
 
 .sec1_inner .sec1_right {
   border-left: 1px solid #628aff;
-  padding-bottom: 10%;
+  background-color: #2a57dc;
 }
 .sec1_inner .sec1_right .title {
   padding: 1.5vw;
@@ -295,14 +281,14 @@ body {
 }
 .sec1_right .title span,
 .title a {
-  font-size: 23px;
+  font-size: 1.5vw;
   font-family: "Jost";
   color: #fff;
 }
 .sec1_inner .sec1_right .intro {
   display: block;
   padding: 1.5vw;
-  margin-top: 12vw;
+  margin-top: 7vw;
   border-top: 1px solid #628aff;
   font-family: "ChosunNm";
 }
@@ -310,7 +296,7 @@ body {
   color: #fff;
   font-size: 1.1vw;
 }
-.intro figure {
+.intro .intro_img {
   background: url(../img/profile2.jpg) no-repeat center;
   background-size: 100%;
   background: cover;
@@ -324,73 +310,48 @@ body {
 }
 
 /* section2 */
-.sec2_inner {
+.intro_inner {
   background: url("../img/intro1.png");
+  height: 100vh;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top: 1px solid #628aff;
 }
-.intro_text h2 span {
+.intro_text h2 {
+  font-family: "Abel";
+  color: #fff;
+  font-size: 2vw;
+  letter-spacing: 1vw;
+}
+.intro_text em,
+.intro_text span {
   display: inline-block;
 }
-/* section3 */
-.sec3 {
-  padding: 10vw;
-  border-bottom: 1px solid rgba(42, 87, 220, 0.4);
-}
-.profile {
-  font-family: "Jost";
-  font-weight: 300;
-}
-.prof_cont {
+.prof {
   position: relative;
   display: flex;
   justify-content: space-between;
+  padding: 10vw;
 }
 .prof_text {
   width: 55%;
   font-family: "Raleway";
   font-weight: 100;
-  font-size: 5vw;
   line-height: 1.2;
   white-space: nowrap;
   mix-blend-mode: overlay;
   color: #1458e4;
 }
-
-/* 애니메이션 나타내기*/
-.cont_item.show .sec3 .prof_intro {
-  opacity: 1;
-  transform: translateX(0);
-}
-.cont_item.show .prof_text span {
-  word-break: keep-all;
-  opacity: 1;
-  transform: translateX(0);
-}
-.cont_item.show .prof_cont figure img {
-  opacity: 1;
-  transform: translateX(0);
-}
-.prof_cont figure img {
-  opacity: 0;
-  transform: translateX(200px);
-  transition: all 0.6s 0.6s ease-in;
-}
-.sec3 .prof_intro {
-  opacity: 0;
-  transform: translateX(-80px);
-  transition: all 0.3s 0.3s ease-in;
-}
-.sec3 .prof_text span {
-  opacity: 0;
-  transform: translateX(-90px);
-  transition: all 0.5s 0.5s ease-in;
-}
-.prof_intro {
+.prof_text p,
+.prof_text strong {
   font-size: 5vw;
+}
+.prof_text strong {
+  mix-blend-mode: color-dodge;
+  font-weight: 700;
 }
 .prof_text span {
   font-family: "ChosunNm";
@@ -401,19 +362,34 @@ body {
   width: 35vw;
   font-size: 1vw;
 }
-.prof_text strong {
-  mix-blend-mode: color-dodge;
-  font-weight: 700;
-}
-.prof_cont figure {
+.prof figure {
   width: 45%;
   z-index: -1;
   position: relative;
 }
-.prof_cont figure img {
-  width: 100%;
+.prof_img {
+  background: url(../img/profile3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 90vh;
   display: block;
 }
+/* section3 */
+.sec3 {
+  padding: 10vw;
+  border-bottom: 1px solid rgba(42, 87, 220, 0.4);
+}
+.profile {
+  font-family: "Jost";
+  font-weight: 300;
+}
+
+/* 애니메이션 나타내기*/
+.prof_cont figure img {
+}
+.sec3 .prof_text span {
+}
+
 /* section4 */
 /* 애니메이션 */
 .cont_item.show .skill .txt_left p,
@@ -506,6 +482,7 @@ body {
 }
 .pro_txt_left span {
   color: #285ad5;
+  font-size: 1vw;
 }
 .pro_txt_left h3 {
   color: #285ad5;
@@ -522,11 +499,12 @@ body {
 /* button */
 .view_btn {
   position: relative;
-  font-size: 1.2vw;
   display: inline-block;
   font-family: "Raleway";
   margin-top: 29%;
   width: 35%;
+  height: auto;
+  vertical-align: middle;
 }
 .view_btn .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
@@ -566,13 +544,12 @@ body {
 }
 .view_btn .view_text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  font-size: 1.2vw;
+  font-size: 1.3vw;
   position: absolute;
-  top: -12%;
+  top: 8%;
   left: 0;
   right: -11%;
   bottom: 0;
-  padding: 5% 0;
   color: #2a57dc;
   font-weight: 700;
   line-height: 1.6;
@@ -590,7 +567,7 @@ body {
   color: #fff;
 }
 .code .view_text {
-  left: 7%;
+  left: 5%;
 }
 .pro_txt_right .pro_numb {
   font-family: "Poppins", sans-serif;
@@ -760,6 +737,7 @@ body {
 }
 .js_view div span:nth-child(7) {
   transition-delay: 0.35s;
+  text-align: center;
 }
 .js_view div span:nth-child(8) {
   transition-delay: 0.4s;
@@ -813,7 +791,7 @@ body {
   margin-top: 5%;
 }
 .tetris img {
-  width: 85%;
+  width: 80%;
   margin: auto;
   display: block;
   padding-top: 3%;
@@ -835,7 +813,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #f1f3ff;
+  background: #f3f5ff;
 }
 .typing {
   width: 100%;
@@ -926,6 +904,11 @@ body {
   height: 100vh;
   padding: 10% 0 0 5%;
 }
+.text_ani,
+.loading_ani {
+  width: 90%;
+  height: 90%;
+}
 .cube_wrap {
   width: 88%;
   height: 80%;
@@ -996,44 +979,70 @@ body {
   width: 100%;
 }
 /* section8 */
-.about {
-}
-.about_txt h2 {
-  position: relative;
-  font-size: 4.5vw;
-  font-weight: 300;
-  margin-bottom: 30vw;
-  color: #fff;
-  font-family: "Jost";
-  text-transform: uppercase;
-}
-.about_wrap1,
-.about_wrap2 {
-  color: #fff;
-  font-family: "Jost";
-  text-transform: uppercase;
+.prog {
+  padding: 5%;
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
-.about_cont1 {
-  width: 50vw;
-  padding-left: 12vw;
+.prog_tit {
+  font-family: "Raleway";
 }
-.about_cont4 {
-  width: 20vw;
+.prog_tit span {
+  font-size: 1.2vw;
+  padding-bottom: 5%;
+  display: block;
 }
-/* .show figure {width: 25vw;}
-.show img {width: 100%;}
-.show span {font-size: 1.5vw; padding-top: 1.2vw; display: block;} */
-
+.prog_tit h3 {
+  font-size: 5vw;
+  font-weight: 700;
+}
+.prog_tit a {
+  font-size: 1.2vw;
+  border-bottom: 1px solid #828282;
+  font-family: "ChosunNm";
+  padding: 1%;
+}
+.prog_numb {
+  font-size: 10vw;
+  font-family: "Poppins";
+}
+.php_img {
+  background-image: url(../img/php.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+}
+.prog_text {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  font-family: "ChosunNm";
+  font-size: 1.2vw;
+}
+.prog_txt1 {
+  width: 50%;
+  border-right: 1px solid #5b5b5b;
+}
+.prog_txt1 p {
+  padding: 5%;
+}
+.prog_txt2 {
+  width: 50%;
+}
+.prog_txt2 p {
+  padding: 5%;
+}
 /* footer */
 .foot_info1 {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 35vh;
-  border-bottom: 1px solid #c4c4c4;
+  height: 33vh;
+  border-bottom: 1px solid #5b5b5b;
   text-transform: uppercase;
   padding: 3%;
 }
@@ -1083,6 +1092,7 @@ body {
 }
 .f_txt {
   width: 30%;
+  padding-bottom: 10%;
 }
 .f_txt h3 {
   font-size: 2vw;
@@ -1096,15 +1106,15 @@ body {
   font-size: 1vw;
   font-weight: 300;
   display: block;
-  padding: 1%;
+  padding: 1% 3%;
 }
 .f_info {
   width: 50%;
 }
 .info {
-  width: 45%;
+  width: 49%;
   display: inline-block;
-  padding-bottom: 3%;
+  padding-bottom: 5%;
 }
 .f_info em {
   font-family: "Abel";
@@ -1124,6 +1134,41 @@ body {
 }
 
 /* media */
+@media (max-width: 1600px) {
+  .view_btn .view_text {
+    top: 16%;
+    left: 10%;
+  }
+}
+@media (max-width: 1280px) {
+  .view_btn {
+    width: 38%;
+  }
+  .view_btn .view_text {
+    top: 21%;
+    right: -20%;
+  }
+}
+@media (max-width: 1024px) {
+  .view_btn .circle {
+    width: 2rem;
+    height: 2rem;
+  }
+  .view_btn .view_text {
+    top: 18%;
+  }
+  .view_btn .circle .icon.arrow {
+    left: 0.3rem;
+    width: 1rem;
+    height: 0.1rem;
+  }
+  .view_btn .circle .icon.arrow::before {
+    top: -0.25rem;
+    right: 0.06rem;
+    width: 0.6rem;
+    height: 0.55rem;
+  }
+}
 @media (max-width: 900px) {
   #header {
     width: 50px;
@@ -1164,14 +1209,14 @@ body {
     flex-direction: column-reverse;
   }
   .sec1_left {
-    width: 100%;
+    width: 63%;
     height: 70vh;
   }
   .left_txt {
     padding: 27% 5%;
   }
   .sec1_right {
-    width: 100%;
+    width: 37%;
     height: 100vh;
     border-bottom: 1px solid #628aff;
   }
@@ -1212,7 +1257,7 @@ body {
     margin: 20% auto;
     float: none;
   }
-  .sec2_inner {
+  .intro_inner {
     height: 50vh;
   }
   .intro_text h2 {
@@ -1253,13 +1298,14 @@ body {
   .skill_img div:nth-child(5n) {
     margin-right: 0;
     padding-top: 5%;
+    width: 12%;
   }
   .skill_text {
     display: block;
     padding: 18% 5%;
   }
   .skill_text p {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .skill_text .txt_left {
     padding-bottom: 7vw;
@@ -1295,8 +1341,8 @@ body {
     margin-top: 5%;
   }
   .view_btn .view_text {
-    left: 9%;
-    top: -2%;
+    left: 0%;
+    top: 18%;
     font-size: 3.5vw;
   }
   .pro_txt_right a::after {
@@ -1368,7 +1414,7 @@ body {
     margin-top: 0;
   }
   .js_cont {
-    height: 55vh;
+    height: 50vh;
     margin-top: 23%;
   }
   .controls i {
@@ -1395,13 +1441,14 @@ body {
     border: none;
   }
   .ani_txt1 h3 {
-    font-size: 5vw;
+    font-size: 7vw;
   }
   .ani_txt2 span {
     width: 36%;
   }
   .ani_txt2 p {
     padding-top: 20%;
+    font-size: 4vw;
   }
   .ani_cont {
     width: 100%;
@@ -1426,11 +1473,11 @@ body {
     width: 100%;
   }
   .f_massage p {
-    font-size: 4.5vw;
+    font-size: 5vw;
   }
   .f_mail p {
     padding-bottom: 6%;
-    font-size: 3.3vw;
+    font-size: 4vw;
   }
   .f_mail button {
     padding: 2% 10%;
@@ -1447,28 +1494,46 @@ body {
   }
   .f_txt {
     width: 100%;
-    height: 35%;
+    height: 45%;
   }
   .f_txt h3 {
-    font-size: 4.5vw;
+    font-size: 6vw;
   }
   .f_txt p {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .f_info {
     width: 100%;
   }
   .f_info em {
-    font-size: 3vw;
+    font-size: 5vw;
   }
   .f_info span {
-    font-size: 2vw;
+    font-size: 4vw;
   }
   .copy {
     padding: 0 7% 3%;
   }
+  .info {
+    width: 100%;
+    display: block;
+  }
 }
-
+@media (max-width: 768px) {
+  .view_btn .view_text {
+    top: 23%;
+  }
+  .view_btn .circle .icon.arrow {
+    width: 1.5rem;
+    left: 1.2rem;
+  }
+  .view_btn .circle .icon.arrow::before {
+    top: -0.4rem;
+    right: 0.05rem;
+    width: 1rem;
+    height: 1rem;
+  }
+}
 @media (max-width: 480px) {
   /* header */
   .side2 a {
@@ -1476,9 +1541,12 @@ body {
     line-height: 2.5;
   }
   /* section5 */
+  .pro_txt_right a {
+    width: 40%;
+  }
   .view_btn .circle {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
   }
   .view_btn .circle .icon.arrow {
     left: 0.1rem;
@@ -1487,12 +1555,28 @@ body {
   }
   .view_btn .circle .icon.arrow::before {
     top: -0.4rem;
-    right: -0.4rem;
+    right: 0.1rem;
     width: 0.8rem;
     height: 0.8rem;
   }
   .view_btn .view_text {
-    top: 6%;
-    left: 14%;
+    top: 18%;
+    left: 13%;
+  }
+}
+@media (max-width: 360px) {
+  .view_btn .view_text {
+    left: 8%;
+  }
+  .view_btn .circle .icon.arrow {
+    left: 0.1rem;
+    width: 1rem;
+    height: 0.125rem;
+  }
+  .view_btn .circle .icon.arrow::before {
+    top: -0.3rem;
+    right: 0.05rem;
+    width: 0.6rem;
+    height: 0.6rem;
   }
 }
