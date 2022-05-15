@@ -253,6 +253,8 @@ window.addEventListener(
     gsap.set(".prof_img", { opacity: 0, x: 100 });
     gsap.set(".prof_text span", { opacity: 0, x: -100 });
     gsap.set(".skill_logo_img", { opacity: 0, x: -70 });
+    gsap.set(".skill_txt_tit", { opacity: 0, x: -70 });
+    gsap.set(".skill_txt_cont", { opacity: 0, x: 70 });
     setTimeout(() => {
       let tl = gsap.timeline();
       tl.to(".prof_text p", { duration: 0.6, opacity: 1, x: 0 });
@@ -260,6 +262,8 @@ window.addEventListener(
       tl.to(".prof_img", { duration: 0.6, opacity: 1, x: 0 });
       tl.to(".prof_text span", { duration: 0.6, opacity: 1, x: 0 });
       tl.to(".skill_logo_img", { duration: 0.6, opacity: 1, x: 0 });
+      tl.to(".skill_txt_tit", { duration: 0.6, opacity: 1, x: 0 });
+      tl.to(".skill_txt_cont", { duration: 0.5, opacity: 1, x: 0 });
     });
   },
   2000
