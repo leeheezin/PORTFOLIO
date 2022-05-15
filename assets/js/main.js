@@ -191,6 +191,14 @@ $(".side2 a").click(function (e) {
 // });
 
 //메인 gsap
+document.querySelectorAll(".split").forEach((desc) => {
+  let splitText = desc.innerText;
+  let splitWrap = splitText.split("").join("</span><span aria-hidden='true'>");
+  splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+  desc.innerHTML = splitWrap;
+  desc.setAttribute("aria-label", splitText);
+});
+
 gsap.set(".sec1_inner .sec1_left", { width: 0, opacity: 0 });
 // gsap.set(".sec1_inner .sec1_left .left_txt", { opacity: 0, x: -100 });
 gsap.set(".sec1_inner .sec1_right .title", { opacity: 0 });
@@ -200,39 +208,26 @@ gsap.set(".sec1_inner .sec1_right .intro p", { opacity: 0, y: 50 });
 gsap.set(".sec1_inner .sec1_right .intro_img", { opacity: 0, y: 50 });
 gsap.set("#header", { left: "-100%" });
 gsap.set("#section2", { opacity: 0, y: 50 });
-gsap.set(".split1", { opacity: 0, x: -70 });
-gsap.set(".split2", { opacity: 0, x: -70 });
-gsap.set(".split3", { opacity: 0, x: -70 });
-gsap.set(".split4", { opacity: 0, x: -70 });
+gsap.set(".split > span", { opacity: 0, y: 50 });
+// gsap.set(".split2", { opacity: 0, x: -100 });
+// gsap.set(".split3", { opacity: 0, x: -120 });
+// gsap.set(".split4", { opacity: 0, x: -120 });
 
 setTimeout(() => {
   let tl = gsap.timeline();
   tl.to("#header", { duration: 0.3, left: 0 });
-  tl.to(".sec1_inner .sec1_left", { duration: 0.6, opacity: 1, width: "63%" });
+  tl.to(".sec1_inner .sec1_left", { duration: 0.4, opacity: 1, width: "63%" });
   tl.to(".sec1_inner .sec1_right", {
-    duration: 0.6,
+    duration: 0.2,
     opacity: 1,
     width: "37%",
   });
-  tl.to(".split1", {
-    duration: 0.6,
-    opacity: 1,
-    x: 0,
-  });
-  tl.to(".split2", {
+  tl.to(".split > span", {
     duration: 0.5,
     opacity: 1,
-    x: 0,
-  });
-  tl.to(".split3", {
-    duration: 0.4,
-    opacity: 1,
-    x: 0,
-  });
-  tl.to(".split4", {
-    duration: 0.4,
-    opacity: 1,
-    x: 0,
+    stagger: 0.07,
+    y: 0,
+    ease: "expo.out",
   });
   tl.to(".sec2_inner", { duration: 0.6, opacity: 1, y: 0 });
   tl.to("#section2", {
@@ -240,12 +235,6 @@ setTimeout(() => {
     opacity: 1,
     y: 0,
   });
-  // tl.to(".sec1_inner .sec1_left .left_txt", {
-  //   duration: 0.6,
-  //   opacity: 1,
-  //   x: 0,
-  //   ease: "power4.out",
-  // });
   tl.to(".sec1_inner .sec1_right .title", { opacity: 1 });
   tl.to(".sec1_inner .sec1_right .intro p", {
     duration: 0.3,
@@ -341,7 +330,8 @@ window.addEventListener("scroll", () => {
   const offset1 =
     scrollTop - document.querySelector(".intro_text h2").offsetTop;
   // gsap.to(".sec2_inner h2 em", {y: offset, opacity: 0 })
-  gsap.to(".intro_text h2 span", { y: offset1 * 0.06 });
+  gsap.to(".intro_text h2 span", { y: offset1 * 0.02 });
+  gsap.to(".intro_text h2 em", { y: offset1 * -0.01 });
 
   gsap.set(".prof_tit p", { opacity: 0, x: -100 });
   gsap.set(".prof_tit strong", { opacity: 0, x: -100 });
@@ -350,31 +340,55 @@ window.addEventListener("scroll", () => {
   gsap.set(".skill_logo_img", { opacity: 0, x: -100 });
   gsap.set(".skill_txt_tit", { opacity: 0, x: -70 });
   gsap.set(".skill_txt_cont", { opacity: 0, x: 70 });
-  gsap.set(".prof_desc p > .desc1", { opacity: 0, y: 30 });
-  gsap.set(".prof_desc p > .desc2", { opacity: 0, y: 30 });
-  gsap.set(".prof_desc p > .desc3", { opacity: 0, y: 30 });
-  gsap.set(".prof_desc p > .desc4", { opacity: 0, y: 30 });
-  gsap.set(".prof_desc p > .desc5", { opacity: 0, y: 30 });
-  gsap.set(".prof_desc p > .desc6", { opacity: 0, y: 30 });
-  gsap.set(".prof_desc p > .desc7", { opacity: 0, y: 30 });
+  gsap.set(".prof_desc span", { opacity: 0, y: 50 });
   setTimeout(() => {
     let tl = gsap.timeline();
     tl.to(".prof_tit p", { duration: 0.6, opacity: 1, x: 0 });
     tl.to(".prof_tit strong", { duration: 0.6, opacity: 1, x: 0 });
     tl.to(".prof_img", { duration: 0.6, opacity: 1, x: 0 });
+    tl.to(".prof_desc .desc1", {
+      duration: 0.3,
+      opacity: 1,
+      y: 0,
+    });
+    tl.to(".prof_desc .desc2", {
+      duration: 0.4,
+      opacity: 1,
+      y: 0,
+    });
+    tl.to(".prof_desc .desc3", {
+      duration: 0.4,
+      opacity: 1,
+      y: 0,
+    });
+    tl.to(".prof_desc .desc4", {
+      duration: 0.4,
+      stagger: 0.01,
+      opacity: 1,
+      y: 0,
+    });
+    tl.to(".prof_desc .desc5", {
+      duration: 0.4,
+      opacity: 1,
+      y: 0,
+    });
+    tl.to(".prof_desc .desc6", {
+      duration: 0.4,
+      opacity: 1,
+      y: 0,
+    });
+    tl.to(".prof_desc .desc7", {
+      duration: 0.6,
+      opacity: 1,
+      y: 0,
+    });
     // tl.to(".prof_text span", { duration: 0.6, opacity: 1, x: 0 });
     tl.to(".skill_logo_img", { duration: 0.8, opacity: 1, x: 0 });
     tl.to(".skill_txt_tit", { duration: 0.6, opacity: 1, x: 0 });
     tl.to(".skill_txt_cont", { duration: 0.5, opacity: 1, x: 0 });
-    tl.to(".prof_desc p > .desc1", { duration: 0.7, opacity: 1, y: 0 });
-    tl.to(".prof_desc p > .desc2", { duration: 0.6, opacity: 1, y: 0 });
-    tl.to(".prof_desc p > .desc3", { duration: 0.5, opacity: 1, y: 0 });
-    tl.to(".prof_desc p > .desc4", { duration: 0.5, opacity: 1, y: 0 });
-    tl.to(".prof_desc p > .desc5", { duration: 0.5, opacity: 1, y: 0 });
-    tl.to(".prof_desc p > .desc6", { duration: 0.5, opacity: 1, y: 0 });
-    tl.to(".prof_desc p > .desc7", { duration: 0.5, opacity: 1, y: 0 });
   });
 });
+// ease: "expo.out",
 
 // profile img 이질감
 

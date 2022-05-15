@@ -255,18 +255,11 @@ body {
   width: 63%;
   background-color: #2a57dc;
 }
-/* left  */
-.left_txt {
-  padding: 9vw 6vw;
-}
-.split span {
-  opacity: 0;
-  transform: translateY(50px);
+.left_txt .split span {
   display: inline-block;
-  min-width: 1vw;
 }
-.sec1_inner .sec1_left div {
-  white-space: nowrap;
+.sec1_inner .left_txt {
+  padding: 9vw 6vw;
   color: #fff;
   font-family: "Raleway";
   font-size: 5vw;
