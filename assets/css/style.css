@@ -252,6 +252,7 @@ body {
   position: relative;
 }
 .sec1_left {
+  width: 63%;
   background-color: #2a57dc;
 }
 /* left  */
@@ -277,6 +278,7 @@ body {
 .sec1_inner .sec1_right {
   border-left: 1px solid #628aff;
   background-color: #2a57dc;
+  width: 37%;
 }
 .sec1_inner .sec1_right .title {
   padding: 1.5vw;
@@ -342,7 +344,7 @@ body {
   justify-content: space-between;
   padding: 10vw;
 }
-.prof_text {
+.prof_cont {
   width: 55%;
   font-family: "Raleway";
   font-weight: 100;
@@ -351,22 +353,26 @@ body {
   mix-blend-mode: overlay;
   color: #1458e4;
 }
-.prof_text p,
-.prof_text strong {
+.prof_tit p {
   font-size: 5vw;
 }
-.prof_text strong {
+.prof_tit strong {
   mix-blend-mode: color-dodge;
   font-weight: 700;
 }
-.prof_text span {
+.prof_desc {
+  margin-top: 3vh;
+}
+.prof_desc p {
   font-family: "ChosunNm";
   white-space: normal;
-  line-height: 1.6;
   display: block;
-  margin-top: 2vh;
+  line-height: 1.5;
   width: 35vw;
   font-size: 1vw;
+}
+.prof_desc p > span {
+  display: inline-block;
 }
 .prof figure {
   width: 45%;
