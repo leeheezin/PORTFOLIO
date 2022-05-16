@@ -307,14 +307,17 @@ body {
 
 /* section2 */
 .intro_inner {
-  background: url("../img/intro1.png");
   height: 100vh;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   border-top: 1px solid #628aff;
+}
+.port_int {
+  background-image: url("../img/intro1.png");
 }
 .intro_text h2 {
   font-family: "Abel";
@@ -416,7 +419,9 @@ body {
   padding-left: 10%;
 }
 /* section4 */
-
+.prof_int {
+  background-image: url("../img/intro2.png");
+}
 /* section5 */
 #section5 .projects {
   background: url("../img/intro2.png") no-repeat center;

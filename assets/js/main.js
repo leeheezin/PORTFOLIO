@@ -205,9 +205,12 @@ window.addEventListener(
     document.querySelector(".scroll").innerText = Math.round(scrollTop);
 
     const offset1 =
-      scrollTop - document.querySelector(".intro_text h2").offsetTop;
-    gsap.to(".intro_text h2 span", { y: offset1 * 0.03 });
-    gsap.to(".intro_text h2 em", { y: offset1 * 0.03 });
+      scrollTop - document.querySelector(".port_int h2").offsetTop;
+    gsap.to(".port_int h2 span", { y: offset1 * 0.04 });
+
+    const offset2 =
+      scrollTop - document.querySelector(".prof_int h2").offsetTop;
+    gsap.to(".prof_int h2 em", { y: offset2 * 0.04 });
 
     // const offset2 = scrollTop - document.querySelector(".prof_cont").offsetTop;
     // gsap.to(".prof_img", { y: offset2 * 0.02 });
