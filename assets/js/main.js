@@ -147,6 +147,20 @@ setTimeout(() => {
     opacity: 1,
     width: "37%",
   });
+  if (matchMedia("screen and (max-width: 960px)").matches) {
+    tl.to(".sec1_inner .sec1_right", {
+      duration: 0.6,
+      opacity: 1,
+      width: "100%",
+    });
+  }
+  if (matchMedia("screen and (max-width: 960px)").matches) {
+    tl.to(".sec1_inner .sec1_left", {
+      duration: 0.6,
+      opacity: 1,
+      width: "100%",
+    });
+  }
   tl.to("#section2", {
     duration: 0.6,
     opacity: 1,
@@ -192,36 +206,36 @@ window.addEventListener(
 
     const offset1 =
       scrollTop - document.querySelector(".intro_text h2").offsetTop;
-    gsap.to(".intro_text h2 span", { y: offset1 * 0.02 });
-    gsap.to(".intro_text h2 em", { y: offset1 * 0.01 });
+    gsap.to(".intro_text h2 span", { y: offset1 * 0.03 });
+    gsap.to(".intro_text h2 em", { y: offset1 * 0.03 });
 
-    const offset2 = scrollTop - document.querySelector(".prof_cont").offsetTop;
-    gsap.to(".prof_img", { y: offset2 * 0.02 });
+    // const offset2 = scrollTop - document.querySelector(".prof_cont").offsetTop;
+    // gsap.to(".prof_img", { y: offset2 * 0.02 });
 
     if (
       scrollTop >
       document.querySelector(".prof_cont").offsetTop + window.innerHeight * 1.5
     ) {
       gsap.to(".prof_tit .tit1", {
-        delay: 0.4,
-        duration: 0.4,
-        opacity: 1,
-        x: 0,
-      });
-      gsap.to(".prof_tit .tit2", {
         delay: 0.5,
         duration: 0.4,
         opacity: 1,
         x: 0,
       });
-      gsap.to(".prof_tit .tit3", {
+      gsap.to(".prof_tit .tit2", {
         delay: 0.6,
         duration: 0.4,
         opacity: 1,
         x: 0,
       });
-      gsap.to(".prof_tit .tit4", {
+      gsap.to(".prof_tit .tit3", {
         delay: 0.7,
+        duration: 0.4,
+        opacity: 1,
+        x: 0,
+      });
+      gsap.to(".prof_tit .tit4", {
+        delay: 0.9,
         duration: 0.4,
         opacity: 1,
         x: 0,
@@ -275,7 +289,7 @@ window.addEventListener(
 );
 
 //section3
-gsap.set(".skill_logo_img", { opacity: 0, x: 100 });
+gsap.set(".skill_logo_img", { opacity: 0, x: -100 });
 gsap.set(".skill_txt_tit .tit1", { opacity: 0, y: 70 });
 gsap.set(".skill_txt_tit .tit2", { opacity: 0, y: 70 });
 gsap.set(".skill_txt_tit .tit3", { opacity: 0, y: 70 });
@@ -299,7 +313,7 @@ window.addEventListener(
       document.querySelector(".skill").offsetTop - window.innerHeight * 0.5
     ) {
       gsap.to(".skill_logo_img", {
-        delay: 0.3,
+        delay: 0.4,
         duration: 0.8,
         opacity: 1,
         x: 0,
