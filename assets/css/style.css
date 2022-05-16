@@ -335,7 +335,7 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 10vw;
+  padding: 7vw 10vw;
 }
 .prof_cont {
   width: 55%;
