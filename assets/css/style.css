@@ -255,7 +255,7 @@ body {
   width: 63%;
   background-color: #2a57dc;
 }
-.left_txt .split span {
+.split span {
   display: inline-block;
 }
 .sec1_inner .left_txt {
@@ -349,6 +349,9 @@ body {
 .prof_tit p {
   font-size: 5vw;
 }
+.prof_tit p span {
+  display: inline-block;
+}
 .prof_tit strong {
   mix-blend-mode: color-dodge;
   font-weight: 700;
@@ -410,7 +413,7 @@ body {
   font-weight: 300;
   border-right: 1px solid #c4c4c4;
 }
-.skill_txt_cont {
+.skill_txt_desc {
   font-family: "Chosunnm";
   font-size: 1vw;
 
