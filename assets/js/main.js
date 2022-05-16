@@ -128,7 +128,6 @@ document.querySelectorAll(".split").forEach((desc) => {
 
 gsap.set(".sec1_inner .sec1_left", { width: 0, opacity: 0 });
 gsap.set(".sec1_inner .sec1_right .title", { opacity: 0 });
-gsap.set(".sec2_inner", { opacity: 0, y: 50 });
 gsap.set(".sec1_inner .sec1_right", { width: 0, opacity: 0 });
 gsap.set(".sec1_inner .sec1_right .intro p", { opacity: 0, y: 50 });
 gsap.set(".sec1_inner .sec1_right .intro_img", { opacity: 0, y: 50 });
@@ -139,23 +138,23 @@ gsap.set(".split > span", { opacity: 0, y: 50 });
 setTimeout(() => {
   let tl = gsap.timeline();
   tl.to("#header", { duration: 0.3, left: 0 });
-  tl.to(".sec1_inner .sec1_left", { duration: 0.5, opacity: 1, width: "63%" });
+  tl.to(".sec1_inner .sec1_left", { duration: 0.6, opacity: 1, width: "63%" });
   tl.to(".sec1_inner .sec1_right", {
-    duration: 0.5,
+    duration: 0.6,
     opacity: 1,
     width: "37%",
   });
   tl.to("#section2", {
-    duration: 0.2,
+    duration: 0.6,
     opacity: 1,
     y: 0,
   });
   tl.to(".split > span", {
-    duration: 0.5,
+    duration: 0.6,
     opacity: 1,
-    stagger: 0.08,
+    stagger: 0.008,
     y: 0,
-    ease: "expo.out",
+    ease: "power4.out",
   });
   tl.to(".sec1_inner .sec1_right .title", { opacity: 1 });
   tl.to(".sec1_inner .sec1_right .intro p", {
