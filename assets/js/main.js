@@ -130,10 +130,10 @@ document.querySelectorAll(".split").forEach((desc) => {
 });
 
 gsap.set(".sec1_inner .sec1_left", { width: 0, opacity: 0 });
-gsap.set(".sec1_inner .sec1_right .title", { opacity: 0 });
+gsap.set(".sec1_inner .sec1_right .main_title", { opacity: 0 });
 gsap.set(".sec1_inner .sec1_right", { width: 0, opacity: 0 });
-gsap.set(".sec1_inner .sec1_right .intro p", { opacity: 0, y: 50 });
-gsap.set(".sec1_inner .sec1_right .intro_img", { opacity: 0, y: 50 });
+gsap.set(".sec1_inner .sec1_right .main_intro p", { opacity: 0, y: 50 });
+gsap.set(".sec1_inner .sec1_right .main_img", { opacity: 0, y: 50 });
 gsap.set("#header", { left: "-100%" });
 gsap.set("#section2", { opacity: 0, y: 50 });
 gsap.set(".split > span", { opacity: 0, y: 50 });
@@ -173,13 +173,13 @@ setTimeout(() => {
     y: 0,
     ease: "power4.out",
   });
-  tl.to(".sec1_inner .sec1_right .title", { opacity: 1 });
-  tl.to(".sec1_inner .sec1_right .intro p", {
+  tl.to(".sec1_inner .sec1_right .main_title", { opacity: 1 });
+  tl.to(".sec1_inner .sec1_right .main_intro p", {
     duration: 0.3,
     opacity: 1,
     y: 0,
   });
-  tl.to(".sec1_inner .sec1_right .intro_img", {
+  tl.to(".sec1_inner .sec1_right .main_img", {
     duration: 0.3,
     opacity: 1,
     y: 0,
