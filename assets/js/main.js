@@ -187,10 +187,10 @@ setTimeout(() => {
 }, 2000);
 
 // section2
-gsap.set(".prof_tit .tit1", { opacity: 0, x: -120 });
-gsap.set(".prof_tit .tit2", { opacity: 0, x: -120 });
-gsap.set(".prof_tit .tit3", { opacity: 0, x: -120 });
-gsap.set(".prof_tit .tit4", { opacity: 0, x: -120 });
+gsap.set(".prof_tit .tit1 > span", { opacity: 0, y: 100 });
+gsap.set(".prof_tit .tit2 > span", { opacity: 0, y: 100 });
+gsap.set(".prof_tit .tit3 > span", { opacity: 0, y: 100 });
+gsap.set(".prof_tit .tit4 > span", { opacity: 0, y: 100 });
 // gsap.set(".prof_img", { opacity: 0, y: 100 });
 gsap.set(".prof_desc p > span", { opacity: 0, y: 50 });
 
@@ -209,8 +209,8 @@ window.addEventListener(
     gsap.to(".port_int h2 span", { y: offset1 * 0.04 });
 
     const offset2 =
-      scrollTop - document.querySelector(".prof_int h2").offsetTop;
-    gsap.to(".prof_int h2 em", { y: offset2 * 0.04 });
+      scrollTop - document.querySelector(".proj_int h2").offsetTop;
+    gsap.to(".proj_int h2 em", { y: offset2 * 0.04 });
 
     // const offset2 = scrollTop - document.querySelector(".prof_cont").offsetTop;
     // gsap.to(".prof_img", { y: offset2 * 0.02 });
@@ -219,29 +219,33 @@ window.addEventListener(
       scrollTop >
       document.querySelector(".prof_cont").offsetTop + window.innerHeight * 1.5
     ) {
-      gsap.to(".prof_tit .tit1", {
-        delay: 0.5,
-        duration: 0.4,
-        opacity: 1,
-        x: 0,
-      });
-      gsap.to(".prof_tit .tit2", {
+      gsap.to(".prof_tit .tit1 > span", {
         delay: 0.6,
-        duration: 0.4,
+        duration: 0.8,
         opacity: 1,
-        x: 0,
+        y: 0,
+        ease: "expo.out",
       });
-      gsap.to(".prof_tit .tit3", {
-        delay: 0.7,
-        duration: 0.4,
+      gsap.to(".prof_tit .tit2 > span", {
+        delay: 0.8,
+        duration: 0.8,
         opacity: 1,
-        x: 0,
+        y: 0,
+        ease: "expo.out",
       });
-      gsap.to(".prof_tit .tit4", {
-        delay: 0.9,
-        duration: 0.4,
+      gsap.to(".prof_tit .tit3 > span", {
+        delay: 1.0,
+        duration: 0.8,
         opacity: 1,
-        x: 0,
+        y: 0,
+        ease: "expo.out",
+      });
+      gsap.to(".prof_tit .tit4 > span", {
+        delay: 1.2,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "expo.out",
       });
       // gsap.to(".prof_img", { delay: 0.6, duration: 0.6, opacity: 1, y: 0 });
       gsap.to(".prof_desc p > .desc1", {
@@ -291,13 +295,34 @@ window.addEventListener(
   1000
 );
 
+//prof_img reveal
+const scrollReveal = function () {
+  let scrollTop =
+    (window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      window.scrollY) +
+    window.innerHeight * 0.1;
+  const reveal = document.querySelectorAll(".reveal");
+
+  reveal.forEach((el) => {
+    const revealDelay = el.dataset.delay;
+    if (scrollTop > el.parentElement.offsetTop) {
+      if (revealDelay == undefined) {
+        el.classList.add("show");
+      } else {
+        setTimeout(() => {
+          el.classList.add("show");
+        }, revealDelay);
+      }
+    }
+  });
+};
+window.addEventListener("scroll", scrollReveal);
+
 //section3
 gsap.set(".skill_logo_img", { opacity: 0, x: -100 });
-gsap.set(".skill_txt_tit .tit1", { opacity: 0, y: 70 });
-gsap.set(".skill_txt_tit .tit2", { opacity: 0, y: 70 });
-gsap.set(".skill_txt_tit .tit3", { opacity: 0, y: 70 });
-gsap.set(".skill_txt_tit .tit4", { opacity: 0, y: 70 });
-gsap.set(".skill_txt_desc p", { opacity: 0, y: 70 });
+gsap.set(".skill_txt_tit p > span", { opacity: 0, y: 100 });
+gsap.set(".skill_txt_desc p > span", { opacity: 1, y: 100 });
 
 window.addEventListener(
   "scroll",
@@ -316,88 +341,101 @@ window.addEventListener(
       document.querySelector(".skill").offsetTop - window.innerHeight * 0.5
     ) {
       gsap.to(".skill_logo_img", {
-        delay: 0.4,
+        delay: 0.5,
         duration: 0.8,
         opacity: 1,
         x: 0,
       });
-      gsap.to(".skill_txt_tit .tit1", {
+      gsap.to(".skill_txt_tit .tit1 > span", {
         delay: 0.8,
-        duration: 0.5,
+        duration: 0.8,
         opacity: 1,
         y: 0,
+        ease: "power4.out",
       });
-      gsap.to(".skill_txt_tit .tit2", {
-        delay: 0.9,
-        duration: 0.5,
-        opacity: 1,
-        y: 0,
-      });
-      gsap.to(".skill_txt_tit .tit3", {
-        delay: 1,
-        duration: 0.5,
-        opacity: 1,
-        y: 0,
-      });
-      gsap.to(".skill_txt_tit .tit4", {
-        delay: 1.2,
-        duration: 0.5,
-        opacity: 1,
-        y: 0,
-      });
-      gsap.to(".skill_txt_desc .desc1", {
-        delay: 0.8,
-        duration: 0.5,
-        opacity: 1,
-        y: 0,
-      });
-      gsap.to(".skill_txt_desc .desc2", {
-        delay: 0.9,
-        duration: 0.5,
-        opacity: 1,
-        y: 0,
-      });
-      gsap.to(".skill_txt_desc .desc3", {
+      gsap.to(".skill_txt_tit .tit2 > span", {
         delay: 1.0,
-        duration: 0.5,
+        duration: 0.8,
         opacity: 1,
         y: 0,
+        ease: "power4.out",
       });
-      gsap.to(".skill_txt_desc .desc4", {
-        delay: 1.1,
-        duration: 0.5,
-        opacity: 1,
-        y: 0,
-      });
-      gsap.to(".skill_txt_desc .desc5", {
+      gsap.to(".skill_txt_tit .tit3 > span", {
         delay: 1.2,
-        duration: 0.5,
+        duration: 0.8,
         opacity: 1,
         y: 0,
+        ease: "power4.out",
       });
-      gsap.to(".skill_txt_desc .desc6", {
-        delay: 1.3,
-        duration: 0.5,
-        opacity: 1,
-        y: 0,
-      });
-      gsap.to(".skill_txt_desc .desc7", {
+      gsap.to(".skill_txt_tit .tit4 > span", {
         delay: 1.4,
-        duration: 0.5,
+        duration: 0.8,
         opacity: 1,
         y: 0,
+        ease: "power4.out",
       });
-      gsap.to(".skill_txt_desc .desc8", {
+      gsap.to(".skill_txt_desc .desc1 > span", {
+        delay: 0.5,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".skill_txt_desc .desc2 > span", {
+        delay: 0.8,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".skill_txt_desc .desc3 > span", {
+        delay: 1.0,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".skill_txt_desc .desc4 > span", {
+        delay: 1.1,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".skill_txt_desc .desc5 > span", {
+        delay: 1.2,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".skill_txt_desc .desc6 > span", {
+        delay: 1.3,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".skill_txt_desc .desc7 > span", {
+        delay: 1.4,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".skill_txt_desc .desc8 > span", {
         delay: 1.5,
-        duration: 0.5,
+        duration: 0.8,
         opacity: 1,
         y: 0,
+        ease: "power4.out",
       });
-      gsap.to(".skill_txt_desc .desc9", {
+      gsap.to(".skill_txt_desc .desc9 > span", {
         delay: 1.6,
-        duration: 0.5,
+        duration: 0.8,
         opacity: 1,
         y: 0,
+        ease: "power4.out",
       });
     }
   },

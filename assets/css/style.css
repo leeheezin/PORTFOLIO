@@ -304,7 +304,6 @@ body {
   margin: 2vw 1vw;
   border-bottom: 1px solid #628aff;
 }
-
 /* section2 */
 .intro_inner {
   height: 100vh;
@@ -330,6 +329,7 @@ body {
   display: inline-block;
 }
 .prof {
+  width: 100%;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -343,11 +343,12 @@ body {
   white-space: nowrap;
   mix-blend-mode: overlay;
   color: #1458e4;
+  z-index: 1000;
 }
 .prof_tit p {
   font-size: 5vw;
 }
-.prof_tit p span {
+.prof_tit p > span {
   display: inline-block;
 }
 .prof_tit strong {
@@ -364,14 +365,16 @@ body {
   line-height: 1.5;
   width: 35vw;
   font-size: 1vw;
+  overflow: hidden;
 }
 .prof_desc p > span {
   display: inline-block;
 }
 .prof figure {
-  width: 45%;
   z-index: -1;
   position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 .prof_img {
   background: url(../img/profile3.png);
@@ -379,6 +382,74 @@ body {
   background-repeat: no-repeat;
   height: 90vh;
   display: block;
+}
+/* reveal */
+.reveal > div,
+.reveal > span {
+  opacity: 0;
+}
+.reveal.show > div,
+.reveal.show > span {
+  animation: opacity 1000ms linear forwards;
+}
+.reveal {
+  position: relative;
+}
+.reveal::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: 100;
+  background-color: #fff;
+}
+.reveal.show::before {
+  animation: reveal 1000ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+.reveal.show::after {
+  animation: reveal 5000ms 500ms cubic-bezier(0.77, 0, 0.18, 1);
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes reveal {
+  0% {
+    width: 100%;
+    height: 0;
+    top: auto;
+    bottom: 0;
+  }
+  50% {
+    width: 100%;
+    height: 100%;
+    top: auto;
+    bottom: 0;
+  }
+  80% {
+    width: 100%;
+    height: 100%;
+    top: auto;
+    bottom: 0;
+  }
+  100% {
+    width: 100%;
+    height: 0;
+    top: auto;
+    bottom: 100%;
+  }
 }
 /* section3 */
 .skill_logo {
@@ -391,11 +462,10 @@ body {
 }
 .skill_logo_img {
   width: 9%;
-  padding-right: 3%;
+  overflow: hidden;
 }
-.skill_logo_img:last-child {
-  padding-right: 0;
-  width: 7%;
+.skill_logo_img img {
+  display: block;
 }
 .skill_inner {
   width: 100%;
@@ -411,6 +481,12 @@ body {
   font-weight: 300;
   border-right: 1px solid #c4c4c4;
 }
+.skill_txt_tit p {
+  overflow: hidden;
+}
+.skill_txt_tit p > span {
+  display: inline-block;
+}
 .skill_txt_desc {
   font-family: "Chosunnm";
   font-size: 1vw;
@@ -418,8 +494,14 @@ body {
   width: 50%;
   padding-left: 10%;
 }
+.skill_txt_desc p {
+  overflow: hidden;
+}
+.skill_txt_desc p > span {
+  display: inline-block;
+}
 /* section4 */
-.prof_int {
+.proj_int {
   background-image: url("../img/intro2.png");
 }
 /* section5 */
@@ -1214,6 +1296,10 @@ body {
   .prof_tit p {
     font-size: 9vw;
   }
+  .prof_tit p > span {
+    overflow: hidden;
+    display: inline-block;
+  }
   .prof_desc p {
     font-size: 2.6vw;
     width: 100%;
@@ -1221,6 +1307,7 @@ body {
   .prof figure {
     width: 100%;
     margin-top: 7vw;
+    overflow: hidden;
   }
   .prof_img {
     background-position: bottom;
@@ -1234,11 +1321,7 @@ body {
   .skill_logo_img {
     display: inline-block;
     width: 19%;
-    padding-left: 5vw;
     padding-right: 0;
-  }
-  .skill_logo_img:last-child {
-    width: 17%;
   }
   .skill_inner {
     padding: 12vw 7vw;
@@ -1324,7 +1407,6 @@ body {
     width: 43%;
   }
   .skill_logo_img:last-child {
-    width: 42%;
   }
   .skill_txt_tit {
     font-size: 6vw;
