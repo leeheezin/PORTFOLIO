@@ -1219,6 +1219,9 @@ body {
     height: 10%;
     border: 0;
   }
+  .nav_close > .close_btn {
+    height: 40%;
+  }
   .sidebar {
     width: 100%;
     height: 100vh;
@@ -1363,9 +1366,26 @@ body {
     width: 30px;
     height: 32px;
   }
+  .nav_close {
+    height: 6%;
+  }
+  .nav_close > .close_btn {
+    width: 39%;
+    height: 50%;
+  }
   .scroll {
     left: 15px;
     bottom: 8px;
+  }
+  .sidebar {
+    top: 50px;
+  }
+  .side2 {
+    height: 85%;
+  }
+  .side2 a {
+    font-size: 12vw;
+    padding: 3%;
   }
   .contents {
     margin-top: 50px;
