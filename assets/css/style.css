@@ -33,7 +33,6 @@ body {
 .inner {
   padding: 6vw;
   margin: 0 auto;
-  text-transform: uppercase;
 }
 #section1 {
   width: 100%;
@@ -395,76 +394,6 @@ body {
   height: 87vh;
   overflow: hidden;
 }
-/* .reveal > div,
-.reveal > span {
-  opacity: 0;
-}
-.reveal.show > div,
-.reveal.show > span {
-  animation: opacity 1000ms linear forwards;
-}
-.reveal {
-  position: relative;
-}
-.reveal::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0;
-  height: 100%;
-  z-index: 100;
-  background-color: #fff;
-}
-.reveal.show::before {
-  animation-duration: 3s;
-  animation: reveal 1000ms cubic-bezier(0.77, 0, 0.18, 1);
-}
-.reveal.show::after {
-  animation-delay: 3s;
-  animation: reveal cubic-bezier(0.77, 0, 0.18, 1);
-  animation-duration: 3s;
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 0;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes reveal {
-  0% {
-    width: 100%;
-    height: 0;
-    top: auto;
-    bottom: 0;
-  }
-  50% {
-    width: 100%;
-    height: 100%;
-    top: auto;
-    bottom: 0;
-  }
-  80% {
-    width: 100%;
-    height: 100%;
-    top: auto;
-    bottom: 0;
-  }
-  100% {
-    width: 100%;
-    height: 0;
-    top: auto;
-    bottom: 100%;
-  }
-} */
 /* section3 */
 .skill_logo {
   width: 100%;
@@ -518,7 +447,177 @@ body {
 .proj_int {
   background-image: url("../img/intro2.png");
 }
+.project {
+  width: 100%;
+}
+.proj {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6vw 6vw 3vw;
+}
+.proj_left {
+  width: 60%;
+}
+.proj_tit {
+  font-family: "Raleway";
+  color: #285ad5;
+}
+.proj_tit p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  overflow: hidden;
+}
+.proj_tit h3 {
+  font-weight: 700;
+  overflow: hidden;
+  font-size: 5vw;
+}
+.proj_desc p {
+  font-size: 1rem;
+  overflow: hidden;
+  font-family: "ChosunNm";
+}
+.proj_tit p > span {
+  display: inline-block;
+}
+.proj_tit h3 > span {
+  display: inline-block;
+}
+.proj_desc p > span {
+  display: inline-block;
+}
+.proj_right {
+  width: 40%;
+  padding-top: 6%;
+  position: relative;
+}
+.proj_view {
+  display: inline-block;
+  width: 40%;
+}
+.project.active .proj_numb {
+  color: #285ad5;
+}
+.proj_numb {
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  display: block;
+  font-size: 23vw;
+  font-weight: 600;
+  opacity: 0.1;
+  position: absolute;
+  top: -55%;
+  z-index: -1;
+  right: -8%;
+}
+.proj_numb span {
+  display: inline-block;
+  -webkit-text-stroke: 2px #285ad5;
+}
+/* button */
+.view_btn {
+  position: relative;
+  display: inline-block;
+  font-family: "Raleway";
+  margin-top: 29%;
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.view_btn .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #2a57dc;
+  border-radius: 1.625rem;
+}
+.view_btn .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+.view_btn .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+.view_btn .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.25rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+.view_txt {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  font-size: 1.3vw;
+  position: absolute;
+  top: 21%;
+  left: 0;
+  right: -18%;
+  bottom: 0;
+  color: #2a57dc;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.view_btn:hover .circle {
+  width: 100%;
+}
+.view_btn:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+.view_btn:hover .view_txt {
+  color: #fff;
+}
+.code {
+  left: 5%;
+}
+/* reveal */
+.proj_img_wrap {
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+}
+.proj_img_wrap > div {
+  width: 100%;
+  height: 65vh;
+  display: block;
+  object-fit: cover;
+}
+.proj_img1 {
+  background: url("../img/proj_img1.png") no-repeat center center / cover;
+}
+.proj_img2 {
+  background: url("../img/proj_img2.png") no-repeat center center / cover;
+}
+.proj_img3 {
+  background: url("../img/proj_img3.png") no-repeat center center / cover;
+}
+
 /* section5 */
+.js_int {
+  background-image: url(../img/intro3.png);
+}
+
 /* #section5 .projects {
   background: url("../img/intro2.png") no-repeat center;
   background-size: 100%;
@@ -562,77 +661,8 @@ body {
 .pro_txt_right {
   width: 40%;
 }
-/* button */
-.view_btn {
-  position: relative;
-  display: inline-block;
-  font-family: "Raleway";
-  margin-top: 29%;
-  width: 35%;
-  height: auto;
-  vertical-align: middle;
-}
-.view_btn .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: #2a57dc;
-  border-radius: 1.625rem;
-}
-.view_btn .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-.view_btn .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-.view_btn .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.25rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
-}
-.view_btn .view_text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  font-size: 1.3vw;
-  position: absolute;
-  top: 8%;
-  left: 0;
-  right: -11%;
-  bottom: 0;
-  color: #2a57dc;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-.view_btn:hover .circle {
-  width: 100%;
-}
-.view_btn:hover .circle .icon.arrow {
-  background: #fff;
-  transform: translate(1rem, 0);
-}
-.view_btn:hover .view_text {
-  color: #fff;
-}
-.code .view_text {
+
+.code .view_txt {
   left: 5%;
 }
 .pro_txt_right .pro_numb {
@@ -646,24 +676,7 @@ body {
   z-index: -1;
   right: 0;
 }
-.pro_img {
-  position: relative;
-  overflow: hidden;
-  background-size: cover;
-  width: 100%;
-  height: 65vh;
-  background-repeat: no-repeat;
-  margin-top: 3%;
-}
-.pro_img1 {
-  background-image: url("../img/proimg1.png");
-}
-.pro_img2 {
-  background-image: url("../img/proimg2.png");
-}
-.pro_img3 {
-  background-image: url("../img/proimg3.png");
-}
+
 */
 
 /* section6 */
@@ -1355,6 +1368,33 @@ body {
     padding-left: 0;
     font-size: 3.3vw;
     padding-top: 10vw;
+  }
+  /* section4 */
+  .proj {
+    display: block;
+  }
+  .proj_left,
+  .proj_right {
+    width: 100%;
+  }
+  .proj_tit p,
+  .proj_desc p {
+    font-size: 3vw;
+  }
+  .proj_tit h3 {
+    font-size: 8vw;
+  }
+  .proj_numb {
+    font-size: 33vw;
+    right: 0;
+    top: -42%;
+  }
+  .proj_view {
+    width: 33%;
+  }
+  .view_txt {
+    top: 6%;
+    font-size: 3vw;
   }
 }
 

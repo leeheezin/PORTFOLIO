@@ -208,14 +208,15 @@ window.addEventListener(
       window.scrollY;
 
     document.querySelector(".scroll").innerText = Math.round(scrollTop);
-
+    //intro 이질감
     const offset1 =
       scrollTop - document.querySelector(".port_int h2").offsetTop;
-    gsap.to(".port_int h2 span", { y: offset1 * 0.04 });
-
+    gsap.to(".port_int h2 span", { y: offset1 * 0.03 });
     const offset2 =
       scrollTop - document.querySelector(".proj_int h2").offsetTop;
-    gsap.to(".proj_int h2 em", { y: offset2 * 0.04 });
+    gsap.to(".proj_int h2 em", { y: offset2 * 0.03 });
+    const offset3 = scrollTop - document.querySelector(".js_int h2").offsetTop;
+    gsap.to(".js_int h2 em", { y: offset3 * 0.03 });
 
     // const offset2 = scrollTop - document.querySelector(".prof_cont").offsetTop;
     // gsap.to(".prof_img", { y: offset2 * 0.02 });
@@ -300,29 +301,51 @@ window.addEventListener(
   1000
 );
 
-//prof_img reveal
+//prof_img, proj_img reveal
 gsap.registerPlugin(ScrollTrigger);
 
-let revealContainers = document.querySelectorAll(".reveal");
+let revealContainers1 = document.querySelectorAll(".reveal");
+let revealContainers2 = document.querySelectorAll(".proj_img_wrap");
 
-revealContainers.forEach((container) => {
-  let image = container.querySelector(".prof_img");
+revealContainers1.forEach((container1) => {
+  let image1 = container1.querySelector(".prof_img");
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: container,
+      trigger: container1,
       // toggleActions: "restart none none reset",
     },
   });
 
-  tl.set(container, { autoAlpha: 1 });
-  tl.from(container, 1.0, {
+  tl.set(container1, { autoAlpha: 1 });
+  tl.from(container1, 1.0, {
     yPercent: 100,
     ease: Power2.out,
   });
-  tl.from(image, 1.0, {
+  tl.from(image1, 1.0, {
     yPercent: -100,
     scale: 1.3,
     delay: -1.0,
+    ease: Power2.out,
+  });
+});
+revealContainers2.forEach((container2) => {
+  let image2 = container2.querySelector(".proj_img_wrap > div");
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container2,
+      // toggleActions: "restart none none reset",
+    },
+  });
+
+  tl.set(container2, { autoAlpha: 1 });
+  tl.from(container2, 1.5, {
+    xPercent: -100,
+    ease: Power2.out,
+  });
+  tl.from(image2, 1.5, {
+    xPercent: 100,
+    scale: 1.3,
+    delay: -1.5,
     ease: Power2.out,
   });
 });
@@ -472,7 +495,129 @@ window.addEventListener(
   1000
 );
 
-// ease: "expo.out",
+//section4 gsap
+gsap.set(".projtit_1 p > span", { opacity: 0, y: 100 });
+gsap.set(".projtit_1 h3 > span", { opacity: 0, y: 100 });
+gsap.set(".projdesc_1 p > span", { opacity: 0, y: 100 });
+gsap.set(".projtit_2 p > span", { opacity: 0, y: 100 });
+gsap.set(".projtit_2 h3 > span", { opacity: 0, y: 100 });
+gsap.set(".projdesc_2 p > span", { opacity: 0, y: 100 });
+gsap.set(".projtit_3 p > span", { opacity: 0, y: 100 });
+gsap.set(".projtit_3 h3 > span", { opacity: 0, y: 100 });
+gsap.set(".projdesc_3 p > span", { opacity: 0, y: 100 });
+gsap.set(".num_1 > span", { opacity: 1, color: "transparent" });
+gsap.set(".num_2 > span", { opacity: 1, color: "transparent" });
+gsap.set(".num_3 > span", { opacity: 1, color: "transparent" });
+
+window.addEventListener(
+  "scroll",
+  () => {
+    let scrollTop =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      window.scrollY;
+
+    document.querySelector(".scroll").innerText = Math.round(scrollTop);
+
+    if (
+      scrollTop >
+      document.querySelector(".proj_1").offsetTop - window.innerHeight
+    ) {
+      gsap.to(".projtit_1 p > span", {
+        delay: 0.5,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".projtit_1 h3 > span", {
+        delay: 0.8,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".projdesc_1 p > span", {
+        delay: 1.2,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".num_1 > span", {
+        delay: 1.1,
+        duration: 1.2,
+        opacity: 1,
+        color: "#285ad5",
+      });
+    }
+    if (
+      scrollTop >
+      document.querySelector(".proj_2").offsetTop - window.innerHeight
+    ) {
+      gsap.to(".projtit_2 p > span", {
+        delay: 0.5,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".projtit_2 h3 > span", {
+        delay: 0.8,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".projdesc_2 p > span", {
+        delay: 1.2,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".num_2 > span", {
+        delay: 1.1,
+        duration: 1.2,
+        opacity: 1,
+        color: "#285ad5",
+      });
+    }
+    if (
+      scrollTop >
+      document.querySelector(".proj_3").offsetTop - window.innerHeight
+    ) {
+      gsap.to(".projtit_3 p > span", {
+        delay: 0.5,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".projtit_3 h3 > span", {
+        delay: 0.8,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".projdesc_3 p > span", {
+        delay: 1.2,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
+      });
+      gsap.to(".num_3 > span", {
+        delay: 1.1,
+        duration: 1.2,
+        opacity: 1,
+        color: "#285ad5",
+      });
+    }
+  },
+  1000
+);
 
 // profile img 이질감
 
