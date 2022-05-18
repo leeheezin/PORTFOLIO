@@ -323,7 +323,6 @@ revealContainers1.forEach((container1) => {
   });
   tl.from(image1, 1.0, {
     yPercent: -100,
-    scale: 1.3,
     delay: -1.0,
     ease: Power2.out,
   });
@@ -344,7 +343,7 @@ revealContainers2.forEach((container2) => {
   });
   tl.from(image2, 1.5, {
     xPercent: 100,
-    scale: 1.3,
+    scale: 1.2,
     delay: -1.5,
     ease: Power2.out,
   });

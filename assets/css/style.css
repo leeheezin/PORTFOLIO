@@ -495,7 +495,7 @@ body {
 }
 .proj_view {
   display: inline-block;
-  width: 40%;
+  width: 43%;
 }
 .project.active .proj_numb {
   color: #285ad5;
@@ -564,10 +564,10 @@ body {
 }
 .view_txt {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  font-size: 1.3vw;
+  font-size: 1.6rem;
   position: absolute;
-  top: 21%;
-  left: 0;
+  top: 5%;
+  left: 3%;
   right: -18%;
   bottom: 0;
   color: #2a57dc;
@@ -587,7 +587,7 @@ body {
   color: #fff;
 }
 .code {
-  left: 5%;
+  left: 10%;
 }
 /* reveal */
 .proj_img_wrap {
