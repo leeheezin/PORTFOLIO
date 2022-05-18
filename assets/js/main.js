@@ -156,6 +156,7 @@ setTimeout(() => {
   }
   if (matchMedia("screen and (max-width: 960px)").matches) {
     tl.to(".sec1_inner .sec1_left", {
+      delay: 0.8,
       duration: 0.6,
       opacity: 1,
       width: "100%",
@@ -217,35 +218,35 @@ window.addEventListener(
 
     if (
       scrollTop >
-      document.querySelector(".prof_cont").offsetTop + window.innerHeight * 1.5
+      document.querySelector(".prof_tit").offsetTop + window.innerHeight * 1.5
     ) {
       gsap.to(".prof_tit .tit1 > span", {
-        delay: 0.6,
+        delay: 0.9,
         duration: 0.8,
         opacity: 1,
         y: 0,
-        ease: "expo.out",
+        ease: "power4.out",
       });
       gsap.to(".prof_tit .tit2 > span", {
-        delay: 0.8,
-        duration: 0.8,
-        opacity: 1,
-        y: 0,
-        ease: "expo.out",
-      });
-      gsap.to(".prof_tit .tit3 > span", {
         delay: 1.0,
         duration: 0.8,
         opacity: 1,
         y: 0,
-        ease: "expo.out",
+        ease: "power4.out",
+      });
+      gsap.to(".prof_tit .tit3 > span", {
+        delay: 1.1,
+        duration: 0.8,
+        opacity: 1,
+        y: 0,
+        ease: "power4.out",
       });
       gsap.to(".prof_tit .tit4 > span", {
         delay: 1.2,
         duration: 0.8,
         opacity: 1,
         y: 0,
-        ease: "expo.out",
+        ease: "power4.out",
       });
       // gsap.to(".prof_img", { delay: 0.6, duration: 0.6, opacity: 1, y: 0 });
       gsap.to(".prof_desc p > .desc1", {
@@ -296,28 +297,53 @@ window.addEventListener(
 );
 
 //prof_img reveal
-const scrollReveal = function () {
-  let scrollTop =
-    (window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      window.scrollY) +
-    window.innerHeight * 0.1;
-  const reveal = document.querySelectorAll(".reveal");
+gsap.registerPlugin(ScrollTrigger);
 
-  reveal.forEach((el) => {
-    const revealDelay = el.dataset.delay;
-    if (scrollTop > el.parentElement.offsetTop) {
-      if (revealDelay == undefined) {
-        el.classList.add("show");
-      } else {
-        setTimeout(() => {
-          el.classList.add("show");
-        }, revealDelay);
-      }
-    }
+let revealContainers = document.querySelectorAll(".reveal");
+
+revealContainers.forEach((container) => {
+  let image = container.querySelector(".prof_img");
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: container,
+      // toggleActions: "restart none none reset",
+    },
   });
-};
-window.addEventListener("scroll", scrollReveal);
+
+  tl.set(container, { autoAlpha: 1 });
+  tl.from(container, 1.0, {
+    yPercent: 100,
+    ease: Power2.out,
+  });
+  tl.from(image, 1.0, {
+    yPercent: -100,
+    scale: 1.3,
+    delay: -1.0,
+    ease: Power2.out,
+  });
+});
+// const scrollReveal = function () {
+//   let scrollTop =
+//     (window.pageYOffset ||
+//       document.documentElement.scrollTop ||
+//       window.scrollY) +
+//     window.innerHeight * 0.5;
+//   const reveal = document.querySelectorAll(".reveal");
+
+//   reveal.forEach((el) => {
+//     const revealDelay = el.dataset.delay;
+//     if (scrollTop > el.parentElement.offsetTop) {
+//       if (revealDelay == undefined) {
+//         el.classList.add("show");
+//       } else {
+//         setTimeout(() => {
+//           el.classList.add("show");
+//         }, revealDelay);
+//       }
+//     }
+//   });
+// };
+// window.addEventListener("scroll", scrollReveal);
 
 //section3
 gsap.set(".skill_logo_img", { opacity: 0, x: -100 });

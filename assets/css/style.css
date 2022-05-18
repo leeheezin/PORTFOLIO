@@ -347,6 +347,7 @@ body {
 }
 .prof_tit p {
   font-size: 5vw;
+  /* overflow: hidden; */
 }
 .prof_tit p > span {
   display: inline-block;
@@ -379,12 +380,22 @@ body {
 .prof_img {
   background: url(../img/profile3.png);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  height: 90vh;
   display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 /* reveal */
-.reveal > div,
+.reveal {
+  visibility: hidden;
+  position: relative;
+  width: 100%;
+  height: 87vh;
+  overflow: hidden;
+}
+/* .reveal > div,
 .reveal > span {
   opacity: 0;
 }
@@ -406,10 +417,13 @@ body {
   background-color: #fff;
 }
 .reveal.show::before {
+  animation-duration: 3s;
   animation: reveal 1000ms cubic-bezier(0.77, 0, 0.18, 1);
 }
 .reveal.show::after {
-  animation: reveal 5000ms 500ms cubic-bezier(0.77, 0, 0.18, 1);
+  animation-delay: 3s;
+  animation: reveal cubic-bezier(0.77, 0, 0.18, 1);
+  animation-duration: 3s;
 }
 @keyframes opacity {
   0% {
@@ -450,7 +464,7 @@ body {
     top: auto;
     bottom: 100%;
   }
-}
+} */
 /* section3 */
 .skill_logo {
   width: 100%;
@@ -1309,9 +1323,7 @@ body {
     margin-top: 7vw;
     overflow: hidden;
   }
-  .prof_img {
-    background-position: bottom;
-    height: 80vh;
+  .reveal {
   }
   /* section3 */
   .skill_logo {
@@ -1396,10 +1408,10 @@ body {
     font-size: 9.6vw;
   }
   .prof_desc p {
-    font-size: 4.9vw;
+    font-size: 4.3vw;
   }
-  .prof_img {
-    height: 45vh;
+  .reveal {
+    height: 65vh;
   }
   /* section3 */
   .skill_logo_img {
@@ -1409,9 +1421,9 @@ body {
   .skill_logo_img:last-child {
   }
   .skill_txt_tit {
-    font-size: 6vw;
+    font-size: 4.5vw;
   }
   .skill_txt_desc {
-    font-size: 4.7vw;
+    font-size: 4.2vw;
   }
 }
