@@ -162,6 +162,10 @@ setTimeout(() => {
       width: "100%",
     });
   }
+  window.onresize = function () {
+    document.location.reload();
+  };
+
   tl.to("#section2", {
     duration: 0.6,
     opacity: 1,
