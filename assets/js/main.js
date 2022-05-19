@@ -162,9 +162,9 @@ setTimeout(() => {
       width: "100%",
     });
   }
-  window.onresize = function () {
-    document.location.reload();
-  };
+  // window.onresize = function () {
+  //   document.location.reload();
+  // };
 
   tl.to("#section2", {
     duration: 0.6,
@@ -657,7 +657,7 @@ window.addEventListener(
 
 //js button
 document
-  .querySelectorAll(".js_view")
+  .querySelectorAll(".game_code")
   .forEach(
     (button) =>
       (button.innerHTML =

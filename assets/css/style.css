@@ -51,6 +51,7 @@ body {
 }
 #section5 {
   width: 100%;
+  overflow: hidden;
 }
 #section6 {
 }
@@ -293,9 +294,7 @@ body {
   display: block;
 }
 .main_intro .main_img {
-  background: url(../img/profile2.jpg) no-repeat center;
-  background-size: 100%;
-  background: cover;
+  background: url(../img/profile.jpg) no-repeat center top / 120%;
   border-radius: 50%;
   width: 12vw;
   height: 12vw;
@@ -377,7 +376,7 @@ body {
   overflow: hidden;
 }
 .prof_img {
-  background: url(../img/profile3.png);
+  background: url(../img/profile.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -617,7 +616,166 @@ body {
 .js_int {
   background-image: url(../img/intro3.png);
 }
-
+.game {
+  float: left;
+  width: 50%;
+  font-family: "Raleway";
+  border-right: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
+}
+.game:nth-child(odd) {
+  border-right: 0;
+}
+.game_inner {
+  padding: 8%;
+}
+.game_txt {
+}
+.game_tit h3 {
+  font-size: 2rem;
+  color: #2a57dc;
+  font-weight: 500;
+}
+.game_desc {
+  display: inline-block;
+  font-family: "ChosunNm";
+  font-size: 0.9rem;
+  padding-top: 5%;
+  width: 60%;
+}
+.game_desc p {
+  /* overflow: hidden; */
+}
+.game_desc p > span {
+  display: inline-block;
+}
+.game_txt a {
+  position: relative;
+  display: inline-block;
+  width: 29%;
+  font-family: "Raleway";
+  font-size: 1.1vw;
+  margin-top: 8%;
+  float: right;
+  transition: 0.25s ease;
+}
+.game_txt a:hover {
+  color: #fff;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.game_code {
+  --background: #275efe;
+  --text: #fff;
+  --font-size: 16px;
+  --duration: 0.44s;
+  --move-hover: -4px;
+  --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
+  --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
+  --font-shadow: var(--font-size);
+  padding: 13px 32px;
+  font-weight: 500;
+  line-height: var(--font-size);
+  border-radius: 24px;
+  display: block;
+  outline: none;
+  text-decoration: none;
+  font-size: var(--font-size);
+  letter-spacing: 0.5px;
+  background: var(--background);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transform: translateY(var(--y)) translateZ(0);
+  transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+}
+.game_code > div {
+  display: flex;
+  overflow: hidden;
+  text-shadow: 0 var(--font-shadow) 0 var(--text);
+}
+.game_code div span {
+  width: 44%;
+  display: block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-style: normal;
+  transition: transform var(--duration) ease;
+  transform: translateY(var(--m)) translateZ(0);
+}
+.game_code div span:nth-child(1) {
+  transition-delay: 0.05s;
+}
+.game_code div span:nth-child(2) {
+  transition-delay: 0.1s;
+}
+.game_code div span:nth-child(3) {
+  transition-delay: 0.15s;
+}
+.game_code div span:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.game_code div span:nth-child(5) {
+  transition-delay: 0.25s;
+}
+.game_code div span:nth-child(6) {
+  transition-delay: 0.3s;
+}
+.game_code div span:nth-child(7) {
+  transition-delay: 0.35s;
+  text-align: center;
+}
+.game_code div span:nth-child(8) {
+  transition-delay: 0.4s;
+}
+.game_code div span:nth-child(9) {
+  transition-delay: 0.45s;
+}
+.game_code div span:nth-child(10) {
+  transition-delay: 0.5s;
+}
+.game_code div span:nth-child(11) {
+  transition-delay: 0.55s;
+}
+.game_code:hover {
+  --y: var(--move-hover);
+  --shadow: var(--shadow-hover);
+}
+.game_code:hover span {
+  --m: calc(var(--font-size) * -1);
+}
+.game_code.reverse {
+  --font-shadow: calc(var(--font-size) * -1);
+}
+.game_code.reverse:hover span {
+  --m: calc(var(--font-size));
+}
+.game_cont {
+  width: 100%;
+  height: 75vh;
+  margin-top: 5%;
+}
+.music_cont {
+  background: #dde2ff;
+}
+.typing_cont {
+  background: #2a57dc;
+}
+.puzzle_cont {
+  background: #2a57dc;
+}
+.card_cont {
+  background: #819fec;
+}
+.typingmaster_cont {
+  background: #e7e7f4;
+}
+.tetris_cont {
+  background: #3e3bdd;
+}
+.game_cont iframe {
+  width: 100%;
+  height: 100%;
+}
 /* #section5 .projects {
   background: url("../img/intro2.png") no-repeat center;
   background-size: 100%;
@@ -759,7 +917,7 @@ body {
   height: 77vh;
   margin-top: 5%;
 }
-.js_view {
+.game_code {
   --background: #275efe;
   --text: #fff;
   --font-size: 16px;
@@ -784,12 +942,12 @@ body {
   transform: translateY(var(--y)) translateZ(0);
   transition: transform var(--duration) ease, box-shadow var(--duration) ease;
 }
-.js_view div {
+.game_code div {
   display: flex;
   overflow: hidden;
   text-shadow: 0 var(--font-shadow) 0 var(--text);
 }
-.js_view div span {
+.game_code div span {
   display: block;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -797,51 +955,51 @@ body {
   transition: transform var(--duration) ease;
   transform: translateY(var(--m)) translateZ(0);
 }
-.js_view div span:nth-child(1) {
+.game_code div span:nth-child(1) {
   transition-delay: 0.05s;
 }
-.js_view div span:nth-child(2) {
+.game_code div span:nth-child(2) {
   transition-delay: 0.1s;
 }
-.js_view div span:nth-child(3) {
+.game_code div span:nth-child(3) {
   transition-delay: 0.15s;
 }
-.js_view div span:nth-child(4) {
+.game_code div span:nth-child(4) {
   transition-delay: 0.2s;
 }
-.js_view div span:nth-child(5) {
+.game_code div span:nth-child(5) {
   transition-delay: 0.25s;
 }
-.js_view div span:nth-child(6) {
+.game_code div span:nth-child(6) {
   transition-delay: 0.3s;
 }
-.js_view div span:nth-child(7) {
+.game_code div span:nth-child(7) {
   transition-delay: 0.35s;
   text-align: center;
 }
-.js_view div span:nth-child(8) {
+.game_code div span:nth-child(8) {
   transition-delay: 0.4s;
 }
-.js_view div span:nth-child(9) {
+.game_code div span:nth-child(9) {
   transition-delay: 0.45s;
 }
-.js_view div span:nth-child(10) {
+.game_code div span:nth-child(10) {
   transition-delay: 0.5s;
 }
-.js_view div span:nth-child(11) {
+.game_code div span:nth-child(11) {
   transition-delay: 0.55s;
 }
-.js_view:hover {
+.game_code:hover {
   --y: var(--move-hover);
   --shadow: var(--shadow-hover);
 }
-.js_view:hover span {
+.game_code:hover span {
   --m: calc(var(--font-size) * -1);
 }
-.js_view.reverse {
+.game_code.reverse {
   --font-shadow: calc(var(--font-size) * -1);
 }
-.js_view.reverse:hover span {
+.game_code.reverse:hover span {
   --m: calc(var(--font-size));
 }
 /* music */
@@ -900,18 +1058,6 @@ body {
   height: 100%;
 }
 /* //typingmaster */
-/* card_game */
-.card_game {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #edf0ff;
-  width: 100%;
-}
-.card {
-  width: 100%;
-  height: 100%;
-}
 
 /* //card_game */
 /* typing game */
@@ -919,7 +1065,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #3444ec;
   width: 100%;
 }
 .typingspeed {
