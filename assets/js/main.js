@@ -7,17 +7,28 @@ let s = skrollr.init({
 //   $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
 // });
 
-// //header scroll color
-// const header = document.querySelector("#header");
-// const headerHeight = header.getBoundingClientRect().height;
+//loading
 
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > document.getElementById("section7").offsetTop) {
-//     header.setAttribute("style", "background: #222;");
-//   } else {
-//     header.setAttribute("style", "background: #1458E4;");
-//   }
-// });
+let Isloader = document.querySelector(".loading_wrap");
+
+function Isloading() {
+  setTimeout(function () {
+    Isloader.classList.add("active");
+  }, 2000);
+}
+Isloading();
+
+//header scroll color
+const header = document.querySelector("#header");
+const headerHeight = header.getBoundingClientRect().height;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > document.getElementById("section6").offsetTop) {
+    header.setAttribute("style", "background: #222;");
+  } else {
+    header.setAttribute("style", "background: #2a57dc;");
+  }
+});
 
 //header sidebar open - close
 $(document).ready(function () {
@@ -317,13 +328,13 @@ revealContainers1.forEach((container1) => {
   });
 
   tl.set(container1, { autoAlpha: 1 });
-  tl.from(container1, 1.0, {
+  tl.from(container1, 0.8, {
     yPercent: 100,
     ease: Power2.out,
   });
-  tl.from(image1, 1.0, {
+  tl.from(image1, 0.8, {
     yPercent: -100,
-    delay: -1.0,
+    delay: -0.8,
     ease: Power2.out,
   });
 });
@@ -617,6 +628,16 @@ window.addEventListener(
   },
   1000
 );
+
+// //section5 가로스크롤
+$(window).scroll(function () {
+  let scrollTop = $(window).scrollTop();
+  let offset = scrollTop - $("#section5").offset().top;
+
+  if (scrollTop > $("#section5").offset().top) {
+    $("#section5 .game_wrap").css("left", -offset);
+  }
+});
 
 // profile img 이질감
 
