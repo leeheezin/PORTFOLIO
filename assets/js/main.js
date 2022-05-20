@@ -14,7 +14,7 @@ let Isloader = document.querySelector(".loading_wrap");
 function Isloading() {
   setTimeout(function () {
     Isloader.classList.add("active");
-  }, 2000);
+  }, 1500);
 }
 Isloading();
 
@@ -635,7 +635,7 @@ $(window).scroll(function () {
   let offset = scrollTop - $("#section5").offset().top;
 
   if (scrollTop > $("#section5").offset().top) {
-    $("#section5 .game_wrap").css("left", -offset);
+    $("#section5 .js_inner .game_wrap").css("left", -offset);
   }
 });
 

@@ -40,7 +40,7 @@ body {
   display: inline-block;
   color: white;
   transform-origin: bottom;
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: 0.5vw;
   text-transform: uppercase;
 }
@@ -74,13 +74,13 @@ body {
 
 @keyframes loading {
   0% {
-    transform: scaleY(0);
+    transform: scaleX(0);
   }
   50% {
-    transform: scaleY(0.5);
+    transform: scaleX(0.5);
   }
   100% {
-    transform: scaleY(1);
+    transform: scaleX(1);
   }
 }
 #header {
@@ -127,7 +127,7 @@ body {
 }
 #section5 {
   position: relative;
-  height: 800vh;
+  height: 215vh;
 }
 #section6 {
 }
@@ -690,6 +690,8 @@ body {
 
 /* section5 */
 .js_inner {
+  width: 100%;
+  position: fixed;
 }
 .js_int {
   background-image: url(../img/intro3.png);
@@ -714,9 +716,6 @@ body {
   font-family: "Raleway";
   border-right: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
-}
-.game:nth-child(odd) {
-  border-right: 0;
 }
 .game_inner {
   padding: 8%;
@@ -868,6 +867,11 @@ body {
   width: 100%;
   height: 100%;
 }
+/* section6 */
+.ani_int {
+  background-image: url(../img/intro4.png);
+}
+
 /* #section5 .projects {
   background: url("../img/intro2.png") no-repeat center;
   background-size: 100%;
@@ -911,7 +915,6 @@ body {
 .pro_txt_right {
   width: 40%;
 }
-
 .code .view_txt {
   left: 5%;
 }
@@ -926,7 +929,6 @@ body {
   z-index: -1;
   right: 0;
 }
-
 */
 
 /* section6 */
@@ -938,7 +940,6 @@ body {
   width: 100%;
   padding: 20px;
   overflow: scroll;
-
   overflow: auto;
   white-space: nowrap;
 } */
@@ -1535,7 +1536,7 @@ body {
     margin-top: 20vw;
   }
   .sec1_inner .sec1_right .main_intro p {
-    font-size: 3.5vw;
+    font-size: 3.3vw;
     line-height: 1.5;
   }
   .main_intro figure {
