@@ -1,1102 +1,1310 @@
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PORTFOLIO</title>
-    <link rel="stylesheet" href="assets/css/reset.css" />
-    <link rel="stylesheet" href="assets/css/fonts.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link
       href="https://webfontworld.github.io/sunn/SUIT.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  </head>
-  <body>
-    <div class="loading_wrap">
-      <ul>
-        <li><span>l</span></li>
-        <li><span>o</span></li>
-        <li><span>a</span></li>
-        <li><span>d</span></li>
-        <li><span>i</span></li>
-        <li><span>n</span></li>
-        <li><span>g</span></li>
-      </ul>
-    </div>
+</head>
+</head>
+<body>
+    <!-- <div class="loading_wrap">
+        <ul>
+            <li><span>l</span></li>
+            <li><span>o</span></li>
+            <li><span>a</span></li>
+            <li><span>d</span></li>
+            <li><span>i</span></li>
+            <li><span>n</span></li>
+            <li><span>g</span></li>
+        </ul>
+    </div> -->
     <header id="header">
-      <nav id="nav">
-        <div class="nav_button">
-          <span class="on"></span>
-        </div>
-        <div class="scroll"><em>0</em></div>
-      </nav>
-      <div class="sidebar">
-        <div class="side_inner">
-          <div class="side1"><em>WELCOME TO MY PORTFOLIO</em></div>
-          <div class="side2">
-            <a href="#section2"><span>PROFILE</span></a>
-            <a href="#section4"><span>SKILLS</span></a>
-            <a href="#section5"><span>PROJECTS</span></a>
-            <a href="#section7"><span>ANIMATION</span></a>
-            <a href="#section8"><span>ABOUT</span></a>
-            <a href="#footer"><span>CONTACT</span></a>
-          </div>
-          <div class="side3">
-            <span>© 2022 PORTFOLIO</span>
-          </div>
-          <div class="nav_close">
-            <button class="close_btn">
-              <span></span>
-            </button>
-          </div>
-        </div>
-      </div>
+        <nav id="nav">
+            <div>
+                <span></span>
+            </div>
+            <div class="scroll">
+                <em>0</em>
+            </div>
+        </nav>
     </header>
     <!-- //header -->
-    <main id="wrapper">
-      <div class="contents">
+
+    <main id="main">
         <section id="section1">
-          <div class="sec1_inner">
-            <div class="sec1_left">
-              <div class="left_txt">
-                <div class="split">PORTFOLIO</div>
-                <div class="split">CREATIVE FRONT</div>
-                <div class="split">DEVELOPER</div>
-                <div class="split">LEE HEE JIN</div>
+            <div class="sec1_inner">
+              <div class="sec1_left">
+                <div class="left_txt">
+                  <div class="split">PORTFOLIO</div>
+                  <div class="split">CREATIVE FRONT</div>
+                  <div class="split">DEVELOPER</div>
+                  <div class="split">LEE HEE JIN</div>
+                </div>
+              </div>
+              <div class="sec1_right">
+                <div class="main_title">
+                  <span>PORTFOLIO</span>
+                  <a href="#">CONTACT ME</a>
+                </div>
+                <div class="main_intro">
+                  <p>
+                    안녕하세요! 프론트엔드개발자를 꿈꾸는 이희진입니다. 다양한
+                    라이브러리를 접하며 동적인 기능을 구현하는것에 흥미를 느끼게
+                    되었고, 프론트엔드 개발자가 되기 위해서 여러가지 웹사이트와
+                    컨텐츠를 퍼블리싱하고, 스크립트 기능을 추가하며 만들어
+                    왔습니다. 배움을 멈추지 않고, 스터디모임을 통해 리액트,php,뷰
+                    등을 배우며 적극적으로 개발에 대한 관심사를 넓혀나가고
+                    있습니다. 앞으로도 실력을 향상시키기위해 멈추지않고, 꾸준하게
+                    배우며 실무에서도 빠른습득과 적용을 잘하는 개발자가
+                    되겠습니다.
+                  </p>
+                  <figure><div class="main_img"></div></figure>
+                </div>
               </div>
             </div>
-            <div class="sec1_right">
-              <div class="main_title">
-                <span>PORTFOLIO</span>
-                <a href="#">CONTACT ME</a>
-              </div>
-              <div class="main_intro">
-                <p>
-                  안녕하세요! 프론트엔드개발자를 꿈꾸는 이희진입니다. 다양한
-                  라이브러리를 접하며 동적인 기능을 구현하는것에 흥미를 느끼게
-                  되었고, 프론트엔드 개발자가 되기 위해서 여러가지 웹사이트와
-                  컨텐츠를 퍼블리싱하고, 스크립트 기능을 추가하며 만들어
-                  왔습니다. 배움을 멈추지 않고, 스터디모임을 통해 리액트,php,뷰
-                  등을 배우며 적극적으로 개발에 대한 관심사를 넓혀나가고
-                  있습니다. 앞으로도 실력을 향상시키기위해 멈추지않고, 꾸준하게
-                  배우며 실무에서도 빠른습득과 적용을 잘하는 개발자가
-                  되겠습니다.
-                </p>
-                <figure><div class="main_img"></div></figure>
-              </div>
-            </div>
-          </div>
         </section>
-        <!-- //section1 -->
         <section id="section2">
-          <div class="port_int intro_inner">
-            <div class="intro_text">
-              <h2>
-                <span>P</span>
-                <em>O</em>
-                <span>R</span>
-                <em>T</em>
-                <span>F</span>
-                <em>O</em>
-                <span>L</span>
-                <em>I</em>
-                <span>O</span>
-              </h2>
-            </div>
-          </div>
-          <article class="profile">
-            <div class="prof inner">
-              <div class="prof_cont">
-                <div class="prof_tit">
-                  <p class="tit1"><span>HELLO!!</span></p>
-                  <p class="tit2"><span>IM HEEJIN-LEE!</span></p>
-                  <p class="tit3"><span>I AM AIMING TO BE</span></p>
-                  <p class="tit4">
-                    <span><strong>A FRONT-END DEVELOPER</strong></span>
-                  </p>
-                </div>
-                <div class="prof_desc">
-                  <p>
-                    <span class="desc1">
-                      안녕하세요! 프론트엔드개발자를 꿈꾸는 이희진입니다.
-                    </span>
-                  </p>
-                  <p>
-                    <span class="desc2">
-                      다양한 라이브러리를 접하며 동적인 기능을 구현하는것에
-                      흥미를 느끼게 되었고,
-                    </span>
-                  </p>
-                  <p>
-                    <span class="desc3">
-                      프론트엔드 개발자가 되기 위해서 여러가지 웹사이트와
-                      컨텐츠를 퍼블리싱하고,
-                    </span>
-                  </p>
-                  <p>
-                    <span class="desc4">
-                      스크립트 기능을 추가하며 만들어 왔습니다. 배움을 멈추지
-                      않고,
-                    </span>
-                  </p>
-                  <p>
-                    <span class="desc5">
-                      스터디모임을 통해 리액트,php,뷰 등을 배우며 적극적으로
-                      개발에 대한 관심사를
-                    </span>
-                  </p>
-                  <p>
-                    <span class="desc6">
-                      넓혀나가고 있습니다. 앞으로도 실력을 향상시키기위해
-                      멈추지않고,
-                    </span>
-                  </p>
-                  <p>
-                    <span class="desc7">
-                      꾸준하게 배우며 실무에서도 빠른습득과 적용을 잘하는
-                      개발자가 되겠습니다.
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <figure class="reveal">
-                <div class="prof_img"></div>
-              </figure>
-            </div>
-          </article>
-        </section>
-        <!-- //section2 -->
-        <section id="section3" class="cont cont_item">
-          <article class="skill">
-            <div class="skill_logo">
-              <div class="skill_logo_img">
-                <img src="assets/img/skill1.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill2.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill3.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill4.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill5.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill6.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill7.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill8.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill9.png" alt="" />
-              </div>
-              <div class="skill_logo_img">
-                <img src="assets/img/skill10.png" alt="" />
-              </div>
-            </div>
-            <div class="skill_txt">
-              <div class="skill_inner">
-                <div class="skill_txt_tit">
-                  <p class="tit1"><span>This is a skill I can use.</span></p>
-                  <p class="tit2">
-                    <span>By trying new features, we are trying to learn</span>
-                  </p>
-                  <p class="tit3">
-                    <span>more diversely and understand them in depth.</span>
-                  </p>
-                  <p class="tit4">
-                    <span
-                      >I will continue to do my best without stopping learning.
-                    </span>
-                  </p>
-                </div>
-                <div class="skill_txt_desc">
-                  <p class="desc1">
-                    <span>크로스브라우징과 웹표준을 준수하여 작업</span>
-                  </p>
-                  <p class="desc2"><span>html 마크업,form,svg등 사용</span></p>
-                  <p class="desc3"><span>css 디자인과 레이아웃 표현</span></p>
-                  <p class="desc4">
-                    <span>
-                      keyframe을 이용한 동적인 효과를 나타내는 애니메이션 작업
-                    </span>
-                  </p>
-                  <p class="desc5"><span>pigma를 이용한 웹디자인 작업</span></p>
-                  <p class="desc6">
-                    <span>
-                      php를 이용한 로그인,회원가입 기능, 댓글 컨텐츠 제작
-                    </span>
-                  </p>
-                  <p class="desc7">
-                    <span>javascript ES6문법, Event등 사용</span>
-                  </p>
-                  <p class="desc8">
-                    <span>jQuery를 이용한 간단한 스크립트 구현</span>
-                  </p>
-                  <p class="desc9">
-                    <span>
-                      React Hooks, useEffect, 컴포넌트, state, vue 등 경험
-                    </span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </article>
-        </section>
-        <!-- //section3-->
-        <div id="section4">
-          <div class="proj_int intro_inner">
-            <div class="intro_text">
-              <h2>
-                <span>P</span>
-                <em>R</em>
-                <span>O</span>
-                <em>J</em>
-                <span>E</span>
-                <em>C</em>
-                <span>T</span>
-                <em>S</em>
-              </h2>
-            </div>
-          </div>
-          <article class="project">
-            <div class="proj inner proj_1">
-              <div class="proj_left">
-                <div class="proj_tit projtit_1">
-                  <p><span>Basic Coding</span></p>
-                  <h3><span>WEBSTANDARD</span></h3>
-                </div>
-                <div class="proj_desc projdesc_1">
-                  <p>
-                    <span>
-                      웹접근성과 웹표준을 준수하여 만든 사이트 입니다.
-                    </span>
-                  </p>
-                  <p>
-                    <span>
-                      팝업, 탭 메뉴,게시판, 슬라이더 등 다양한 기능을 웹표준에
-                      맞게 제작한 사이트 입니다.
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <div class="proj_right">
-                <div class="site proj_view">
-                  <a href="#" class="view_btn">
-                    <span class="circle" aria-hidden="true">
-                      <span class="icon arrow"></span>
-                    </span>
-                    <span class="view_txt">site view</span>
-                  </a>
-                </div>
-                <div class="code proj_view">
-                  <a href="#" class="view_btn">
-                    <span class="circle" aria-hidden="true">
-                      <span class="icon arrow"></span>
-                    </span>
-                    <span class="code view_txt">code view</span>
-                  </a>
-                </div>
-                <div class="proj_numb num_1"><span>01</span></div>
-              </div>
-            </div>
-            <figure class="proj_img_wrap"><div class="proj_img1"></div></figure>
-          </article>
-          <article class="project">
-            <div class="proj inner proj_2">
-              <div class="proj_left">
-                <div class="proj_tit projtit_2">
-                  <p><span>Basic Coding</span></p>
-                  <h3><span>megabox</span></h3>
-                </div>
-                <div class="proj_desc projdesc_2">
-                  <p>
-                    <span>
-                      기존의 기업형 메가박스 사이트를 리뉴얼하여 작업한
-                      사이트입니다.
-                    </span>
-                  </p>
-                  <p>
-                    <span>
-                      이미지 슬라이드를 위해 swiper를 사용했고, 웹접근성을
-                      준수하여 반응형으로 제작하였습니다.
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <div class="proj_right">
-                <div class="site proj_view">
-                  <a href="#" class="view_btn">
-                    <span class="circle" aria-hidden="true">
-                      <span class="icon arrow"></span>
-                    </span>
-                    <span class="view_txt">site view</span>
-                  </a>
-                </div>
-                <div class="code proj_view">
-                  <a href="#" class="view_btn">
-                    <span class="circle" aria-hidden="true">
-                      <span class="icon arrow"></span>
-                    </span>
-                    <span class="code view_txt">code view</span>
-                  </a>
-                </div>
-                <div class="proj_numb num_2"><span>02</span></div>
-              </div>
-            </div>
-            <figure class="proj_img_wrap"><div class="proj_img2"></div></figure>
-          </article>
-          <article class="project">
-            <div class="proj inner proj_3">
-              <div class="proj_left">
-                <div class="proj_tit projtit_3">
-                  <p><span>Basic Coding</span></p>
-                  <h3><span>hanacard</span></h3>
-                </div>
-                <div class="proj_desc projdesc_3">
-                  <p>
-                    <span>
-                      기존의 기업형 하나카드 사이트를 작업하였습니다.
-                    </span>
-                  </p>
-                  <p>
-                    <span>
-                      section별로 나누어 레이아웃을 잡은후 웹표준과 접근성에
-                      준수하여 작업하였습니다.
-                    </span>
-                  </p>
-                </div>
-              </div>
-              <div class="proj_right">
-                <div class="site proj_view">
-                  <a href="#" class="view_btn">
-                    <span class="circle" aria-hidden="true">
-                      <span class="icon arrow"></span>
-                    </span>
-                    <span class="view_txt">site view</span>
-                  </a>
-                </div>
-                <div class="code proj_view">
-                  <a href="#" class="view_btn">
-                    <span class="circle" aria-hidden="true">
-                      <span class="icon arrow"></span>
-                    </span>
-                    <span class="code view_txt">code view</span>
-                  </a>
-                </div>
-                <div class="proj_numb num_3"><span>03</span></div>
-              </div>
-            </div>
-            <figure class="proj_img_wrap"><div class="proj_img3"></div></figure>
-          </article>
-        </div>
-        <!-- //section4 -->
-        <div id="section5">
-          <div class="js_inner">
-            <div class="js_int intro_inner">
+            <div class="port_int intro_inner">
               <div class="intro_text">
                 <h2>
-                  <span>J</span>
-                  <em>A</em>
-                  <span>V</span>
-                  <em>A</em>
-                  <span>S</span>
-                  <em>C</em>
-                  <span>R</span>
-                  <em>I</em>
                   <span>P</span>
+                  <em>O</em>
+                  <span>R</span>
                   <em>T</em>
+                  <span>F</span>
+                  <em>O</em>
+                  <span>L</span>
+                  <em>I</em>
+                  <span>O</span>
                 </h2>
               </div>
             </div>
-            <div class="game_wrap">
-              <div class="game_wrap1">
-                <article class="game">
-                  <div class="game_inner">
-                    <div class="game_tit">
-                      <h3>music player</h3>
-                    </div>
-                    <div class="game_txt">
-                      <div class="game_desc">
-                        <p>
-                          <span
-                            >JAVASCRIPT를 이용하여 버튼을 눌러 재생 및
-                            정지,</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >리스트를 볼수있고, 음악이 재생되는 뮤직
-                            플레이어</span
-                          >
-                        </p>
-                        <p><span>컨텐츠를 작업하였습니다.</span></p>
-                      </div>
-                      <a class="game_code" href="#">CODE VIEW</a>
-                    </div>
-                    <div class="game_cont music_cont">
-                      <iframe
-                        class="music"
-                        src="https://leeheezin.github.io/javascript/music%20player/"
-                        frameborder="0"
-                      ></iframe>
-                    </div>
+            <article class="profile">
+              <div class="prof inner">
+                <div class="prof_cont">
+                  <div class="prof_tit">
+                    <p class="tit1"><span>HELLO!!</span></p>
+                    <p class="tit2"><span>IM HEEJIN-LEE!</span></p>
+                    <p class="tit3"><span>I AM AIMING TO BE</span></p>
+                    <p class="tit4">
+                      <span><strong>A FRONT-END DEVELOPER</strong></span>
+                    </p>
                   </div>
-                </article>
-                <article class="game">
-                  <div class="game_inner">
-                    <div class="game_txt">
-                      <div class="game_tit">
-                        <h3>TYPING GAME</h3>
-                      </div>
-                      <div class="game_desc">
-                        <p>
-                          <span
-                            >JAVASCRIPT를 이용한 타자게임 컨텐츠입니다.</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >페이지수마다 제한시간은 60초이며, 타이핑의
-                            오타와</span
-                          >
-                        </p>
-                        <p><span>속도,시간을 테스트 할 수 있습니다.</span></p>
-                      </div>
-                      <a class="game_code" href="#">CODE VIEW</a>
-                    </div>
-                    <div class="game_cont typing_cont">
-                      <iframe
-                        class="typing_game"
-                        src="https://leeheezin.github.io/javascript/Typing%20speed%20game/"
-                        frameborder="0"
-                      ></iframe>
-                    </div>
+                  <div class="prof_desc">
+                    <p>
+                      <span class="desc1">
+                        안녕하세요! 프론트엔드개발자를 꿈꾸는 이희진입니다.
+                      </span>
+                    </p>
+                    <p>
+                      <span class="desc2">
+                        다양한 라이브러리를 접하며 동적인 기능을 구현하는것에
+                        흥미를 느끼게 되었고,
+                      </span>
+                    </p>
+                    <p>
+                      <span class="desc3">
+                        프론트엔드 개발자가 되기 위해서 여러가지 웹사이트와
+                        컨텐츠를 퍼블리싱하고,
+                      </span>
+                    </p>
+                    <p>
+                      <span class="desc4">
+                        스크립트 기능을 추가하며 만들어 왔습니다. 배움을 멈추지
+                        않고,
+                      </span>
+                    </p>
+                    <p>
+                      <span class="desc5">
+                        스터디모임을 통해 리액트,php,뷰 등을 배우며 적극적으로
+                        개발에 대한 관심사를
+                      </span>
+                    </p>
+                    <p>
+                      <span class="desc6">
+                        넓혀나가고 있습니다. 앞으로도 실력을 향상시키기위해
+                        멈추지않고,
+                      </span>
+                    </p>
+                    <p>
+                      <span class="desc7">
+                        꾸준하게 배우며 실무에서도 빠른습득과 적용을 잘하는
+                        개발자가 되겠습니다.
+                      </span>
+                    </p>
                   </div>
-                </article>
+                </div>
+                <figure class="reveal">
+                  <div class="prof_img"></div>
+                </figure>
               </div>
-              <div class="game_wrap2">
-                <article class="game">
-                  <div class="game_inner">
-                    <div class="game_txt">
-                      <div class="game_tit">
-                        <h3>puzzle</h3>
-                      </div>
-                      <div class="game_desc">
-                        <p>
-                          <span
-                            >JAVASCRIPT를 이용하여 작업한 퍼즐
-                            컨텐츠입니다.</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >스타트 버튼을 눌러 5초간 완성화면을 보여주고,</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >마우스 드래그로 이동하여 맞추는 퍼즐입니다.</span
-                          >
-                        </p>
-                      </div>
-                      <a class="game_code" href="#">CODE VIEW</a>
-                    </div>
-                    <div class="game_cont puzzle_cont">
-                      <iframe
-                        class="puzzle_game"
-                        src="https://leeheezin.github.io/javascript/puzzle/"
-                        frameborder="0"
-                      ></iframe>
-                    </div>
-                  </div>
-                </article>
-                <article class="game">
-                  <div class="game_inner">
-                    <div class="game_txt">
-                      <div class="game_tit">
-                        <h3>card game</h3>
-                      </div>
-                      <div class="game_desc">
-                        <p>
-                          <span
-                            >JAVASCRIPT를 이용한 카드게임 컨텐츠입니다.</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >무작위로 배치된 16장의 카드에서 동일한
-                            이미지가</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >있는 같은 짝의 카드를 기억하여
-                            맞추는것입니다.</span
-                          >
-                        </p>
-                      </div>
-                      <a class="game_code" href="#">CODE VIEW</a>
-                    </div>
-                    <div class="game_cont card_cont">
-                      <iframe
-                        class="card_game"
-                        src="https://leeheezin.github.io/javascript/Card%20Game/"
-                        frameborder="0"
-                      ></iframe>
-                    </div>
-                  </div>
-                </article>
+            </article>
+          </section>
+          <section id="section3" class="cont cont_item">
+            <article class="skill">
+              <div class="skill_logo">
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill1.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill2.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill3.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill4.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill5.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill6.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill7.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill8.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill9.png" alt="" />
+                </div>
+                <div class="skill_logo_img">
+                  <img src="assets/img/skill10.png" alt="" />
+                </div>
               </div>
-              <div class="game_wrap3">
-                <article class="game">
-                  <div class="game_inner">
-                    <div class="game_txt">
-                      <div class="game_tit">
-                        <h3>typing mater</h3>
-                      </div>
-                      <div class="game_desc">
-                        <p>
-                          <span>JAVASCRIPT를 이용한 단어를 타이핑하는 </span>
-                        </p>
-                        <p>
-                          <span
-                            >컨텐츠입니다. 주어진 단어를 입력하면 다음
-                            단어로</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >넘어가고, 시간제한 및 점수획득이 가능합니다.</span
-                          >
-                        </p>
-                      </div>
-                      <a class="game_code" href="#">CODE VIEW</a>
-                    </div>
-                    <div class="game_cont typingmaster_cont">
-                      <iframe
-                        class="typingmaster_game"
-                        src="https://leeheezin.github.io/javascript/Typing Master/"
-                        frameborder="0"
-                      ></iframe>
-                    </div>
+              <div class="skill_txt">
+                <div class="skill_inner">
+                  <div class="skill_txt_tit">
+                    <p class="tit1"><span>This is a skill I can use.</span></p>
+                    <p class="tit2">
+                      <span>By trying new features, we are trying to learn</span>
+                    </p>
+                    <p class="tit3">
+                      <span>more diversely and understand them in depth.</span>
+                    </p>
+                    <p class="tit4">
+                      <span
+                        >I will continue to do my best without stopping learning.
+                      </span>
+                    </p>
                   </div>
-                </article>
-                <article class="game">
-                  <div class="game_inner">
-                    <div class="game_txt">
-                      <div class="game_tit">
-                        <h3>tetris</h3>
-                      </div>
-                      <div class="game_desc">
-                        <p>
-                          <span
-                            >JAVASCRIPT를 이용하여 추억의 게임 테트리스</span
-                          >
-                        </p>
-                        <p>
-                          <span
-                            >컨텐츠입니다. 화살표 버튼을 눌러 도형을
-                            바꾸고</span
-                          >
-                        </p>
-                        <p>
-                          <span>스페이스바로 빠르기 조절이 가능합니다.</span>
-                        </p>
-                      </div>
-                      <a class="game_code" href="#">CODE VIEW</a>
-                    </div>
-                    <div class="game_cont tetris_cont">
-                      <iframe
-                        class="tetris_game"
-                        src="https://leeheezin.github.io/javascript/tetris/"
-                        frameborder="0"
-                      ></iframe>
-                    </div>
+                  <div class="skill_txt_desc">
+                    <p class="desc1">
+                      <span>크로스브라우징과 웹표준을 준수하여 작업</span>
+                    </p>
+                    <p class="desc2"><span>html 마크업,form,svg등 사용</span></p>
+                    <p class="desc3"><span>css 디자인과 레이아웃 표현</span></p>
+                    <p class="desc4">
+                      <span>
+                        keyframe을 이용한 동적인 효과를 나타내는 애니메이션 작업
+                      </span>
+                    </p>
+                    <p class="desc5"><span>pigma를 이용한 웹디자인 작업</span></p>
+                    <p class="desc6">
+                      <span>
+                        php를 이용한 로그인,회원가입 기능, 댓글 컨텐츠 제작
+                      </span>
+                    </p>
+                    <p class="desc7">
+                      <span>javascript ES6문법, Event등 사용</span>
+                    </p>
+                    <p class="desc8">
+                      <span>jQuery를 이용한 간단한 스크립트 구현</span>
+                    </p>
+                    <p class="desc9">
+                      <span>
+                        React Hooks, useEffect, 컴포넌트, state, vue 등 경험
+                      </span>
+                    </p>
                   </div>
-                </article>
+                </div>
+              </div>
+            </article>
+          </section>
+          <!-- //section3-->
+          <section id="section4">
+            <div class="proj_int intro_inner">
+              <div class="intro_text">
+                <h2>
+                  <span>P</span>
+                  <em>R</em>
+                  <span>O</span>
+                  <em>J</em>
+                  <span>E</span>
+                  <em>C</em>
+                  <span>T</span>
+                  <em>S</em>
+                </h2>
               </div>
             </div>
-          </div>
-        </div>
-        <!-- //section5 -->
-        <!-- section6 -->
-        <section id="section6">
-          <div class="ani_int intro_inner">
+            <article class="project">
+              <div class="proj inner proj_1">
+                <div class="proj_left">
+                  <div class="proj_tit projtit_1">
+                    <p><span>Basic Coding</span></p>
+                    <h3><span>WEBSTANDARD</span></h3>
+                  </div>
+                  <div class="proj_desc projdesc_1">
+                    <p>
+                      <span>
+                        웹접근성과 웹표준을 준수하여 만든 사이트 입니다.
+                      </span>
+                    </p>
+                    <p>
+                      <span>
+                        팝업, 탭 메뉴,게시판, 슬라이더 등 다양한 기능을 웹표준에
+                        맞게 제작한 사이트 입니다.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="proj_right">
+                  <div class="site proj_view">
+                    <a href="#" class="view_btn">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="view_txt">site view</span>
+                    </a>
+                  </div>
+                  <div class="code proj_view">
+                    <a href="#" class="view_btn">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="code view_txt">code view</span>
+                    </a>
+                  </div>
+                  <div class="proj_numb num_1"><span>01</span></div>
+                </div>
+              </div>
+              <figure class="proj_img_wrap"><div class="proj_img1"></div></figure>
+            </article>
+            <article class="project">
+              <div class="proj inner proj_2">
+                <div class="proj_left">
+                  <div class="proj_tit projtit_2">
+                    <p><span>Basic Coding</span></p>
+                    <h3><span>megabox</span></h3>
+                  </div>
+                  <div class="proj_desc projdesc_2">
+                    <p>
+                      <span>
+                        기존의 기업형 메가박스 사이트를 리뉴얼하여 작업한
+                        사이트입니다.
+                      </span>
+                    </p>
+                    <p>
+                      <span>
+                        이미지 슬라이드를 위해 swiper를 사용했고, 웹접근성을
+                        준수하여 반응형으로 제작하였습니다.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="proj_right">
+                  <div class="site proj_view">
+                    <a href="#" class="view_btn">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="view_txt">site view</span>
+                    </a>
+                  </div>
+                  <div class="code proj_view">
+                    <a href="#" class="view_btn">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="code view_txt">code view</span>
+                    </a>
+                  </div>
+                  <div class="proj_numb num_2"><span>02</span></div>
+                </div>
+              </div>
+              <figure class="proj_img_wrap"><div class="proj_img2"></div></figure>
+            </article>
+            <article class="project">
+              <div class="proj inner proj_3">
+                <div class="proj_left">
+                  <div class="proj_tit projtit_3">
+                    <p><span>Basic Coding</span></p>
+                    <h3><span>hanacard</span></h3>
+                  </div>
+                  <div class="proj_desc projdesc_3">
+                    <p>
+                      <span>
+                        기존의 기업형 하나카드 사이트를 작업하였습니다.
+                      </span>
+                    </p>
+                    <p>
+                      <span>
+                        section별로 나누어 레이아웃을 잡은후 웹표준과 접근성에
+                        준수하여 작업하였습니다.
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="proj_right">
+                  <div class="site proj_view">
+                    <a href="#" class="view_btn">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="view_txt">site view</span>
+                    </a>
+                  </div>
+                  <div class="code proj_view">
+                    <a href="#" class="view_btn">
+                      <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                      </span>
+                      <span class="code view_txt">code view</span>
+                    </a>
+                  </div>
+                  <div class="proj_numb num_3"><span>03</span></div>
+                </div>
+              </div>
+              <figure class="proj_img_wrap"><div class="proj_img3"></div></figure>
+            </article>
+          </section>
+          <div class="js_int intro_inner">
             <div class="intro_text">
               <h2>
-                <span>A</span>
-                <em>N</em>
-                <span>I</span>
-                <em>M</em>
-                <span>A</span>
+                <span>J</span>
+                <em>A</em>
+                <span>V</span>
+                <em>A</em>
+                <span>S</span>
+                <em>C</em>
+                <span>R</span>
+                <em>I</em>
+                <span>P</span>
                 <em>T</em>
-                <span>I</span>
-                <em>O</em>
-                <span>N</span>
               </h2>
             </div>
-          </div>
+        </div>
+        <section id="section5">
+            <div class="sec5_wrap">
+                <div class="sec2-1"><article class="game">
+                    <div class="game_inner">
+                      <div class="game_tit">
+                        <h3>music player</h3>
+                      </div>
+                      <div class="game_txt">
+                        <div class="game_desc">
+                          <p>
+                            <span
+                              >JAVASCRIPT를 이용하여 버튼을 눌러 재생 및 정지,</span
+                            >
+                          </p>
+                          <p>
+                            <span
+                              >리스트를 볼수있고, 음악이 재생되는 뮤직
+                              플레이어</span
+                            >
+                          </p>
+                          <p><span>컨텐츠를 작업하였습니다.</span></p>
+                        </div>
+                        <a class="game_code" href="#">CODE VIEW</a>
+                      </div>
+                      <div class="game_cont music_cont">
+                        <iframe
+                          class="music"
+                          src="https://leeheezin.github.io/javascript/music%20player/"
+                          frameborder="0"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </article></div>
+                <div class="sec2-2"><article class="game">
+                    <div class="game_inner">
+                      <div class="game_txt">
+                        <div class="game_tit">
+                          <h3>TYPING GAME</h3>
+                        </div>
+                        <div class="game_desc">
+                          <p>
+                            <span>JAVASCRIPT를 이용한 타자게임 컨텐츠입니다.</span>
+                          </p>
+                          <p>
+                            <span
+                              >페이지수마다 제한시간은 60초이며, 타이핑의
+                              오타와</span
+                            >
+                          </p>
+                          <p><span>속도,시간을 테스트 할 수 있습니다.</span></p>
+                        </div>
+                        <a class="game_code" href="#">CODE VIEW</a>
+                      </div>
+                      <div class="game_cont typing_cont">
+                        <iframe
+                          class="typing_game"
+                          src="https://leeheezin.github.io/javascript/Typing%20speed%20game/"
+                          frameborder="0"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </article></div>
+                <div class="sec2-3"><article class="game">
+                    <div class="game_inner">
+                      <div class="game_txt">
+                        <div class="game_tit">
+                          <h3>puzzle</h3>
+                        </div>
+                        <div class="game_desc">
+                          <p>
+                            <span
+                              >JAVASCRIPT를 이용하여 작업한 퍼즐 컨텐츠입니다.</span
+                            >
+                          </p>
+                          <p>
+                            <span
+                              >스타트 버튼을 눌러 5초간 완성화면을 보여주고,</span
+                            >
+                          </p>
+                          <p>
+                            <span>마우스 드래그로 이동하여 맞추는 퍼즐입니다.</span>
+                          </p>
+                        </div>
+                        <a class="game_code" href="#">CODE VIEW</a>
+                      </div>
+                      <div class="game_cont puzzle_cont">
+                        <iframe
+                          class="puzzle_game"
+                          src="https://leeheezin.github.io/javascript/puzzle/"
+                          frameborder="0"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </article></div>
+                <div class="sec2-4"><article class="game">
+                    <div class="game_inner">
+                      <div class="game_txt">
+                        <div class="game_tit">
+                          <h3>card game</h3>
+                        </div>
+                        <div class="game_desc">
+                          <p>
+                            <span>JAVASCRIPT를 이용한 카드게임 컨텐츠입니다.</span>
+                          </p>
+                          <p>
+                            <span
+                              >무작위로 배치된 16장의 카드에서 동일한 이미지가</span
+                            >
+                          </p>
+                          <p>
+                            <span
+                              >있는 같은 짝의 카드를 기억하여 맞추는것입니다.</span
+                            >
+                          </p>
+                        </div>
+                        <a class="game_code" href="#">CODE VIEW</a>
+                      </div>
+                      <div class="game_cont card_cont">
+                        <iframe
+                          class="card_game"
+                          src="https://leeheezin.github.io/javascript/Card%20Game/"
+                          frameborder="0"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </article></div>
+                <div class="sec2-5"><article class="game">
+                    <div class="game_inner">
+                      <div class="game_txt">
+                        <div class="game_tit">
+                          <h3>typing mater</h3>
+                        </div>
+                        <div class="game_desc">
+                          <p>
+                            <span>JAVASCRIPT를 이용한 단어를 타이핑하는 </span>
+                          </p>
+                          <p>
+                            <span
+                              >컨텐츠입니다. 주어진 단어를 입력하면 다음
+                              단어로</span
+                            >
+                          </p>
+                          <p>
+                            <span
+                              >넘어가고, 시간제한 및 점수획득이 가능합니다.</span
+                            >
+                          </p>
+                        </div>
+                        <a class="game_code" href="#">CODE VIEW</a>
+                      </div>
+                      <div class="game_cont typingmaster_cont">
+                        <iframe
+                          class="typingmaster_game"
+                          src="https://leeheezin.github.io/javascript/Typing Master/"
+                          frameborder="0"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </article></div>
+                <div class="sec2-6"><article class="game">
+                    <div class="game_inner">
+                      <div class="game_txt">
+                        <div class="game_tit">
+                          <h3>tetris</h3>
+                        </div>
+                        <div class="game_desc">
+                          <p>
+                            <span>JAVASCRIPT를 이용하여 추억의 게임 테트리스</span>
+                          </p>
+                          <p>
+                            <span
+                              >컨텐츠입니다. 화살표 버튼을 눌러 도형을 바꾸고</span
+                            >
+                          </p>
+                          <p>
+                            <span>스페이스바로 빠르기 조절이 가능합니다.</span>
+                          </p>
+                        </div>
+                        <a class="game_code" href="#">CODE VIEW</a>
+                      </div>
+                      <div class="game_cont tetris_cont">
+                        <iframe
+                          class="tetris_game"
+                          src="https://leeheezin.github.io/javascript/tetris/"
+                          frameborder="0"
+                        ></iframe>
+                      </div>
+                    </div>
+                  </article></div>
+            </div>
         </section>
-        <!-- //section6 -->
-
-        <!-- <section id="section5" class="cont">
-          <article class="project cont_item">
-            <div class="pro_cont">
-              <div class="pro_txt">
-                <div class="pro inner">
-                  <div class="pro_txt_left">
-                    <span>Basic Coding</span>
-                    <h3>megabox site</h3>
-                    <p>
-                      기존의 기업형 메가박스 사이트를 리뉴얼하여 작업한
-                      사이트입니다.<br />
-                      이미지 슬라이드를 위해 swiper를 사용했고, 웹접근성을
-                      준수하여 반응형으로 제작하였습니다.
-                    </p>
-                  </div>
-                  <div class="pro_txt_right">
-                    <a href="#" class="site view_btn">
-                      <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                      </span>
-                      <span class="view_text">site view</span>
-                    </a>
-                    <a href="#" class="code view_btn">
-                      <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                      </span>
-                      <span class="view_text">code view</span>
-                    </a>
-                    <span class="pro_numb">01</span>
-                  </div>
-                </div>
-              </div>
-              <div class="pro_img pro_img1"></div>
-            </div>
-          </article>
-          <article class="project cont_item">
-            <div class="pro_cont">
-              <div class="pro_txt">
-                <div class="pro inner">
-                  <div class="pro_txt_left">
-                    <span>Basic Coding</span>
-                    <h3>hanacard site</h3>
-                    <p>
-                      기존의 기업형 하나카드 사이트를 작업하였습니다.<br />
-                      section별로 나누어 레이아웃을 잡은후 웹표준과 접근성에
-                      준수하여 작업하였습니다.
-                    </p>
-                  </div>
-                  <div class="pro_txt_right">
-                    <a href="#" class="site view_btn">
-                      <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                      </span>
-                      <span class="view_text">site view</span>
-                    </a>
-                    <a href="#" class="code view_btn">
-                      <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                      </span>
-                      <span class="view_text">code view</span>
-                    </a>
-                    <span class="pro_numb">02</span>
-                  </div>
-                </div>
-              </div>
-              <div class="pro_img pro_img2"></div>
-            </div>
-          </article>
-          <article class="project cont_item">
-            <div class="pro_cont">
-              <div class="pro_txt">
-                <div class="pro inner">
-                  <div class="pro_txt_left">
-                    <span>Basic Coding</span>
-                    <h3>WEBSTANDARD site</h3>
-                    <p>
-                      웹접근성과 웹표준을 준수하여 만든 사이트 입니다.<br />
-                      팝업, 탭 메뉴,게시판, 슬라이더 등 다양한 기능을 웹표준에
-                      맞게 제작한 사이트 입니다.
-                    </p>
-                  </div>
-                  <div class="pro_txt_right">
-                    <a href="#" class="site view_btn">
-                      <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                      </span>
-                      <span class="view_text">site view</span>
-                    </a>
-                    <a href="#" class="code view_btn">
-                      <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                      </span>
-                      <span class="view_text">code view</span>
-                    </a>
-                    <span class="pro_numb">03</span>
-                  </div>
-                </div>
-              </div>
-              <div class="pro_img pro_img3"></div>
-            </div>
-          </article>
-        </section> -->
-        <!-- //section5 -->
-        <!-- <section id="section6" class="cont_item wrap-vertical">
-          <div class="js_in intro">
-            <div class="intro_text">
-              <h2><span>javascript</span></h2>
-            </div>
-          </div>
-          <article class="js_wrap" class="cont_item">
-            <div class="js inner">
-              <div class="js_tit">
-                <h3>music player</h3>
-              </div>
-              <div class="js_txt">
-                <p>
-                  javascript를 이용하여 버튼을 눌러 재생 및 정지, 리스트를
-                  볼수있고, 음악이 재생되는 뮤직 플레이어 컨텐츠를
-                  작업하였습니다.
-                </p>
-                <a href="#" class="js_view">code view</a>
-              </div>
-              <div class="js_cont musicplayer">
-                <iframe
-                  class="music"
-                  src="https://leeheezin.github.io/javascript/music%20player/"
-                  frameborder="0"
-                ></iframe>
+        <section id="section7">
+            <div class="ani_int intro_inner">
+              <div class="intro_text">
+                <h2>
+                  <span>A</span>
+                  <em>N</em>
+                  <span>I</span>
+                  <em>M</em>
+                  <span>A</span>
+                  <em>T</em>
+                  <span>I</span>
+                  <em>O</em>
+                  <span>N</span>
+                </h2>
               </div>
             </div>
-          </article>
-          <article class="js_wrap js_wrap2" class="cont_item">
-            <div class="js inner">
-              <div class="js_tit">
-                <h3>tetris</h3>
-              </div>
-              <div class="js_txt">
-                <p>
-                  javascript를 이용하여 추억의 게임 테트리스 컨텐츠입니다.
-                  화살표 버튼을 눌러 도형을 바꾸고 스페이스바로 빠르기 조절이
-                  가능합니다.
-                </p>
-                <a href="#" class="js_view">code view</a>
-              </div>
-              <div class="js_cont tetrisgame">
-                <a
-                  class="tetris"
-                  href="https://leeheezin.github.io/javascript/tetris/"
-                  ><img src="assets/img/tetris.png" alt=""
-                /></a>
-              </div>
-            </div>
-          </article>
-          <article class="js_wrap" class="cont_item">
-            <div class="js inner">
-              <div class="js_tit">
-                <h3>puzzle</h3>
-              </div>
-              <div class="js_txt">
-                <p>
-                  javascript를 이용하여 작업한 퍼즐 컨텐츠입니다. 스타트 버튼을
-                  눌러 5초간 완성화면을 보여주고, 마우스 드래그로 이동하여
-                  맞추는 퍼즐입니다.
-                </p>
-                <a href="#" class="js_view">code view</a>
-              </div>
-              <div class="js_cont puzzlegame">
-                <iframe
-                  class="puzzle"
-                  src="https://leeheezin.github.io/javascript/puzzle/"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </div>
-          </article>
-          <article class="js_wrap" class="cont_item">
-            <div class="js inner">
-              <div class="js_tit">
-                <h3>typing master</h3>
-              </div>
-              <div class="js_txt">
-                <p>
-                  javascript를 이용하여 단어를 타이핑해서 점수를 획득하는
-                  컨텐츠입니다. 입력하면 다음 단어로 넘어가고, 시간제한 및
-                  점수획득이 가능합니다.
-                </p>
-                <a href="#" class="js_view">code view</a>
-              </div>
-              <div class="js_cont typing_master">
-                <iframe
-                  class="typing"
-                  src="https://leeheezin.github.io/javascript/Typing%20Master/"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </div>
-          </article>
-          <article class="js_wrap" class="cont_item">
-            <div class="js inner">
-              <div class="js_tit">
-                <h3>card game</h3>
-              </div>
-              <div class="js_txt">
-                <p>
-                  javascript를 이용한 카드게임 컨텐츠입니다. 무작위로 배치된
-                  16장의 카드에서 동일한 이미지가 있는 같은 짝의 카드를 기억하여
-                  맞추는것입니다.
-                </p>
-                <a href="#" class="js_view">code view</a>
-              </div>
-              <div class="js_cont card_game">
-                <iframe
-                  class="card"
-                  src="https://leeheezin.github.io/javascript/Card%20Game/"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </div>
-          </article>
-          <article class="js_wrap" class="cont_item">
-            <div class="js inner">
-              <div class="js_tit">
-                <h3>typing game</h3>
-              </div>
-              <div class="js_txt">
-                <p>
-                  javascript를 이용한 타자게임 컨텐츠입니다. 페이지수마다
-                  제한시간은 60초이며, 타이핑의 오타와 속도,시간을 테스트 할 수
-                  있습니다.
-                </p>
-                <a href="#" class="js_view">code view</a>
-              </div>
-              <div class="js_cont typingspeedgame">
-                <iframe
-                  class="typingspeed"
-                  src="https://leeheezin.github.io/javascript/Typing%20speed%20game/"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </div>
-          </article>
-        </section> -->
-        <!-- //section6 -->
-        <!-- <section id="section7" class="cont cont_item">
-          <div class="intro">
-            <div class="intro_text">
-              <h2><span>animation</span></h2>
-            </div>
-          </div>
-          <article class="ani_wrap">
-            <div class="ani">
-              <div class="ani_txt">
-                <div class="ani_txt1">
-                  <h3>text animation</h3>
-                </div>
-                <div class="ani_txt2">
-                  <a href="#" #=""><span>code view</span></a>
-                  <p>
-                    HTML, CSS keyframe 이용하여 6개 면을 transform, rotate,
-                    translate, animation, scale값을 다르게 입력하여 자연스럽게
-                    움직이는 Cube Animation을 완성하였습니다.
-                  </p>
-                </div>
-              </div>
-              <div class="ani_cont">
-                <iframe
-                  class="text_ani"
-                  src="https://leeheezin.github.io/portfolio2/animation/text/"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </div>
-          </article>
-          <article class="ani_wrap">
-            <div class="ani">
-              <div class="ani_txt">
-                <div class="ani_txt1">
-                  <h3>cube ANIMATION</h3>
-                </div>
-                <div class="ani_txt2">
-                  <a href="#" #=""><span>code view</span></a>
-                  <p>
-                    HTML, CSS keyframe 이용하여 6개 면을 transform, rotate,
-                    translate, animation, scale값을 다르게 입력하여 자연스럽게
-                    움직이는 Cube Animation을 완성하였습니다.
-                  </p>
-                </div>
-              </div>
-              <div class="ani_cont">
-                <div class="cube_wrap">
-                  <div class="cube">
-                    <div class="face front"></div>
-                    <div class="face back"></div>
-                    <div class="face left"></div>
-                    <div class="face right"></div>
-                    <div class="face top"></div>
-                    <div class="face bottom"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </article>
-          <article class="ani_wrap">
-            <div class="ani">
-              <div class="ani_txt">
-                <div class="ani_txt1">
-                  <h3>loading ANIMATION</h3>
-                </div>
-                <div class="ani_txt2">
-                  <a href="#" #=""><span>code view</span></a>
-                  <p>
-                    HTML, CSS keyframe 이용하여 색상마다 transform, rotate,
-                    translate, animation, scale값을 다르게 입력하여 무한으로
-                    돌아가는 Loading Animation을 완성하였습니다. Toggle
-                    theme버튼을 누르면 밝은테마에서 어두운테마로 변경도
-                    가능합니다.
-                  </p>
-                </div>
-              </div>
-              <div class="ani_cont">
-                <iframe
-                  class="loading_ani"
-                  src="https://leeheezin.github.io/portfolio2/loading/"
-                  frameborder="0"
-                ></iframe>
-              </div>
-            </div>
-          </article>
-        </section> -->
-        <!-- //section7 -->
-        <!-- <section id="section8" class="cont">
-          <div class="prog inner">
-            <div class="prog_tit">
-              <span>programming</span>
-              <h3>php site</h3>
-              <a href="#">사이트 보기</a>
-            </div>
-            <span class="prog_numb">01</span>
-          </div>
-          <figure>
-            <div class="php_img"></div>
-          </figure>
-          <div class="prog_text">
-            <div class="prog_txt1">
-              <p>php를 이용하여 제작한 사이트 입니다.</p>
-            </div>
-            <div class="prog_txt2">
-              <p>
-                PHP와 MySQL을 이용하여 데이터베이스 작업을 하고, 회원가입 및
-                로그인, 댓글, 게시판 등 작성하면 데이터베이스에 저장이 되고,
-                해당되는 데이터로 출력됩니다.
-              </p>
-            </div>
-          </div>
-        </section> -->
-      </div>
-      <!--// contents -->
-      <!-- <footer id="footer" class="cont">
-        <div class="foot_info1">
-          <div class="f_massage">
-            <p>Thank you for reviewing my portfolio</p>
-          </div>
-          <div class="f_mail">
-            <p>If you want to tell me, leave a message.</p>
-            <button type="submit" class="send">EMAIL</button>
-          </div>
-          <div class="f_sns">
-            <a href="#"><img src="assets/img/sns1.png" alt="" /></a>
-            <a href="#"><img src="assets/img/sns2.png" alt="" /></a>
-            <a href="#"><img src="assets/img/sns3.png" alt="" /></a>
-          </div>
-        </div>
-        <div class="foot_info2">
-          <div class="f_txt">
-            <h3>CONTACT BY FRONT-END</h3>
-            <p>
-              Let's talk together.<br />
-              If you have anything to say, feel free to contact me. I'll give
-              you an answer.
-            </p>
-          </div>
-          <div class="f_info">
-            <div class="tell info">
-              <em>tell me</em>
-              <span>010-8880-5970</span>
-            </div>
-            <div class="email info">
-              <em>e-mail</em>
-              <span>gmlwls107@naver.com</span>
-            </div>
-            <div class="address info">
-              <em>address</em>
-              <span>Gwanak-gu, Seoul</span>
-            </div>
-            <div class="github info">
-              <em>git-hub</em>
-              <a href="#"><span>https://github.com/leeheezin</span></a>
-            </div>
-          </div>
-        </div>
-        <div class="copy">LEEHEEJIN © 2022 PORTFOLIO</div>
-      </footer> -->
-      <!--//footer -->
+          </section>
     </main>
-    <!-- //wrapper -->
-    <!-- script -->
+
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.7.0/jquery.lettering.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="assets/js/skrollr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
+    <script>
+        
+// //scroll
+// $(window).scroll(function () {
+//   let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
+//   $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
+// });
+
+
+
+//header scroll color
+// const header = document.querySelector("#header");
+// const headerHeight = header.getBoundingClientRect().height;
+
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY > document.getElementById("section6").offsetTop) {
+//     header.setAttribute("style", "background: #222;");
+//   } else {
+//     header.setAttribute("style", "background: #2a57dc;");
+//   }
+// });
+
+// //header sidebar open - close
+// $(document).ready(function () {
+//   var target = $(".sidebar");
+
+//   // 버튼을 클릭하면 사이드바 열림
+//   $(document).on("click", ".nav_button", function (e) {
+//     target.show();
+//     target.addClass(".sidebar");
+//   });
+//   // 닫기 버튼을 클릭하면 사이드바 닫힘
+//   $(document).on("click", ".nav_close", function (e) {
+//     target.hide();
+//     target.removeClass(".sidebar");
+//   });
+//   // 메뉴를 클릭하면 사이드바 닫힘
+//   $(document).on("click", ".side2 a", function (e) {
+//     target.hide();
+//     target.removeClass(".sidebar");
+//   });
+//   // 사이드바 외부를 클릭하면 사이드바 닫힘
+//   $(document).mouseup(function (e) {
+//     if (target.has(e.target).length == 0) {
+//       target.hide();
+//       target.removeClass(".sidebar");
+//     }
+//   });
+// });
+// //사이드바 메뉴 버튼 클릭해서 이동하기
+// $(".side2 a").click(function (e) {
+//   e.preventDefault();
+//   let target = $(this); //사용자가 클릭한 버튼의 타겟이 저장
+//   let index = target.index(); //인덱스 부여하여 저장
+//   let section = $(".cont").eq(index); //eq() :  인덱스
+//   let offset = section.offset().top; //offset(): 요소의 위치(문서)
+//   $("html,body").animate({ scrollTop: offset }, 600); //offset값을 scrolltop에 대입(애니메이션)
+// });
+
+// function scrollProgress(){
+//   let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
+
+//   if(scrollTop > document.getElementById("header").offsetTop){
+//     document.getElementById("section7").classList.add("down");
+//   }
+
+//   function changeColor() {
+//     let scrollTop = window.pageXOffset || document.documentElement.scrollTop || window.scrollY;
+//     const sec7 = document.getElementById('section7');
+
+//     const header = document.getElementById('header');
+
+//     const changeHeight = sec7.offsetHeight;
+
+//     if (scrollTop >= sec7.offsetTop && scrollTop <= changeHeight) {
+//         header.classList.add("down");
+//     } else {
+//         header.classList.remove("down");
+//     }
+// }
+// window.addEventListener("scroll", changeColor);
+
+//section1 left txt
+// var headline = $(".left_txt p");
+// var char = '[class*="char"]';
+// var tl = new TimelineLite();
+
+// headline
+//   .lettering('words').lettering();
+
+// // Stagger letter animation
+// tl.staggerFrom(char, 1, {
+//   opacity: 0,
+//   ease: Back.easeOut,
+//   x: '-200%'
+// }, 0.02);
+
+//.intro_text h2 글자 쪼개기
+
+//   Splitting();
+
+// var s = document.createElement("style");
+// s.innerHTML =
+//   " *, *:before, *:after { animation-play-state: paused !important; }";
+
+// document.addEventListener("keypress", function () {
+//   s.parentNode ? document.head.removeChild(s) : document.head.appendChild(s);
+// });
+
+// $(".left p").load(function(e){
+//   e.preventDefault();
+//   let index = target.index(); //인덱스 부여하여 저장
+//   let section = $(".left p").eq(index); //eq() :  인덱스
+// });
+
+// $(window).load(function(){
+//   let main = $(window).load(); //scrolltop(): 브라우저 위치값
+
+//   if(main >= $("#section1").offset().top - 2 ){
+//     $(".left p").eq(0).addClass("active").siblings().removeClass("active");
+//   }
+// });
+
+//메인 gsap
+// document.querySelectorAll(".split").forEach((desc) => {
+//   let splitText = desc.innerText;
+//   let splitWrap = splitText.split("").join("</span><span aria-hidden='true'>");
+//   splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+//   desc.innerHTML = splitWrap;
+//   desc.setAttribute("aria-label", splitText);
+// });
+
+// gsap.set(".sec1_inner .sec1_left", { width: 0, opacity: 0 });
+// gsap.set(".sec1_inner .sec1_right .main_title", { opacity: 1 });
+// gsap.set(".sec1_inner .sec1_right", { width: 0, opacity: 0 });
+// gsap.set(".sec1_inner .sec1_right .main_intro p", { opacity: 0, y: 50 });
+// gsap.set(".sec1_inner .sec1_right .main_img", { opacity: 0, y: 50 });
+// gsap.set("#header", { left: "-100%" });
+// gsap.set("#section2", { opacity: 0, y: 50 });
+// gsap.set(".split > span", { opacity: 0, y: 50 });
+
+// setTimeout(() => {
+//   let tl = gsap.timeline();
+//   tl.to("#header", { duration: 0.3, left: 0 });
+//   tl.to(".sec1_inner .sec1_left", { duration: 0.6, opacity: 1, width: "63%" });
+//   tl.to(".sec1_inner .sec1_right", {
+//     duration: 0.6,
+//     opacity: 1,
+//     width: "37%",
+//   });
+//   if (matchMedia("screen and (max-width: 960px)").matches) {
+//     tl.to(".sec1_inner .sec1_right", {
+//       duration: 0.6,
+//       opacity: 1,
+//       width: "100%",
+//     });
+//   }
+//   if (matchMedia("screen and (max-width: 960px)").matches) {
+//     tl.to(".sec1_inner .sec1_left", {
+//       delay: 0.8,
+//       duration: 0.6,
+//       opacity: 1,
+//       width: "100%",
+//     });
+//   }
+//   // window.onresize = function () {
+//   //   document.location.reload();
+//   // };
+
+//   tl.to("#section2", {
+//     duration: 0.6,
+//     opacity: 1,
+//     y: 0,
+//   });
+//   tl.to(".split > span", {
+//     duration: 0.6,
+//     opacity: 1,
+//     stagger: 0.008,
+//     y: 0,
+//     ease: "power4.out",
+//   });
+//   tl.to(".sec1_inner .sec1_right .main_title", { opacity: 0 });
+//   tl.from(".sec1_inner .sec1_right .main_title", {
+//     opacity: 0,
+//   });
+
+//   tl.to(".sec1_inner .sec1_right .main_intro p", {
+//     duration: 0.3,
+//     opacity: 1,
+//     y: 0,
+//   });
+//   tl.to(".sec1_inner .sec1_right .main_img", {
+//     duration: 0.3,
+//     opacity: 1,
+//     y: 0,
+//   });
+// }, 2000);
+
+// // section2
+// gsap.set(".prof_tit .tit1 > span", { opacity: 1, y: 100 });
+// gsap.set(".prof_tit .tit2 > span", { opacity: 1, y: 100 });
+// gsap.set(".prof_tit .tit3 > span", { opacity: 1, y: 100 });
+// gsap.set(".prof_tit .tit4 > span", { opacity: 1, y: 100 });
+// // gsap.set(".prof_img", { opacity: 0, y: 100 });
+// gsap.set(".prof_desc p > span", { opacity: 1, y: 50 });
+
+// window.addEventListener(
+//   "scroll",
+//   () => {
+//     let scrollTop =
+//       window.pageYOffset ||
+//       document.documentElement.scrollTop ||
+//       window.scrollY;
+
+//     document.querySelector(".scroll").innerText = Math.round(scrollTop);
+//     //intro 이질감
+//     const offset1 =
+//       scrollTop - document.querySelector(".port_int h2").offsetTop;
+//     gsap.to(".port_int h2 span", { y: offset1 * 0.03 });
+//     const offset2 =
+//       scrollTop - document.querySelector(".proj_int h2").offsetTop;
+//     gsap.to(".proj_int h2 em", { y: offset2 * 0.03 });
+//     const offset3 = scrollTop - document.querySelector(".js_int h2").offsetTop;
+//     gsap.to(".js_int h2 em", { y: offset3 * 0.03 });
+
+//     // const offset2 = scrollTop - document.querySelector(".prof_cont").offsetTop;
+//     // gsap.to(".prof_img", { y: offset2 * 0.02 });
+
+//     if (
+//       scrollTop >
+//       document.querySelector(".prof_tit").offsetTop + window.innerHeight * 1.5
+//     ) {
+//       gsap.to(".prof_tit .tit1 > span", {
+//         opacity: 0,
+//       });
+//       gsap.from(".prof_tit .tit1 > span", {
+//         scrollTrigger: {
+//           trigger: ".tit1 > span",
+//           scroller: pageContents,
+//           scrub: true,
+//           // start: "top bottom",
+//           // end: "top top",
+//         },
+//         delay: 0.9,
+//         duration: 0.8,
+//         opacity: 0,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".prof_tit .tit2 > span", {
+//         delay: 1.0,
+//         duration: 0.8,
+//         opacity: 0,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".prof_tit .tit3 > span", {
+//         delay: 1.1,
+//         duration: 0.8,
+//         opacity: 0,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".prof_tit .tit4 > span", {
+//         delay: 1.2,
+//         duration: 0.8,
+//         opacity: 0,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       // gsap.to(".prof_img", { delay: 0.6, duration: 0.6, opacity: 1, y: 0 });
+//       gsap.to(".prof_desc p > .desc1", {
+//         delay: 0.8,
+//         duration: 0.5,
+//         y: 0,
+//         opacity: 0,
+//       });
+//       gsap.to(".prof_desc p > .desc2", {
+//         delay: 0.9,
+//         duration: 0.5,
+//         y: 0,
+//         opacity: 0,
+//       });
+//       gsap.to(".prof_desc p > .desc3", {
+//         delay: 1.0,
+//         duration: 0.5,
+//         y: 0,
+//         opacity: 0,
+//       });
+//       gsap.to(".prof_desc p > .desc4", {
+//         delay: 1.1,
+//         duration: 0.5,
+//         y: 0,
+//         opacity: 0,
+//       });
+//       gsap.to(".prof_desc p > .desc5", {
+//         delay: 1.2,
+//         duration: 0.5,
+//         y: 0,
+//         opacity: 0,
+//       });
+//       gsap.to(".prof_desc p > .desc6", {
+//         delay: 1.3,
+//         duration: 0.5,
+//         y: 0,
+//         opacity: 0,
+//       });
+//       gsap.to(".prof_desc p > .desc7", {
+//         delay: 1.3,
+//         duration: 0.5,
+//         y: 0,
+//         opacity: 0,
+//       });
+//     }
+//   },
+//   1000
+// );
+
+// //prof_img, proj_img reveal
+// gsap.registerPlugin(ScrollTrigger);
+
+// let revealContainers1 = document.querySelectorAll(".reveal");
+// let revealContainers2 = document.querySelectorAll(".proj_img_wrap");
+
+// revealContainers1.forEach((container1) => {
+//   let image1 = container1.querySelector(".prof_img");
+//   let tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: container1,
+//       // toggleActions: "restart none none reset",
+//     },
+//   });
+
+//   tl.set(container1, { autoAlpha: 1 });
+//   tl.from(container1, 0.8, {
+//     yPercent: 100,
+//     ease: Power2.out,
+//   });
+//   tl.from(image1, 0.8, {
+//     yPercent: -100,
+//     delay: -0.8,
+//     ease: Power2.out,
+//   });
+// });
+// revealContainers2.forEach((container2) => {
+//   let image2 = container2.querySelector(".proj_img_wrap > div");
+//   let tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: container2,
+//       // toggleActions: "restart none none reset",
+//     },
+//   });
+
+//   tl.set(container2, { autoAlpha: 1 });
+//   tl.from(container2, 1.5, {
+//     xPercent: -100,
+//     ease: Power2.out,
+//   });
+//   tl.from(image2, 1.5, {
+//     xPercent: 100,
+//     scale: 1.2,
+//     delay: -1.5,
+//     ease: Power2.out,
+//   });
+// });
+// // const scrollReveal = function () {
+// //   let scrollTop =
+// //     (window.pageYOffset ||
+// //       document.documentElement.scrollTop ||
+// //       window.scrollY) +
+// //     window.innerHeight * 0.5;
+// //   const reveal = document.querySelectorAll(".reveal");
+
+// //   reveal.forEach((el) => {
+// //     const revealDelay = el.dataset.delay;
+// //     if (scrollTop > el.parentElement.offsetTop) {
+// //       if (revealDelay == undefined) {
+// //         el.classList.add("show");
+// //       } else {
+// //         setTimeout(() => {
+// //           el.classList.add("show");
+// //         }, revealDelay);
+// //       }
+// //     }
+// //   });
+// // };
+// // window.addEventListener("scroll", scrollReveal);
+
+// //section3
+// gsap.set(".skill_logo_img", { opacity: 0, x: -100 });
+// gsap.set(".skill_txt_tit p > span", { opacity: 0, y: 100 });
+// gsap.set(".skill_txt_desc p > span", { opacity: 1, y: 100 });
+
+// window.addEventListener(
+//   "scroll",
+//   () => {
+//     let scrollTop =
+//       window.pageYOffset ||
+//       document.documentElement.scrollTop ||
+//       window.scrollY;
+
+//     document.querySelector(".scroll").innerText = Math.round(scrollTop);
+
+//     // gsap.set(".prof_text span", { opacity: 0, x: -100 });
+
+//     if (
+//       scrollTop >
+//       document.querySelector(".skill").offsetTop - window.innerHeight * 0.5
+//     ) {
+//       gsap.to(".skill_logo_img", {
+//         delay: 0.5,
+//         duration: 0.8,
+//         opacity: 1,
+//         x: 0,
+//       });
+//       gsap.to(".skill_txt_tit .tit1 > span", {
+//         delay: 0.8,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_tit .tit2 > span", {
+//         delay: 1.0,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_tit .tit3 > span", {
+//         delay: 1.2,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_tit .tit4 > span", {
+//         delay: 1.4,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc1 > span", {
+//         delay: 0.5,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc2 > span", {
+//         delay: 0.8,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc3 > span", {
+//         delay: 1.0,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc4 > span", {
+//         delay: 1.1,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc5 > span", {
+//         delay: 1.2,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc6 > span", {
+//         delay: 1.3,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc7 > span", {
+//         delay: 1.4,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc8 > span", {
+//         delay: 1.5,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".skill_txt_desc .desc9 > span", {
+//         delay: 1.6,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//     }
+//   },
+//   1000
+// );
+
+// //section4 gsap
+// gsap.set(".projtit_1 p > span", { opacity: 0, y: 100 });
+// gsap.set(".projtit_1 h3 > span", { opacity: 0, y: 100 });
+// gsap.set(".projdesc_1 p > span", { opacity: 0, y: 100 });
+// gsap.set(".projtit_2 p > span", { opacity: 0, y: 100 });
+// gsap.set(".projtit_2 h3 > span", { opacity: 0, y: 100 });
+// gsap.set(".projdesc_2 p > span", { opacity: 0, y: 100 });
+// gsap.set(".projtit_3 p > span", { opacity: 0, y: 100 });
+// gsap.set(".projtit_3 h3 > span", { opacity: 0, y: 100 });
+// gsap.set(".projdesc_3 p > span", { opacity: 0, y: 100 });
+// gsap.set(".num_1 > span", { opacity: 1, color: "transparent" });
+// gsap.set(".num_2 > span", { opacity: 1, color: "transparent" });
+// gsap.set(".num_3 > span", { opacity: 1, color: "transparent" });
+
+// window.addEventListener(
+//   "scroll",
+//   () => {
+//     let scrollTop =
+//       window.pageYOffset ||
+//       document.documentElement.scrollTop ||
+//       window.scrollY;
+
+//     document.querySelector(".scroll").innerText = Math.round(scrollTop);
+
+//     if (
+//       scrollTop >
+//       document.querySelector(".proj_1").offsetTop - window.innerHeight
+//     ) {
+//       gsap.to(".projtit_1 p > span", {
+//         delay: 0.5,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".projtit_1 h3 > span", {
+//         delay: 0.8,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".projdesc_1 p > span", {
+//         delay: 1.2,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".num_1 > span", {
+//         delay: 1.1,
+//         duration: 1.2,
+//         opacity: 1,
+//         color: "#285ad5",
+//       });
+//     }
+//     if (
+//       scrollTop >
+//       document.querySelector(".proj_2").offsetTop - window.innerHeight
+//     ) {
+//       gsap.to(".projtit_2 p > span", {
+//         delay: 0.5,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".projtit_2 h3 > span", {
+//         delay: 0.8,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".projdesc_2 p > span", {
+//         delay: 1.2,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".num_2 > span", {
+//         delay: 1.1,
+//         duration: 1.2,
+//         opacity: 1,
+//         color: "#285ad5",
+//       });
+//     }
+//     if (
+//       scrollTop >
+//       document.querySelector(".proj_3").offsetTop - window.innerHeight
+//     ) {
+//       gsap.to(".projtit_3 p > span", {
+//         delay: 0.5,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".projtit_3 h3 > span", {
+//         delay: 0.8,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".projdesc_3 p > span", {
+//         delay: 1.2,
+//         duration: 0.8,
+//         opacity: 1,
+//         y: 0,
+//         ease: "power4.out",
+//       });
+//       gsap.to(".num_3 > span", {
+//         delay: 1.1,
+//         duration: 1.2,
+//         opacity: 1,
+//         color: "#285ad5",
+//       });
+//     }
+//   },
+//   1000
+// );
+
+
+
+
+
+// profile img 이질감
+
+// $(".profile").each(function (index) {
+//   let offset = (scrollTop - $(this).offset().top) * 0.2;
+
+//   $(this)
+//     .find(".prof_img")
+//     .css({ transform: "translateY(" + offset + "px)" });
+// });
+
+// main txt split
+
+//section 나타내기 / img + txt 이질감
+// function scrollProgress() {
+//   // let scrollTop =
+//   //   (document.documentElement.scrollTop ||
+//   //     window.scrollY ||
+//   //     window.pageYOffset) + window.innerHeight;
+//   // document.querySelectorAll(".cont_item").forEach((item) => {
+//   //   scrollTop > item.offsetTop
+//   //     ? item.classList.add("show")
+//   //     : item.classList.remove("show");
+//   // });
+//   document.querySelectorAll("#section6").forEach((item) => {
+//     let offset1 = (scrollTop - item.offsetTop) * 0.1;
+//     let offset2 = (scrollTop - item.offsetTop) * 0.05;
+
+//     item.querySelector(".js_txt h2").style.transform =
+//       "translateX(" + offset2 + "px)";
+//     item.querySelector(".js_txt p").style.transform =
+//       "translateX(" + -offset2 + "px)";
+//   });
+// }
+// window.addEventListener("scroll", scrollProgress);
+
+
+
+    </script>
+</body>
+
 </html>

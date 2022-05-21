@@ -1,7 +1,4 @@
-let s = skrollr.init({
-  smoothScrolling: true,
-});
-// //scroll
+//scroll
 // $(window).scroll(function () {
 //   let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
 //   $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
@@ -9,21 +6,21 @@ let s = skrollr.init({
 
 //loading
 
-let Isloader = document.querySelector(".loading_wrap");
+// let Isloader = document.querySelector(".loading_wrap");
 
-function Isloading() {
-  setTimeout(function () {
-    Isloader.classList.add("active");
-  }, 1500);
-}
-Isloading();
+// function Isloading() {
+//   setTimeout(function () {
+//     Isloader.classList.add("active");
+//   }, 1500);
+// }
+// Isloading();
 
 //header scroll color
 const header = document.querySelector("#header");
 const headerHeight = header.getBoundingClientRect().height;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > document.getElementById("section6").offsetTop) {
+  if (window.scrollY > document.getElementById("section7").offsetTop) {
     header.setAttribute("style", "background: #222;");
   } else {
     header.setAttribute("style", "background: #2a57dc;");
@@ -141,7 +138,7 @@ document.querySelectorAll(".split").forEach((desc) => {
 });
 
 gsap.set(".sec1_inner .sec1_left", { width: 0, opacity: 0 });
-gsap.set(".sec1_inner .sec1_right .main_title", { opacity: 0 });
+gsap.set(".sec1_inner .sec1_right .main_title", { opacity: 1 });
 gsap.set(".sec1_inner .sec1_right", { width: 0, opacity: 0 });
 gsap.set(".sec1_inner .sec1_right .main_intro p", { opacity: 0, y: 50 });
 gsap.set(".sec1_inner .sec1_right .main_img", { opacity: 0, y: 50 });
@@ -189,7 +186,11 @@ setTimeout(() => {
     y: 0,
     ease: "power4.out",
   });
-  tl.to(".sec1_inner .sec1_right .main_title", { opacity: 1 });
+  tl.to(".sec1_inner .sec1_right .main_title", { opacity: 0 });
+  tl.from(".sec1_inner .sec1_right .main_title", {
+    opacity: 0,
+  });
+
   tl.to(".sec1_inner .sec1_right .main_intro p", {
     duration: 0.3,
     opacity: 1,
@@ -203,12 +204,12 @@ setTimeout(() => {
 }, 2000);
 
 // section2
-gsap.set(".prof_tit .tit1 > span", { opacity: 0, y: 100 });
-gsap.set(".prof_tit .tit2 > span", { opacity: 0, y: 100 });
-gsap.set(".prof_tit .tit3 > span", { opacity: 0, y: 100 });
-gsap.set(".prof_tit .tit4 > span", { opacity: 0, y: 100 });
+gsap.set(".prof_tit .tit1 > span", { opacity: 1, y: 100 });
+gsap.set(".prof_tit .tit2 > span", { opacity: 1, y: 100 });
+gsap.set(".prof_tit .tit3 > span", { opacity: 1, y: 100 });
+gsap.set(".prof_tit .tit4 > span", { opacity: 1, y: 100 });
 // gsap.set(".prof_img", { opacity: 0, y: 100 });
-gsap.set(".prof_desc p > span", { opacity: 0, y: 50 });
+gsap.set(".prof_desc p > span", { opacity: 1, y: 50 });
 
 window.addEventListener(
   "scroll",
@@ -237,30 +238,40 @@ window.addEventListener(
       document.querySelector(".prof_tit").offsetTop + window.innerHeight * 1.5
     ) {
       gsap.to(".prof_tit .tit1 > span", {
+        opacity: 0,
+      });
+      gsap.from(".prof_tit .tit1 > span", {
+        scrollTrigger: {
+          trigger: ".tit1 > span",
+          scroller: pageContents,
+          scrub: true,
+          // start: "top bottom",
+          // end: "top top",
+        },
         delay: 0.9,
         duration: 0.8,
-        opacity: 1,
+        opacity: 0,
         y: 0,
         ease: "power4.out",
       });
       gsap.to(".prof_tit .tit2 > span", {
         delay: 1.0,
         duration: 0.8,
-        opacity: 1,
+        opacity: 0,
         y: 0,
         ease: "power4.out",
       });
       gsap.to(".prof_tit .tit3 > span", {
         delay: 1.1,
         duration: 0.8,
-        opacity: 1,
+        opacity: 0,
         y: 0,
         ease: "power4.out",
       });
       gsap.to(".prof_tit .tit4 > span", {
         delay: 1.2,
         duration: 0.8,
-        opacity: 1,
+        opacity: 0,
         y: 0,
         ease: "power4.out",
       });
@@ -269,43 +280,43 @@ window.addEventListener(
         delay: 0.8,
         duration: 0.5,
         y: 0,
-        opacity: 1,
+        opacity: 0,
       });
       gsap.to(".prof_desc p > .desc2", {
         delay: 0.9,
         duration: 0.5,
         y: 0,
-        opacity: 1,
+        opacity: 0,
       });
       gsap.to(".prof_desc p > .desc3", {
         delay: 1.0,
         duration: 0.5,
         y: 0,
-        opacity: 1,
+        opacity: 0,
       });
       gsap.to(".prof_desc p > .desc4", {
         delay: 1.1,
         duration: 0.5,
         y: 0,
-        opacity: 1,
+        opacity: 0,
       });
       gsap.to(".prof_desc p > .desc5", {
         delay: 1.2,
         duration: 0.5,
         y: 0,
-        opacity: 1,
+        opacity: 0,
       });
       gsap.to(".prof_desc p > .desc6", {
         delay: 1.3,
         duration: 0.5,
         y: 0,
-        opacity: 1,
+        opacity: 0,
       });
       gsap.to(".prof_desc p > .desc7", {
         delay: 1.3,
         duration: 0.5,
         y: 0,
-        opacity: 1,
+        opacity: 0,
       });
     }
   },
@@ -630,15 +641,57 @@ window.addEventListener(
 );
 
 // //section5 가로스크롤
-$(window).scroll(function () {
-  let scrollTop = $(window).scrollTop();
-  let offset = scrollTop - $("#section5").offset().top;
+gsap.registerPlugin(ScrollTrigger);
 
-  if (scrollTop > $("#section5").offset().top) {
-    $("#section5 .js_inner .game_wrap").css("left", -offset);
-  }
+const pageContents = document.getElementById("main");
+
+const scroller = new LocomotiveScroll({
+  el: pageContents,
+  smooth: true,
 });
 
+scroller.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy(pageContents, {
+  scrollTop(value) {
+    return arguments.length
+      ? scroller.scrollTo(value, 0, 0)
+      : scroller.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      left: 0,
+      top: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  pinType: pageContents.style.transform ? "transform" : "fixed",
+});
+
+window.addEventListener("load", function () {
+  let sec2WrapWidth = document.querySelector(".sec5_wrap").offsetWidth;
+  let horizontal2 = sec2WrapWidth - window.innerWidth;
+
+  gsap.to("#section5 .sec5_wrap", {
+    scrollTrigger: {
+      scroller: pageContents,
+      scrub: true,
+      trigger: "#section5",
+      pin: true,
+      anticipatePin: 1,
+      start: "top top",
+      //end: sec2WrapWidth,
+      end: () => `+=${sec2WrapWidth}`,
+      markers: true,
+    },
+    x: -horizontal2,
+    ease: "none",
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+  ScrollTrigger.refresh();
+});
 // profile img 이질감
 
 // $(".profile").each(function (index) {
@@ -686,76 +739,3 @@ document
         button.textContent.trim().split("").join("</span><span>") +
         "</span></div>")
   );
-
-//SupahScroll
-class SupahScroll {
-  constructor(options) {
-    this.opt = options || {};
-    this.el = this.opt.el ? this.opt.el : ".supah_scroll";
-    this.speed = this.opt.speed ? this.opt.speed : 0.1;
-    this.init();
-  }
-
-  init() {
-    this.scrollY = 0;
-    this.supahScroll = document.querySelectorAll(this.el)[0];
-    this.supahScroll.classList.add("supah_scroll");
-    this.events();
-    this.update();
-    this.animate();
-  }
-
-  update() {
-    if (this.supahScroll === null) return;
-    document.body.style.height = `${
-      this.supahScroll.getBoundingClientRect().height
-    }px`;
-  }
-
-  pause() {
-    document.body.style.overflow = "hidden";
-    cancelAnimationFrame(this.raf);
-  }
-
-  play() {
-    document.body.style.overflow = "inherit";
-    this.raf = requestAnimationFrame(this.animate.bind(this));
-  }
-
-  destroy() {
-    this.supahScroll.classList.remove("supah_scroll");
-    this.supahScroll.style.transform = "none";
-    document.body.style.overflow = "inherit";
-    window.removeEventListener("resize", this.update);
-    cancelAnimationFrame(this.raf);
-    delete this.supahScroll;
-  }
-
-  animate() {
-    this.scrollY += (window.scrollY - this.scrollY) * this.speed;
-    this.supahScroll.style.transform = `translate3d(0,${-this.scrollY}px,0)`;
-    this.raf = requestAnimationFrame(this.animate.bind(this));
-  }
-
-  scrollTo(y) {
-    window.scrollTo(0, y);
-  }
-
-  staticScrollTo(y) {
-    cancelAnimationFrame(this.raf);
-    this.scrollY = y;
-    window.scrollTo(0, y);
-    this.supahScroll.style.transform = `translate3d(0,${-y}px,0)`;
-    this.play();
-  }
-
-  events() {
-    window.addEventListener("load", this.update.bind(this));
-    window.addEventListener("resize", this.update.bind(this));
-  }
-}
-//Initialize
-const supahscroll = new SupahScroll({
-  el: "main",
-  speed: 0.1,
-});

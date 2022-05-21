@@ -1,11 +1,17 @@
 @font-face {
-    font-family: 'ChosunNm';
-    font-weight: normal;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.ttf') format("truetype");
-    font-display: swap;
+  font-family: "ChosunNm";
+  font-weight: normal;
+  font-style: normal;
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot");
+  src: url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.ttf")
+      format("truetype");
+  font-display: swap;
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
