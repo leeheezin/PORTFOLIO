@@ -48,7 +48,76 @@ html.has-scroll-dragging {
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
+/* loading */
 
+/* .loading_wrap {
+  width: 100%;
+  height: 100vh;
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #124fcd;
+  transition: 1s;
+}
+.loading_wrap.active {
+  opacity: 0;
+  transform: translateY(50%);
+}
+.loading_wrap.noactive {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.loading_wrap ul li {
+  list-style: none;
+  display: inline-block;
+}
+.loading_wrap li span {
+  display: inline-block;
+  color: white;
+  transform-origin: bottom;
+  font-size: 17px;
+  letter-spacing: 0.5vw;
+  text-transform: uppercase;
+}
+.loading_wrap li:nth-child(1) {
+  animation: loading 1.3s -0.8s infinite ease-in-out both;
+}
+.loading_wrap li:nth-child(2) {
+  animation: loading 1.3s -0.7s infinite ease-in-out both;
+}
+.loading_wrap li:nth-child(3) {
+  animation: loading 1.3s -0.6s infinite ease-in-out both;
+}
+.loading_wrap li:nth-child(4) {
+  animation: loading 1.3s -0.5s infinite ease-in-out both;
+}
+.loading_wrap li:nth-child(5) {
+  animation: loading 1.3s -0.4s infinite ease-in-out both;
+}
+.loading_wrap li:nth-child(6) {
+  animation: loading 1.3s -0.3s infinite ease-in-out both;
+}
+.loading_wrap li:nth-child(7) {
+  animation: loading 1.3s -0.2s infinite ease-in-out both;
+}
+
+@keyframes loading {
+  0% {
+    transform: scaleY(0.5);
+  }
+  50% {
+    transform: scaleY(0.8);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+} */
 /* section1 */
 main {
   margin-left: 100px;
@@ -116,8 +185,7 @@ main {
   display: block;
 }
 .main_intro .main_img {
-  background: url("http://127.0.0.1:5501/assets/img/profile.jpg") no-repeat
-    center top / 120%;
+  background: url("../img/profile.jpg") no-repeat center top / 120%;
   border-radius: 50%;
   width: 12vw;
   height: 12vw;
@@ -170,7 +238,7 @@ main {
   border-top: 1px solid #628aff;
 }
 .port_int {
-  background-image: url("https://leeheezin.github.io/PORTFOLIO/assets/img/intro1.png");
+  background-image: url("../img/intro1.png");
 }
 .intro_text h2 {
   font-family: "Abel";
@@ -230,22 +298,22 @@ main {
   height: 87vh;
 }
 .prof_img {
-  background-image: url(../img/profile.jpg);
+  background-image: url("../img/profile.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   display: block;
-  height: 100%;
+  height: 96%;
   width: 100%;
   object-fit: cover;
 }
-.reveal {
+/* .reveal {
   visibility: hidden;
   position: relative;
   width: 100%;
   height: 87vh;
   overflow: hidden;
-}
+} */
 /* section3 */
 .skill_logo {
   width: 100%;
@@ -803,7 +871,7 @@ main {
 
 /* section5 */
 .js_int {
-  background: url("https://vooban.com/uploads/placeholders/video.jpg");
+  background: url("../img/intro3.png");
   height: 100vh;
 }
 .intro_inner {
@@ -899,5 +967,5 @@ main {
 }
 /* section7 */
 .ani_int {
-  background-image: url("http://127.0.0.1:5501/assets/img/intro4.png");
+  background-image: url("../img/intro4.png");
 }
