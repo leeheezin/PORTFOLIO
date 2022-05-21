@@ -1,8 +1,8 @@
-//scroll
-// $(window).scroll(function () {
-//   let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
-//   $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
-// });
+scroll;
+$(window).scroll(function () {
+  let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
+  $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
+});
 
 // //loading
 
@@ -16,53 +16,53 @@
 // Isloading();
 
 // //header scroll color
-// const header = document.querySelector("#header");
-// const headerHeight = header.getBoundingClientRect().height;
+const header = document.querySelector("#header");
+const headerHeight = header.getBoundingClientRect().height;
 
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY > document.getElementById("section7").offsetTop) {
-//     header.setAttribute("style", "background: #222;");
-//   } else {
-//     header.setAttribute("style", "background: #2a57dc;");
-//   }
-// });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > document.getElementById("section7").offsetTop) {
+    header.setAttribute("style", "background: #222;");
+  } else {
+    header.setAttribute("style", "background: #2a57dc;");
+  }
+});
 
 // //header sidebar open - close
-// $(document).ready(function () {
-//   var target = $(".sidebar");
+$(document).ready(function () {
+  var target = $(".sidebar");
 
-//   // 버튼을 클릭하면 사이드바 열림
-//   $(document).on("click", ".nav_button", function (e) {
-//     target.show();
-//     target.addClass(".sidebar");
-//   });
-//   // 닫기 버튼을 클릭하면 사이드바 닫힘
-//   $(document).on("click", ".nav_close", function (e) {
-//     target.hide();
-//     target.removeClass(".sidebar");
-//   });
-//   // 메뉴를 클릭하면 사이드바 닫힘
-//   $(document).on("click", ".side2 a", function (e) {
-//     target.hide();
-//     target.removeClass(".sidebar");
-//   });
-//   // 사이드바 외부를 클릭하면 사이드바 닫힘
-//   $(document).mouseup(function (e) {
-//     if (target.has(e.target).length == 0) {
-//       target.hide();
-//       target.removeClass(".sidebar");
-//     }
-//   });
-// });
-// //사이드바 메뉴 버튼 클릭해서 이동하기
-// $(".side2 a").click(function (e) {
-//   e.preventDefault();
-//   let target = $(this); //사용자가 클릭한 버튼의 타겟이 저장
-//   let index = target.index(); //인덱스 부여하여 저장
-//   let section = $(".cont").eq(index); //eq() :  인덱스
-//   let offset = section.offset().top; //offset(): 요소의 위치(문서)
-//   $("html,body").animate({ scrollTop: offset }, 600); //offset값을 scrolltop에 대입(애니메이션)
-// });
+  // 버튼을 클릭하면 사이드바 열림
+  $(document).on("click", ".nav_button", function (e) {
+    target.show();
+    target.addClass(".sidebar");
+  });
+  // 닫기 버튼을 클릭하면 사이드바 닫힘
+  $(document).on("click", ".nav_close", function (e) {
+    target.hide();
+    target.removeClass(".sidebar");
+  });
+  // 메뉴를 클릭하면 사이드바 닫힘
+  $(document).on("click", ".side2 a", function (e) {
+    target.hide();
+    target.removeClass(".sidebar");
+  });
+  // 사이드바 외부를 클릭하면 사이드바 닫힘
+  $(document).mouseup(function (e) {
+    if (target.has(e.target).length == 0) {
+      target.hide();
+      target.removeClass(".sidebar");
+    }
+  });
+});
+//사이드바 메뉴 버튼 클릭해서 이동하기
+$(".side2 a").click(function (e) {
+  e.preventDefault();
+  let target = $(this); //사용자가 클릭한 버튼의 타겟이 저장
+  let index = target.index(); //인덱스 부여하여 저장
+  let section = $(".cont").eq(index); //eq() :  인덱스
+  let offset = section.offset().top; //offset(): 요소의 위치(문서)
+  $("html,body").animate({ scrollTop: offset }, 600); //offset값을 scrolltop에 대입(애니메이션)
+});
 
 // function scrollProgress(){
 //   let scrollTop = document.documentElement.scrollTop || window.scrollY || window.pageYOffset;
