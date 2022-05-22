@@ -86,6 +86,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  text-transform: uppercase;
 }
 
 ul {
