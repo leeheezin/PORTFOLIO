@@ -1,10 +1,11 @@
-scroll;
-$(window).scroll(function () {
-  let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
-  $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
-});
+// scroll;
+// $(window).scroll(function () {
+//   let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
+//   $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
+// });
 
 // //loading
+
 let Isloader = document.querySelector(".loading_wrap");
 
 function Isloading() {
@@ -15,6 +16,13 @@ function Isloading() {
 Isloading();
 
 // //header scroll color
+//scroll
+$(window).scroll(function () {
+  let scrollTop = $(window).scrollTop(); //scrolltop(): 브라우저 위치값
+  $(".scroll em").text(parseInt(scrollTop)); //브라우저 스크롤값을 텍스트로 표시
+});
+
+//header scroll color
 const header = document.querySelector("#header");
 const headerHeight = header.getBoundingClientRect().height;
 
@@ -22,7 +30,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > document.getElementById("section7").offsetTop) {
     header.setAttribute("style", "background: #222;");
   } else {
-    header.setAttribute("style", "background: #2a57dc;");
+    header.setAttribute("style", "background: #1458E4;");
   }
 });
 
@@ -691,6 +699,18 @@ window.addEventListener("load", function () {
   ScrollTrigger.addEventListener("refresh", () => scroller.update());
   ScrollTrigger.refresh();
 });
+// game_popup
+function show() {
+  document.querySelector(".game_popup").className = "game_popup show";
+}
+
+function close() {
+  document.querySelector(".game_popup").className = "game_popup";
+}
+
+document.querySelector("#show").addEventListener("click", show);
+document.querySelector("#close").addEventListener("click", close);
+
 // profile img 이질감
 
 // $(".profile").each(function (index) {

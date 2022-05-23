@@ -131,8 +131,6 @@ main {
   width: 100%;
   border-top: 1px solid #628aff;
 }
-#section5 {
-}
 #section6 {
   background-color: #2a57dc;
   height: 100vh;
@@ -162,7 +160,6 @@ main {
   font-family: "Jost";
   color: #fff;
 }
-
 /* section1 */
 
 .sec1_inner {
@@ -281,7 +278,7 @@ main {
 }
 .prof_tit p {
   font-size: 5vw;
-/*   overflow: hidden; */
+  /* overflow: hidden; */
 }
 .prof_tit p > span {
   display: inline-block;
@@ -305,7 +302,7 @@ main {
 .prof figure {
   z-index: -1;
   position: relative;
-  width: 100%;
+  width: 45%;
   overflow: hidden;
   height: 87vh;
 }
@@ -556,6 +553,8 @@ main {
 .sec5_wrap > div {
   min-width: 50vw;
   height: 100vh;
+  border-right: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4;
 }
 .sec2-1 {
 }
@@ -565,11 +564,9 @@ main {
 }
 
 .game {
-  font-family: "Raleway";
-  border-right: 1px solid #c4c4c4;
-  border-bottom: 1px solid #c4c4c4;
 }
 .game_inner {
+  font-family: "Raleway";
   padding: 5% 5% 0;
 }
 .game_txt {
@@ -596,7 +593,7 @@ main {
 .game_txt a {
   position: relative;
   display: inline-block;
-  width: 29%;
+  width: 23%;
   font-family: "Raleway";
   font-size: 1.1vw;
   margin-top: 8%;
@@ -617,7 +614,8 @@ main {
   --shadow: 0 2px 8px -1px rgba(39, 94, 254, 0.32);
   --shadow-hover: 0 4px 20px -2px rgba(39, 94, 254, 0.5);
   --font-shadow: var(--font-size);
-  padding: 13px 32px;
+  padding: 16px 32px;
+  font-family: "Roboto";
   font-weight: 500;
   line-height: var(--font-size);
   border-radius: 24px;
@@ -632,13 +630,12 @@ main {
   transform: translateY(var(--y)) translateZ(0);
   transition: transform var(--duration) ease, box-shadow var(--duration) ease;
 }
-.game_code > div {
+.game_code div {
   display: flex;
   overflow: hidden;
   text-shadow: 0 var(--font-shadow) 0 var(--text);
 }
 .game_code div span {
-  width: 44%;
   display: block;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -695,39 +692,105 @@ main {
 }
 .game_cont {
   width: 100%;
-  height: 75vh;
+  height: 69vh;
   margin-top: 3%;
 }
 .music_cont {
-  background: #dde2ff;
+  background: url(../img/music.png) no-repeat center center/cover;
 }
 .typing_cont {
-  background: #2a57dc;
+  background: url(../img/typinggame.png) no-repeat center center/cover;
 }
 .puzzle_cont {
-  background: #2a57dc;
+  background: url(../img/puzzle.png) no-repeat center center/cover;
 }
 .card_cont {
-  background: #819fec;
+  background: url(../img/cardgame.png) no-repeat center center/cover;
 }
 .typingmaster_cont {
-  background: #e7e7f4;
+  background: url(../img/typingmaster.png) no-repeat center center/cover;
 }
 .tetris_cont {
-  background: #3e3bdd;
+  background: url(../img/tetris.png) no-repeat center center/cover;
 }
 .game_cont iframe {
   width: 100%;
   height: 100%;
 }
+/* game_popup */
+/* .game_popup {
+  position: fixed;
+  top: 26%;
+  left: 0;
+  width: 16%;
+  height: 70vh;
+  background-color: #e9effb;
+  z-index: 1000;
+
+  z-index: -1;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  position: absolute;
+  top: 72%;
+  right: -14%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
+  width: 70%;
+  height: 98vh;
+}
+.popup iframe {
+  width: 100%;
+  height: 100%;
+}
+.show .popup {
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+#close {
+  width: 2%;
+  margin: 2%;
+  float: right;
+}
+#close span {
+  width: 100%;
+  height: 4px;
+  background: #222;
+  display: inline-flex;
+  position: relative;
+  transform: rotate(45deg);
+}
+#close span::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 4px;
+  background: #222;
+  transform: rotate(-90deg);
+} */
+
 /* scroll px값*/
-.scroll {
+/* .scroll {
   position: absolute;
   left: 27px;
   bottom: 20px;
   z-index: 2000;
   color: #fff;
-}
+} */
 /* header */
 #header {
   position: fixed;
@@ -955,29 +1018,6 @@ main {
   margin-top: 2vh;
 }
 
-@media (max-width: 900px) {
-  .sec1__inner {
-    flex-direction: column-reverse;
-  }
-  .sec1__inner .left {
-    width: 100%;
-  }
-  .sec1__inner .right {
-    width: 100%;
-    border-left: 0;
-  }
-  .sec1__inner .right .intro {
-    height: auto;
-    border-bottom: 1px solid #628aff;
-  }
-  .sec1__inner .left p {
-    position: relative;
-    transform: rotate(0);
-    bottom: 0;
-    left: 0;
-    padding: 3vw;
-  }
-}
 /* section2 */
 
 /* section5 */
