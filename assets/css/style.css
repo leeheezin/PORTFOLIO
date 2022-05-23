@@ -306,6 +306,17 @@ main {
   height: 87vh;
   overflow: hidden;
 } */
+/* .proj_img_wrap {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  visibility: visible;
+  transform: skewY(0);
+}
+
+.reveal {
+  transform: scale(1);
+  width: 100%;
+  transition: 1s ease-out;
+} */
 /* section3 */
 .skill_logo {
   width: 100%;
@@ -427,7 +438,8 @@ main {
 .proj_numb span {
   color: transparent;
   display: inline-block;
-  -webkit-text-stroke: 2px #285ad5;
+  /* -webkit-text-stroke: 2px #285ad5; */
+  color: #285ad5;
 }
 /* button */
 .view_btn {
