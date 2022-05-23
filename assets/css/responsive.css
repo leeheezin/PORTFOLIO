@@ -1,28 +1,5 @@
 @charset "utf-8";
 
-@media (max-width: 900px) {
-  .sec1__inner {
-    flex-direction: column-reverse;
-  }
-  .sec1__inner .left {
-    width: 100%;
-  }
-  .sec1__inner .right {
-    width: 100%;
-    border-left: 0;
-  }
-  .sec1__inner .right .intro {
-    height: auto;
-    border-bottom: 1px solid #628aff;
-  }
-  .sec1__inner .left p {
-    position: relative;
-    transform: rotate(0);
-    bottom: 0;
-    left: 0;
-    padding: 3vw;
-  }
-}
 /* media */
 @media (max-width: 960px) {
   #header {
@@ -44,6 +21,27 @@
   }
   .nav_close > .close_btn {
     height: 40%;
+  }
+  .sec1__inner {
+    flex-direction: column-reverse;
+  }
+  .sec1__inner .left {
+    width: 100%;
+  }
+  .sec1__inner .right {
+    width: 100%;
+    border-left: 0;
+  }
+  .sec1__inner .right .intro {
+    height: auto;
+    border-bottom: 1px solid #628aff;
+  }
+  .sec1__inner .left p {
+    position: relative;
+    transform: rotate(0);
+    bottom: 0;
+    left: 0;
+    padding: 3vw;
   }
   .sidebar {
     width: 100%;
@@ -70,14 +68,10 @@
     font-size: 3vw;
     padding: 3%;
   }
-  .contents {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 100px;
-  }
   main {
     width: 100%;
     margin-left: 0;
+    margin-top: 100px;
   }
   /* section1 */
   .sec1_inner {
@@ -150,6 +144,7 @@
   }
   .prof figure {
     width: 100%;
+    height: 86vh;
     margin-top: 7vw;
     overflow: hidden;
   }
@@ -210,11 +205,101 @@
     top: 6%;
     font-size: 3vw;
   }
-}
-/*section5  */
-/*section6  */
-.game_cont {
-  height: 60vh;
+  .game_cont {
+    height: 60vh;
+  }
+  /*section5  */
+  .sec5_wrap > div {
+    width: 100vw;
+  }
+  /*section6  */
+  .ani {
+    display: block;
+  }
+  .ani_txt {
+    width: 100%;
+    height: 40vh;
+    border: none;
+  }
+  .ani_txt1 h3 {
+    font-size: 7vw;
+  }
+  .ani_txt2 span {
+    width: 36%;
+  }
+  .ani_txt2 p {
+    padding-top: 20%;
+    font-size: 4vw;
+  }
+  .ani_cont {
+    width: 100%;
+    height: 50vh;
+    padding: 10% 0 0 10%;
+  }
+  /* footer */
+  /* footer */
+  #footer {
+    width: 100%;
+    margin-left: 0;
+  }
+  .foot_info1,
+  .foot_info2 {
+    display: block;
+    padding: 7%;
+  }
+  .f_massage {
+    width: 100%;
+    padding-bottom: 8%;
+  }
+  .f_mail {
+    width: 100%;
+  }
+  .f_massage p {
+    font-size: 5vw;
+  }
+  .f_mail p {
+    padding-bottom: 6%;
+    font-size: 4vw;
+  }
+  .f_mail button {
+    padding: 2% 10%;
+    letter-spacing: 0.1vw;
+    font-size: 3vw;
+  }
+  .f_sns {
+    width: 37%;
+    margin-top: 10%;
+    float: right;
+  }
+  .f_sns a img {
+    width: 27%;
+  }
+  .f_txt {
+    width: 100%;
+    height: 45%;
+  }
+  .f_txt h3 {
+    font-size: 6vw;
+  }
+  .f_txt p {
+    font-size: 4vw;
+  }
+  .f_info {
+    width: 100%;
+  }
+  .f_info em {
+    font-size: 5vw;
+  }
+  .f_info span {
+    font-size: 4vw;
+  }
+  .copy {
+    padding: 0 7% 3%;
+  }
+  .info {
+    width: 100%;
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -246,7 +331,7 @@
     font-size: 12vw;
     padding: 3%;
   }
-  .contents {
+  main {
     margin-top: 50px;
   }
   /* section1 */
@@ -290,7 +375,7 @@
     font-size: 4.3vw;
   }
   .reveal {
-    height: 65vh;
+    height: 52vh;
   }
   /* section3 */
   .skill_logo_img {

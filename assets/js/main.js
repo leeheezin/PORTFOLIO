@@ -27,7 +27,7 @@ const header = document.querySelector("#header");
 const headerHeight = header.getBoundingClientRect().height;
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > document.getElementById("section7").offsetTop) {
+  if (window.scrollY > document.getElementById("section6").offsetTop) {
     header.setAttribute("style", "background: #222;");
   } else {
     header.setAttribute("style", "background: #1458E4;");
@@ -750,7 +750,7 @@ document.querySelector("#close").addEventListener("click", close);
 
 //js button
 document
-  .querySelectorAll(".game_code")
+  .querySelectorAll(".game_btn a")
   .forEach(
     (button) =>
       (button.innerHTML =
