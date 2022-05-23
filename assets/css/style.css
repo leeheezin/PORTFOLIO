@@ -1172,7 +1172,7 @@ main {
   height: 80%;
   background: radial-gradient(#fff, #ccc);
   overflow: hidden;
-  perspective: 500;
+  perspective: 500px;
   position: relative;
 }
 .cube {
