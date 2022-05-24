@@ -398,6 +398,7 @@ $(".side2 a").click(function (e) {
 //     }
 //   });
 // };
+
 // window.addEventListener("scroll", scrollReveal);
 
 // //section3
@@ -700,16 +701,16 @@ window.addEventListener("load", function () {
   ScrollTrigger.refresh();
 });
 // game_popup
-function show() {
-  document.querySelector(".game_popup").className = "game_popup show";
-}
+// function show() {
+//   document.querySelector(".game_popup").className = "game_popup show";
+// }
 
-function close() {
-  document.querySelector(".game_popup").className = "game_popup";
-}
+// function close() {
+//   document.querySelector(".game_popup").className = "game_popup";
+// }
 
-document.querySelector("#show").addEventListener("click", show);
-document.querySelector("#close").addEventListener("click", close);
+// document.querySelector("#show").addEventListener("click", show);
+// document.querySelector("#close").addEventListener("click", close);
 
 // profile img 이질감
 
