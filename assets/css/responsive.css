@@ -236,6 +236,16 @@
     height: 50vh;
     padding: 10% 0 0 10%;
   }
+  /* section7 */
+  .prog_tit span {
+    font-size: 2vw;
+  }
+  .prog_tit h3 {
+    font-size: 7vw;
+  }
+  .prog_tit a {
+    font-size: 2vw;
+  }
   /* footer */
   /* footer */
   #footer {

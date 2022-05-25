@@ -211,10 +211,10 @@ $(".side2 a").click(function (e) {
 // }, 2000);
 
 // // section2
-// gsap.set(".prof_tit .tit1 > span", { opacity: 1, y: 100 });
-// gsap.set(".prof_tit .tit2 > span", { opacity: 1, y: 100 });
-// gsap.set(".prof_tit .tit3 > span", { opacity: 1, y: 100 });
-// gsap.set(".prof_tit .tit4 > span", { opacity: 1, y: 100 });
+// gsap.set(".prof .tit1 > span", { opacity: 1, y: 100 });
+// gsap.set(".prof .tit2 > span", { opacity: 1, y: 100 });
+// gsap.set(".prof .tit3 > span", { opacity: 1, y: 100 });
+// gsap.set(".prof .tit4 > span", { opacity: 1, y: 100 });
 // // gsap.set(".prof_img", { opacity: 0, y: 100 });
 // gsap.set(".prof_desc p > span", { opacity: 1, y: 50 });
 
@@ -242,12 +242,12 @@ $(".side2 a").click(function (e) {
 
 //     if (
 //       scrollTop >
-//       document.querySelector(".prof_tit").offsetTop + window.innerHeight * 1.5
+//       document.querySelector(".prof").offsetTop + window.innerHeight * 1.5
 //     ) {
-//       gsap.to(".prof_tit .tit1 > span", {
+//       gsap.to(".prof .tit1 > span", {
 //         opacity: 0,
 //       });
-//       gsap.from(".prof_tit .tit1 > span", {
+//       gsap.from(".prof .tit1 > span", {
 //         scrollTrigger: {
 //           trigger: ".tit1 > span",
 //           scroller: pageContents,
@@ -261,21 +261,21 @@ $(".side2 a").click(function (e) {
 //         y: 0,
 //         ease: "power4.out",
 //       });
-//       gsap.to(".prof_tit .tit2 > span", {
+//       gsap.to(".prof .tit2 > span", {
 //         delay: 1.0,
 //         duration: 0.8,
 //         opacity: 0,
 //         y: 0,
 //         ease: "power4.out",
 //       });
-//       gsap.to(".prof_tit .tit3 > span", {
+//       gsap.to(".prof .tit3 > span", {
 //         delay: 1.1,
 //         duration: 0.8,
 //         opacity: 0,
 //         y: 0,
 //         ease: "power4.out",
 //       });
-//       gsap.to(".prof_tit .tit4 > span", {
+//       gsap.to(".prof .tit4 > span", {
 //         delay: 1.2,
 //         duration: 0.8,
 //         opacity: 0,
@@ -283,48 +283,169 @@ $(".side2 a").click(function (e) {
 //         ease: "power4.out",
 //       });
 //       // gsap.to(".prof_img", { delay: 0.6, duration: 0.6, opacity: 1, y: 0 });
-//       gsap.to(".prof_desc p > .desc1", {
-//         delay: 0.8,
-//         duration: 0.5,
-//         y: 0,
-//         opacity: 0,
-//       });
-//       gsap.to(".prof_desc p > .desc2", {
-//         delay: 0.9,
-//         duration: 0.5,
-//         y: 0,
-//         opacity: 0,
-//       });
-//       gsap.to(".prof_desc p > .desc3", {
-//         delay: 1.0,
-//         duration: 0.5,
-//         y: 0,
-//         opacity: 0,
-//       });
-//       gsap.to(".prof_desc p > .desc4", {
-//         delay: 1.1,
-//         duration: 0.5,
-//         y: 0,
-//         opacity: 0,
-//       });
-//       gsap.to(".prof_desc p > .desc5", {
-//         delay: 1.2,
-//         duration: 0.5,
-//         y: 0,
-//         opacity: 0,
-//       });
-//       gsap.to(".prof_desc p > .desc6", {
-//         delay: 1.3,
-//         duration: 0.5,
-//         y: 0,
-//         opacity: 0,
-//       });
-//       gsap.to(".prof_desc p > .desc7", {
-//         delay: 1.3,
-//         duration: 0.5,
-//         y: 0,
-//         opacity: 0,
-//       });
+
+//section5 가로스크롤
+gsap.registerPlugin(ScrollTrigger);
+
+const pageContents = document.getElementById("main");
+
+const scroller = new LocomotiveScroll({
+  el: pageContents,
+  smooth: true,
+});
+
+scroller.on("scroll", ScrollTrigger.update);
+
+ScrollTrigger.scrollerProxy(pageContents, {
+  scrollTop(value) {
+    return arguments.length
+      ? scroller.scrollTo(value, 0, 0)
+      : scroller.scroll.instance.scroll.y;
+  },
+  getBoundingClientRect() {
+    return {
+      left: 0,
+      top: 0,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  },
+  pinType: pageContents.style.transform ? "transform" : "fixed",
+});
+
+window.addEventListener("load", function () {
+  let sec2WrapWidth = document.querySelector(".sec5_wrap").offsetWidth;
+  let horizontal2 = sec2WrapWidth - window.innerWidth;
+
+  gsap.to("#section5 .sec5_wrap", {
+    scrollTrigger: {
+      scroller: pageContents,
+      scrub: true,
+      trigger: "#section5",
+      pin: true,
+      anticipatePin: 1,
+      start: "top top",
+      //end: sec2WrapWidth,
+      end: () => `+=${sec2WrapWidth}`,
+      markers: true,
+    },
+    x: -horizontal2,
+    ease: "none",
+  });
+
+  ScrollTrigger.addEventListener("refresh", () => scroller.update());
+  ScrollTrigger.refresh();
+});
+// section2
+gsap.set(".prof_desc p > span", {
+  y: 0,
+});
+gsap.to(".prof_desc p > span", {
+  y: 20,
+});
+gsap.from(".prof_desc p > .desc1", {
+  scrollTrigger: {
+    trigger: ".prof",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  y: 20,
+});
+gsap.from(".prof_desc p > .desc2", {
+  scrollTrigger: {
+    trigger: ".prof",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  y: 20,
+});
+gsap.from(".prof_desc p > .desc3", {
+  scrollTrigger: {
+    trigger: ".prof",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  y: 20,
+});
+gsap.from(".prof_desc p > .desc4", {
+  scrollTrigger: {
+    trigger: ".prof",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  y: 20,
+});
+gsap.from(".prof_desc p > .desc5", {
+  scrollTrigger: {
+    trigger: ".prof",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  y: 20,
+});
+gsap.from(".prof_desc p > .desc6", {
+  scrollTrigger: {
+    trigger: ".prof",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  y: 20,
+});
+gsap.from(".prof_desc p > .desc7", {
+  scrollTrigger: {
+    trigger: ".prof",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  y: 20,
+});
+// section3
+gsap.set("skill_logo", {
+  x: 0,
+});
+gsap.to(".skill_logo", {
+  x: 100,
+});
+gsap.from(".skill_logo", {
+  scrollTrigger: {
+    trigger: ".skill",
+    scroller: pageContents,
+    scrub: true,
+    ease: Power2.out,
+  },
+  x: 100,
+});
+// gsap.to(".prof_desc p > .desc4", {
+//   delay: 1.1,
+//   duration: 0.5,
+//   y: 0,
+//   opacity: 0,
+// });
+// gsap.to(".prof_desc p > .desc5", {
+//   delay: 1.2,
+//   duration: 0.5,
+//   y: 0,
+//   opacity: 0,
+// });
+// gsap.to(".prof_desc p > .desc6", {
+//   delay: 1.3,
+//   duration: 0.5,
+//   y: 0,
+//   opacity: 0,
+// });
+// gsap.to(".prof_desc p > .desc7", {
+//   delay: 1.3,
+//   duration: 0.5,
+//   y: 0,
+//   opacity: 0,
+// });
 //     }
 //   },
 //   1000
@@ -648,58 +769,6 @@ $(".side2 a").click(function (e) {
 //   1000
 // );
 
-//section5 가로스크롤
-gsap.registerPlugin(ScrollTrigger);
-
-const pageContents = document.getElementById("main");
-
-const scroller = new LocomotiveScroll({
-  el: pageContents,
-  smooth: true,
-});
-
-scroller.on("scroll", ScrollTrigger.update);
-
-ScrollTrigger.scrollerProxy(pageContents, {
-  scrollTop(value) {
-    return arguments.length
-      ? scroller.scrollTo(value, 0, 0)
-      : scroller.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {
-      left: 0,
-      top: 0,
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-  },
-  pinType: pageContents.style.transform ? "transform" : "fixed",
-});
-
-window.addEventListener("load", function () {
-  let sec2WrapWidth = document.querySelector(".sec5_wrap").offsetWidth;
-  let horizontal2 = sec2WrapWidth - window.innerWidth;
-
-  gsap.to("#section5 .sec5_wrap", {
-    scrollTrigger: {
-      scroller: pageContents,
-      scrub: true,
-      trigger: "#section5",
-      pin: true,
-      anticipatePin: 1,
-      start: "top top",
-      //end: sec2WrapWidth,
-      end: () => `+=${sec2WrapWidth}`,
-      markers: true,
-    },
-    x: -horizontal2,
-    ease: "none",
-  });
-
-  ScrollTrigger.addEventListener("refresh", () => scroller.update());
-  ScrollTrigger.refresh();
-});
 // game_popup
 // function show() {
 //   document.querySelector(".game_popup").className = "game_popup show";

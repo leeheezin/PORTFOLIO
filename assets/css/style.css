@@ -302,14 +302,14 @@ main {
   height: 96%;
   width: 100%;
   object-fit: cover;
+  z-index: 1000;
+  transition: all 0.5s;
 }
-/* .reveal {
-  visibility: hidden;
-  position: relative;
+.reveal {
   width: 100%;
   height: 87vh;
   overflow: hidden;
-} */
+}
 /* .proj_img_wrap {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   visibility: visible;
@@ -1279,6 +1279,7 @@ main {
 .progimg {
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top center;
   width: 100%;
   height: 50vh;
 }
@@ -1380,7 +1381,7 @@ main {
   font-size: 1vw;
   font-weight: 300;
   display: block;
-  padding: 1% 3%;
+  padding: 2% 3%;
 }
 .f_info {
   width: 50%;
