@@ -137,6 +137,10 @@ main {
   display: flex;
   left: 0;
 }
+#section7 {
+  background: #222;
+  color: #fff;
+}
 #footer {
   border-top: 1px solid #c4c4c4;
   background: #222;
@@ -311,7 +315,6 @@ main {
   visibility: visible;
   transform: skewY(0);
 }
-
 .reveal {
   transform: scale(1);
   width: 100%;
@@ -730,23 +733,19 @@ main {
   height: 70vh;
   background-color: #e9effb;
   z-index: 1000;
-
   z-index: -1;
   opacity: 0;
 }
-
 .show {
   opacity: 1;
   z-index: 1000;
   transition: all 0.5s;
 }
-
 .window {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .popup {
   position: absolute;
   top: 72%;
@@ -1244,7 +1243,72 @@ main {
   transform: translateY(50px) rotateX(90deg);
 }
 /* //cube */
-
+/* section7 */
+.prog_php {
+  border-bottom: 1px solid #828282;
+}
+.prog {
+  padding: 5%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.prog_tit {
+  font-family: "Raleway";
+}
+.prog_tit span {
+  font-size: 1.2vw;
+  padding-bottom: 5%;
+  display: block;
+}
+.prog_tit h3 {
+  font-size: 5vw;
+  font-weight: 700;
+}
+.prog_tit a {
+  font-size: 1.2vw;
+  border-bottom: 1px solid #828282;
+  font-family: "ChosunNm";
+  padding: 1%;
+}
+.prog_numb {
+  font-size: 10vw;
+  font-family: "Poppins";
+}
+.progimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 50vh;
+}
+.php_img {
+  background-image: url(../img/php.png);
+}
+.react_img {
+  background-image: url(../img/react.png);
+}
+.prog_text {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  font-family: "ChosunNm";
+  font-size: 1.2vw;
+}
+.prog_txt1 {
+  width: 50%;
+  border-right: 1px solid #5b5b5b;
+}
+.prog_txt1 p {
+  padding: 5%;
+}
+.prog_txt2 {
+  width: 50%;
+}
+.prog_txt2 p {
+  padding: 5%;
+}
 /* footer */
 /* footer */
 .foot_info1 {
