@@ -411,7 +411,7 @@ gsap.set(".skill_logo_img", {
   x: 0,
 });
 gsap.to(".skill_logo_img", {
-  x: 100,
+  x: 80,
 });
 gsap.from(".skill_logo_img", {
   scrollTrigger: {
@@ -420,7 +420,7 @@ gsap.from(".skill_logo_img", {
     scrub: true,
     ease: Power2.out,
   },
-  x: 100,
+  x: 80,
 });
 // gsap.to(".prof_desc p > .desc4", {
 //   delay: 1.1,
