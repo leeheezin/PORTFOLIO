@@ -407,13 +407,13 @@ gsap.from(".prof_desc p > .desc7", {
   y: 20,
 });
 // section3
-gsap.set("skill_logo", {
+gsap.set(".skill_logo_img", {
   x: 0,
 });
-gsap.to(".skill_logo", {
+gsap.to(".skill_logo_img", {
   x: 100,
 });
-gsap.from(".skill_logo", {
+gsap.from(".skill_logo_img", {
   scrollTrigger: {
     trigger: ".skill",
     scroller: pageContents,
