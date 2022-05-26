@@ -217,7 +217,7 @@ main {
   width: 12vw;
   height: 12vw;
   display: block;
-  margin: 2vw 1vw;
+  margin: 1vw;
   border-bottom: 1px solid #628aff;
 }
 
@@ -549,7 +549,7 @@ main {
   align-items: center;
 }
 .sec5_wrap > div {
-  min-width: 50vw;
+  min-width: 49vw;
   height: 100vh;
   border-right: 1px solid #c4c4c4;
   border-bottom: 1px solid #c4c4c4;
